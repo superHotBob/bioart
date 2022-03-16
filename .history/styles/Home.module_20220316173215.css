@@ -211,7 +211,6 @@
 .table h2 {
   text-align: center;
   font-family: "GmarketSansLight";
-  font-size: 28px;
 }
 .table h2 a {
   color: #00b4e6;
@@ -253,7 +252,7 @@ p.headerTable:hover {
   background: url("/icon_graph_01.svg") 21% 47%/ 16% no-repeat;
   padding-left: 10px;
 }
-.headerTable span, .headerTableFirst span {
+.headerTable span {
   flex-grow: 1;
   font-size: 18px;
   line-height: 50px;

@@ -15,26 +15,6 @@ const data = [
     items: 150,
   },
   {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
     ranking: 1239,
     planet: "BioArt",
     volume: 17.61,
@@ -153,7 +133,7 @@ export default function Home() {
           Rankings of Planets <a>over last 7 days ▼</a>
         </h2>
         <div className={styles.icons}>
-          <Image src="/icon_cate_on_01.svg" width={54} height={40} alt="icon" />
+          <Image src="/icon_cate_01_on.svg" width={54} height={40} alt="icon" />
           <Image src="/icon_cate_02.svg" width={54} height={40} alt="icon" />
           <Image src="/icon_cate_04.svg" width={54} height={40} alt="icon" />
         </div>
@@ -169,44 +149,28 @@ export default function Home() {
             <span>Items</span>
           </div>
           <div className={styles.data}>
-            <p  className={styles.headerTableFirst}>
-              <span style={{ textAlign: "left",fontSize: '28px' }}>1239</span>
-              <span
-                style={{
-                  flexGrow: 4,
-                  fontSize: '28px',
-                  height: "50px",
-                  textAlign: "left",
-                  backgroundImage: "url(/icon_ba.svg)",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "50px",
-                  paddingLeft: 60,
-                }}
-              >
-                BioArt
-              </span>
-              <span className={styles.volumeIcon}>17.61</span>
-              <span>-53.52%</span>
-              <span style={{ color: "#00b4e6" }}>4.41%</span>
-              <span className={styles.volumeIcon}>1.3</span>
-              <span>163</span>
-              <span>150</span>
-            </p>
-            <h2>All</h2>
+            <h2>ALL</h2>
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
                 <span style={{ textAlign: "left" }}>{i.ranking}</span>
-                <span
-                  style={{
-                    flexGrow: 4,
-                    height: "50px",
-                    textAlign: "left",
-                    backgroundImage: "url(/icon_ba.svg)",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "50px",
-                    paddingLeft: 60,
-                  }}
-                >
+                <span style={{ 
+                  flexGrow: 4,
+                  height: '50px', 
+                  textAlign: "left",
+                  
+                  backgroundImage: "url(/icon_ba.svg)" ,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: "50px",
+                  paddingLeft: 60,
+                  }}>
+                  {/* <b style={{marginRight: 10 }}>
+                    <Image
+                      src="/icon_ba.svg"
+                      width={50}
+                      height={50}
+                      alt="icon"
+                    />
+                  </b> */}
                   {i.planet}
                 </span>
                 <span className={styles.volumeIcon}>{i.volume}</span>

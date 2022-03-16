@@ -15,26 +15,6 @@ const data = [
     items: 150,
   },
   {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
     ranking: 1239,
     planet: "BioArt",
     volume: 17.61,
@@ -192,7 +172,7 @@ export default function Home() {
               <span>163</span>
               <span>150</span>
             </p>
-            <h2>All</h2>
+            <h2>ALL</h2>
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
                 <span style={{ textAlign: "left" }}>{i.ranking}</span>

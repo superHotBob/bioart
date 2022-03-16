@@ -15,26 +15,6 @@ const data = [
     items: 150,
   },
   {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
-    ranking: 1229,
-    planet: "BioArt",
-    volume: 16.61,
-    hours: "-53.52%",
-    days: "4.02%",
-    floorPrice: 1.3,
-    owners: 160,
-    items: 150,
-  },
-  {
     ranking: 1239,
     planet: "BioArt",
     volume: 17.61,
@@ -169,12 +149,11 @@ export default function Home() {
             <span>Items</span>
           </div>
           <div className={styles.data}>
-            <p  className={styles.headerTableFirst}>
-              <span style={{ textAlign: "left",fontSize: '28px' }}>1239</span>
+            <p key={index} className={styles.headerTable}>
+              <span style={{ textAlign: "left" }}>1239</span>
               <span
                 style={{
                   flexGrow: 4,
-                  fontSize: '28px',
                   height: "50px",
                   textAlign: "left",
                   backgroundImage: "url(/icon_ba.svg)",
@@ -192,7 +171,7 @@ export default function Home() {
               <span>163</span>
               <span>150</span>
             </p>
-            <h2>All</h2>
+            <h2>ALL</h2>
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
                 <span style={{ textAlign: "left" }}>{i.ranking}</span>
