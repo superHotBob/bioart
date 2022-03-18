@@ -20,7 +20,7 @@ export default function Navbar() {
           placeholder="Search"
         />
         <Link href="/createitem">
-           <a className={styles.tab01} />
+           <a src="/#" className={styles.tab01} />
         </Link>
        
         <a className={styles.tab02} />
