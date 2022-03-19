@@ -265,7 +265,7 @@ export default function CreateItem() {
           content: "";
           position: absolute;
           top: 10%;
-          left: ${publicNft ? "5%" : "55%"};
+          left: ${publicNft ? "5%" : "50.8%"};
           width: 23px;
           transition: all 0.5s;
           height: 23px;

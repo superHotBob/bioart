@@ -264,11 +264,11 @@ export default function CreateItem() {
         .publicOn:before {
           content: "";
           position: absolute;
-          top: 10%;
-          left: ${publicNft ? "5%" : "55%"};
-          width: 23px;
+          top: 6%;
+          left: ${publicNft ? "7%" : "50%"};
+          width: 26px;
           transition: all 0.5s;
-          height: 23px;
+          height: 26px;
           background-color: #fff;
           border-radius: 52%;
           display: inline-block;

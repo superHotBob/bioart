@@ -1,17 +1,13 @@
 import Image from "next/image";
 import react, { useState } from "react";
-import { createMint } from "@solana/spl-token";
-const web3 = require("@solana/web3.js");
+import { createMint } from '@solana/spl-token';
+const web3 = require('@solana/web3.js');
 
 export default function CreateItem() {
   const [imageNft, selectedImageNft] = useState();
   const [type_nft, setTypeNft] = useState();
-  const [publicNft, setPublicNft] = useState(false);
 
-  const connection = new web3.Connection(
-    web3.clusterApiUrl("devnet"),
-    "confirmed"
-  );
+  const connection = new web3.Connection(web3.clusterApiUrl('devnet'), 'confirmed');
   console.log(connection);
   const viewImage = async (event) => {
     let file = event.target.files[0];
@@ -80,9 +76,9 @@ export default function CreateItem() {
       </div>
       <div className="contentBlock">
         <h1>Create New Item</h1>
-        <p className="itemName"> requared input</p>
-        <label>
-          <p className="itemName"> Item Name</p>
+        <p>* requared input</p>
+        <label className="itemName">
+          <p>* Item Name</p>
           <input type="text" />
         </label>
         <label>
@@ -95,14 +91,9 @@ export default function CreateItem() {
         </label>
         <label>
           <p>Hashtag</p>
-          <input
-            type="text"
-            placeholder="e.g) #Genome #Bio #NFT #Game #Tiger #Whale"
-          />
+          <input type="text" placeholder="e.g) #Genome #Bio #NFT #Game #Tiger #Whale"/>
         </label>
         <div className="btnBlock">
-          <span className="publicOn" onClick={() => setPublicNft(!publicNft)} />
-
           <button className="createBtn">Create</button>
           <button className="cancelBtn">Cancel</button>
         </div>
@@ -129,19 +120,20 @@ export default function CreateItem() {
           font-size: 25px;
         }
         .iconClose {
-          cursor: pointer;
-          position: absolute;
-          left: 93%;
-          top: 1%;
-          z-index: 100;
-          border-radius: 50%;
-          display: block;
-          background-color: #fff;
-          background-image: url(/close.svg);
-          background-size: 100%;
-          background-position: center;
-          width: 34px;
-          height: 34px;
+            cursor: pointer;
+            position: absolute;
+            left: 93%;
+            top: 1%;
+            z-index: 100;
+            border-radius: 50%;
+            display: block;
+            background-color: #fff;
+            background-image: url(/close.svg);
+            background-size: 100%;
+            background-position: center;
+            width: 34px;
+            height: 34px;
+          
         }
         .createItem {
           width: 78%;
@@ -168,7 +160,6 @@ export default function CreateItem() {
         .contentBlock {
           width: 60%;
         }
-
         label {
           display: block;
 
@@ -177,19 +168,17 @@ export default function CreateItem() {
           margin-bottom: 50px;
         }
         .itemName:before {
-          content: "";
-          background-image: url("/icon_star.svg");
-          background-position: center center;
-          background-repeat: no-repeat;
-          width: 10px;
-          height: 10px;
-          background-size: 10px;
-          display: inline-block;
-          margin-right: 5px;
-          margin-left: -15px;
-        }
-        .itemName {
-          margin-left: 15px;
+           
+    content: '';
+    background-image: url(../img/icon_star.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    background-size: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: -15px;
         }
         input,
         textarea {
@@ -197,9 +186,8 @@ export default function CreateItem() {
           font-size: 20px;
           height: 44px;
           border: 1px solid #c9c9c9;
-          padding: 20px;
+          padding: 0 20px 0 30px;
           border-radius: 20px;
-          outline: none;
         }
         textarea {
           height: 200px;
@@ -209,20 +197,13 @@ export default function CreateItem() {
           border: 1px solid #c9c9c9;
           border-radius: 20px;
           width: 25%;
-          margin: 0 0 0 20px;
+          margin: 50px 0 0 20px;
           float: right;
           font-size: 18px;
         }
         .cancelBtn {
           background-color: red;
           color: #fff;
-        }
-        .createBtn:hover {
-          background-color: #00b4e6;
-          color: #fff;
-        }
-        .cancelBtn:hover {
-          background-color: #000;
         }
         .supported {
           margin: 100px 20px 0;
@@ -236,9 +217,6 @@ export default function CreateItem() {
           cursor: pointer;
           height: 100%;
         }
-        .btnBlock {
-            margin-top: 100px;
-        }
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
@@ -249,37 +227,6 @@ export default function CreateItem() {
         .plus:hover {
           background-image: url("/icon_mrbk.svg");
         }
-        .publicOn {
-          height: 30px;
-          width: 60px;
-          position: relative;
-          top: 6px;
-          display: inline-block;
-          background-color: ${publicNft ? "#00b4e6" : "#c9c9c9"};
-          -webkit-transition: 0.5s;
-          transition: 0.4s;
-          border-radius: 20px;
-          cursor: pointer;
-        }
-        .publicOn:before {
-          content: "";
-          position: absolute;
-          top: 10%;
-          left: ${publicNft ? "5%" : "55%"};
-          width: 23px;
-          transition: all 0.5s;
-          height: 23px;
-          background-color: #fff;
-          border-radius: 52%;
-          display: inline-block;
-        }
-        .publicOn:after {
-          content: "Public";
-          position: absolute;
-          top: 17%;
-          left: 130%;
-          font-size: 22px;
-        }  
       `}</style>
     </div>
   );

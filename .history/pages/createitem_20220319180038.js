@@ -6,7 +6,6 @@ const web3 = require("@solana/web3.js");
 export default function CreateItem() {
   const [imageNft, selectedImageNft] = useState();
   const [type_nft, setTypeNft] = useState();
-  const [publicNft, setPublicNft] = useState(false);
 
   const connection = new web3.Connection(
     web3.clusterApiUrl("devnet"),
@@ -101,8 +100,8 @@ export default function CreateItem() {
           />
         </label>
         <div className="btnBlock">
-          <span className="publicOn" onClick={() => setPublicNft(!publicNft)} />
-
+          <span className="publicOn"/>
+            
           <button className="createBtn">Create</button>
           <button className="cancelBtn">Cancel</button>
         </div>
@@ -168,7 +167,7 @@ export default function CreateItem() {
         .contentBlock {
           width: 60%;
         }
-
+        
         label {
           display: block;
 
@@ -218,8 +217,8 @@ export default function CreateItem() {
           color: #fff;
         }
         .createBtn:hover {
-          background-color: #00b4e6;
-          color: #fff;
+            background-color: #00b4e6;
+            color: #fff;
         }
         .cancelBtn:hover {
           background-color: #000;
@@ -236,9 +235,6 @@ export default function CreateItem() {
           cursor: pointer;
           height: 100%;
         }
-        .btnBlock {
-            margin-top: 100px;
-        }
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
@@ -250,36 +246,34 @@ export default function CreateItem() {
           background-image: url("/icon_mrbk.svg");
         }
         .publicOn {
-          height: 30px;
-          width: 60px;
-          position: relative;
-          top: 6px;
-          display: inline-block;
-          background-color: ${publicNft ? "#00b4e6" : "#c9c9c9"};
-          -webkit-transition: 0.5s;
-          transition: 0.4s;
-          border-radius: 20px;
-          cursor: pointer;
+            height: 35px;
+            width: 68px;
+            
+           position: relative;
+
+            display: inline-block;
+            background-color: #00b4e6;
+            -webkit-transition: .5s;
+            transition: .4s;
+            border-radius: 20px;
+
         }
         .publicOn:before {
           content: "";
           position: absolute;
-          top: 10%;
-          left: ${publicNft ? "5%" : "55%"};
-          width: 23px;
-          transition: all 0.5s;
-          height: 23px;
+          top: 5%;
+          left: 10%;
+          width: 30px;
+          height: 30px;
           background-color: #fff;
-          border-radius: 52%;
+            border-radius: 50%;
+
           display: inline-block;
+         
+      
+
+
         }
-        .publicOn:after {
-          content: "Public";
-          position: absolute;
-          top: 17%;
-          left: 130%;
-          font-size: 22px;
-        }  
       `}</style>
     </div>
   );

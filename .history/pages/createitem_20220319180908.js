@@ -236,9 +236,6 @@ export default function CreateItem() {
           cursor: pointer;
           height: 100%;
         }
-        .btnBlock {
-            margin-top: 100px;
-        }
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
@@ -250,10 +247,9 @@ export default function CreateItem() {
           background-image: url("/icon_mrbk.svg");
         }
         .publicOn {
-          height: 30px;
-          width: 60px;
+          height: 35px;
+          width: 68px;
           position: relative;
-          top: 6px;
           display: inline-block;
           background-color: ${publicNft ? "#00b4e6" : "#c9c9c9"};
           -webkit-transition: 0.5s;
@@ -264,21 +260,20 @@ export default function CreateItem() {
         .publicOn:before {
           content: "";
           position: absolute;
-          top: 10%;
-          left: ${publicNft ? "5%" : "55%"};
-          width: 23px;
+          top: 6%;
+          left: ${publicNft ? "7%" : "50%"};
+          width: 30px;
           transition: all 0.5s;
-          height: 23px;
+          height: 30px;
           background-color: #fff;
-          border-radius: 52%;
+          border-radius: 50%;
           display: inline-block;
         }
         .publicOn:after {
           content: "Public";
           position: absolute;
-          top: 17%;
-          left: 130%;
-          font-size: 22px;
+          top: 6%;
+          left: 120%;
         }  
       `}</style>
     </div>
