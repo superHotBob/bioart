@@ -80,7 +80,7 @@ export default function CreateItem() {
             <>
               <form>
                 <label className="addImage">
-                  <div className="plus"/>
+                  <div className="plus"></div>
                   <input
                     type="file"
                     id="file"
@@ -173,9 +173,9 @@ export default function CreateItem() {
             
         }
         .createItem {
-          width: 69%;
+          width: 68%;
           height: auto;
-          margin: 90px auto;
+          margin: 100px auto;
           display: flex;
           justify-content: space-between;
           font-family: "GmarketSansMedium";
@@ -273,7 +273,7 @@ export default function CreateItem() {
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
-          background-size: 23%;
+          background-size: 30%;
           height: 500px;
           background-position: center;
         }

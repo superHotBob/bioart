@@ -173,9 +173,9 @@ export default function CreateItem() {
             
         }
         .createItem {
-          width: 69%;
+          width: 68%;
           height: auto;
-          margin: 90px auto;
+          margin: 100px auto;
           display: flex;
           justify-content: space-between;
           font-family: "GmarketSansMedium";

@@ -80,7 +80,7 @@ export default function CreateItem() {
             <>
               <form>
                 <label className="addImage">
-                  <div className="plus"/>
+                  <div className="plus"></div>
                   <input
                     type="file"
                     id="file"
@@ -104,7 +104,7 @@ export default function CreateItem() {
       </div>
       <div className="contentBlock">
         <h1>Create New Item</h1>
-        <p className="itemName requared"> requared input</p>
+        <p className="itemName"> requared input</p>
         <label>
           <p className="itemName"> Item Name</p>
           <input type="text" />
@@ -167,15 +167,10 @@ export default function CreateItem() {
           width: 34px;
           height: 34px;
         }
-        .requared {
-            margin-bottom: 60px;
-            color: #c9c9c9;
-            
-        }
         .createItem {
-          width: 69%;
+          width: 75%;
           height: auto;
-          margin: 90px auto;
+          margin: 100px auto;
           display: flex;
           justify-content: space-between;
           font-family: "GmarketSansMedium";
@@ -190,14 +185,13 @@ export default function CreateItem() {
         }
         h1 {
           margin-top: 0;
-          font-size: 38px;
           font-family: "GmarketSansLight";
         }
         .imageBlock {
-          width: 40%;
+          width: 38%;
         }
         .contentBlock {
-          width: 58%;
+          width: 60%;
         }
 
         label {
@@ -205,7 +199,7 @@ export default function CreateItem() {
 
           font-size: 22px;
           font-family: "GmarketSansMedium";
-          margin-bottom: 60px;
+          margin-bottom: 50px;
         }
         .itemName:before {
           content: "";
@@ -273,7 +267,7 @@ export default function CreateItem() {
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
-          background-size: 23%;
+          background-size: 30%;
           height: 500px;
           background-position: center;
         }

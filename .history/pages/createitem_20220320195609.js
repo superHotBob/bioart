@@ -80,7 +80,7 @@ export default function CreateItem() {
             <>
               <form>
                 <label className="addImage">
-                  <div className="plus"/>
+                  <div className="plus"></div>
                   <input
                     type="file"
                     id="file"
@@ -168,14 +168,14 @@ export default function CreateItem() {
           height: 34px;
         }
         .requared {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             color: #c9c9c9;
             
         }
         .createItem {
-          width: 69%;
+          width: 68%;
           height: auto;
-          margin: 90px auto;
+          margin: 80px auto;
           display: flex;
           justify-content: space-between;
           font-family: "GmarketSansMedium";
@@ -205,7 +205,7 @@ export default function CreateItem() {
 
           font-size: 22px;
           font-family: "GmarketSansMedium";
-          margin-bottom: 60px;
+          margin-bottom: 50px;
         }
         .itemName:before {
           content: "";
@@ -273,7 +273,7 @@ export default function CreateItem() {
         .plus {
           background-image: url("/icon_mrwt.svg");
           background-repeat: no-repeat;
-          background-size: 23%;
+          background-size: 30%;
           height: 500px;
           background-position: center;
         }
