@@ -1,4 +1,6 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
+import react, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { sliderGenoOne, sliderGenoTwo } from "../components/sliders";
 import Slider from "react-slick";
@@ -102,7 +104,7 @@ export default function Geno() {
       </div>
       <div className="subscribePlanets">
         <h2 className="planetsHeader"> Subscribe Planets</h2>
-        <Image src="/icon_graph_04.svg" width={70} height={70} alt="icon" />
+        <Image src="/icon_graph_04.svg" width={60} height={60} alt="icon" />
         <div className={styles.sliderWraper} style={{ width: "100%" }}>
           <Slider {...sliderGenoOne}>
             <div className="planetItems slider">
@@ -171,7 +173,7 @@ export default function Geno() {
         </div>
         <div className="likeBlok">
           <h2 className="planetsHeader">Like</h2>
-          <Image src="/icon_graph_04.svg" width={70} height={70} alt="icon" />
+          <Image src="/icon_graph_04.svg" width={58} height={58} alt="icon" />
           <div className={styles.sliderWraper} style={{ width: "100%" }}>
           <Slider {...sliderGenoTwo}>
               {Array(8)
@@ -182,7 +184,7 @@ export default function Geno() {
                       <div
                         className="itemSliderImageNft"
                         style={{
-                          paddingTop: "106%",
+                          paddingTop: "89%",
                           height: "100%",
                           marginBottom: 0,
                           backgroundImage: "url(/article-img.png)",
@@ -200,9 +202,9 @@ export default function Geno() {
                           </b>
                           <span>1.3</span>
                         </p>
-                        <p className="textNft">Artistic Transformation of Life into Information.</p>
+                        <p>Artistic Transformation of Life into Information.</p>
 
-                        <h5 className="lastStringNft">
+                        <h5>
                           <b>
                             <Image
                               src="/icon_like_on.svg"
@@ -464,7 +466,11 @@ export default function Geno() {
           background-size: 100%;
           background-position: center;
         }
-        
+        .iconSlider {
+          margin-top: 0;
+          width: 65px;
+          height: 65px;
+        }
         .lastString {
           position: absolute;
           width: 90%;
@@ -501,7 +507,7 @@ export default function Geno() {
           background-repeat: no-repeat;
           background-size: 23%;
           height: 500px;
-          width: 48.5%;
+          width: 48%;
           background-color: #ebebeb;
           border: 1px solid #c9c9c9;
           border-radius: 10px;
@@ -562,10 +568,26 @@ export default function Geno() {
         .itemSliderImageNft:hover {
           box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
-        
-        
-        
-      `}</style>      
+        .iconGraph {
+          margin: 0px 10px;
+          vertical-align: top;
+          display: inline-block;
+        }
+        h5 {
+          width: 90%;
+          margin: 10px auto;
+          padding: 10px 0;
+          border-top: 1px solid #c9c9c9;
+          font-size: 18px;
+          color: #333;
+          display: flex;
+          justify-content: space-between;
+        }
+        h5 b {
+          margin: 0 5px 0 0;
+          flex-grow: 1;
+        }
+      `}</style>
     </div>
   );
 }

@@ -17,7 +17,6 @@ export default function Layout({ children }) {
             color: #333;
             display: flex;
             justify-content: space-between;
-            font-family: "GmarketSansLight";
           }
           .lastStringNft b {
             margin: 0 5px 0 0;

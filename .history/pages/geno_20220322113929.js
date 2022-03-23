@@ -182,7 +182,7 @@ export default function Geno() {
                       <div
                         className="itemSliderImageNft"
                         style={{
-                          paddingTop: "106%",
+                          paddingTop: "89%",
                           height: "100%",
                           marginBottom: 0,
                           backgroundImage: "url(/article-img.png)",
@@ -200,7 +200,7 @@ export default function Geno() {
                           </b>
                           <span>1.3</span>
                         </p>
-                        <p className="textNft">Artistic Transformation of Life into Information.</p>
+                        <p>Artistic Transformation of Life into Information.</p>
 
                         <h5 className="lastStringNft">
                           <b>
@@ -464,7 +464,11 @@ export default function Geno() {
           background-size: 100%;
           background-position: center;
         }
-        
+        .iconSlider {
+          margin-top: 0;
+          width: 65px;
+          height: 65px;
+        }
         .lastString {
           position: absolute;
           width: 90%;

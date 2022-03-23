@@ -182,7 +182,7 @@ export default function Geno() {
                       <div
                         className="itemSliderImageNft"
                         style={{
-                          paddingTop: "106%",
+                          paddingTop: "89%",
                           height: "100%",
                           marginBottom: 0,
                           backgroundImage: "url(/article-img.png)",
@@ -200,7 +200,7 @@ export default function Geno() {
                           </b>
                           <span>1.3</span>
                         </p>
-                        <p className="textNft">Artistic Transformation of Life into Information.</p>
+                        <p>Artistic Transformation of Life into Information.</p>
 
                         <h5 className="lastStringNft">
                           <b>
@@ -464,7 +464,11 @@ export default function Geno() {
           background-size: 100%;
           background-position: center;
         }
-        
+        .iconSlider {
+          margin-top: 0;
+          width: 65px;
+          height: 65px;
+        }
         .lastString {
           position: absolute;
           width: 90%;
@@ -562,10 +566,42 @@ export default function Geno() {
         .itemSliderImageNft:hover {
           box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
-        
-        
-        
-      `}</style>      
+        .iconGraph {
+          margin: 0px 10px;
+          vertical-align: top;
+          display: inline-block;
+        }
+        h5 {
+          width: 90%;
+          margin: 10px auto;
+          padding: 10px 0;
+          border-top: 1px solid #c9c9c9;
+          font-size: 18px;
+          color: #333;
+          display: flex;
+          justify-content: space-between;
+        }
+        h5 b {
+          margin: 0 5px 0 0;
+          flex-grow: 1;
+        }
+      `}</style>
+      <style jsx global>{`
+      .lastStringNft {
+          width: 90%;
+          margin: 10px auto;
+          padding: 10px 0;
+          border-top: 1px solid #c9c9c9;
+          font-size: 18px;
+          color: #333;
+          display: flex;
+          justify-content: space-between;
+        }
+        .lastStringNft b {
+          margin: 0 5px 0 0;
+          flex-grow: 1;
+        }
+      `}</style>
     </div>
   );
 }

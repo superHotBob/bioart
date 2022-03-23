@@ -182,7 +182,7 @@ export default function Geno() {
                       <div
                         className="itemSliderImageNft"
                         style={{
-                          paddingTop: "106%",
+                          paddingTop: "89%",
                           height: "100%",
                           marginBottom: 0,
                           backgroundImage: "url(/article-img.png)",

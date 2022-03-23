@@ -182,7 +182,7 @@ export default function Geno() {
                       <div
                         className="itemSliderImageNft"
                         style={{
-                          paddingTop: "106%",
+                          paddingTop: "89%",
                           height: "100%",
                           marginBottom: 0,
                           backgroundImage: "url(/article-img.png)",
@@ -464,7 +464,11 @@ export default function Geno() {
           background-size: 100%;
           background-position: center;
         }
-        
+        .iconSlider {
+          margin-top: 0;
+          width: 65px;
+          height: 65px;
+        }
         .lastString {
           position: absolute;
           width: 90%;
@@ -540,11 +544,7 @@ export default function Geno() {
           font-family: "GmarketSansMedium";
           font-weight: 400;
         }
-        .itemSliderNft p:last-of-type {
-          font-size: 1vw;
-          margin: 15px;
-          font-family: "GmarketSansLight";
-        }
+        
         .itemSliderNft .img {
           margin: 15px;
         }

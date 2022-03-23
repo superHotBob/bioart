@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         {children}
         <style jsx global>{`
           .lastStringNft {
-            width: 90%;
+            width: 50%;
             margin: 10px auto;
             padding: 10px 0;
             border-top: 1px solid #c9c9c9;
@@ -17,7 +17,6 @@ export default function Layout({ children }) {
             color: #333;
             display: flex;
             justify-content: space-between;
-            font-family: "GmarketSansLight";
           }
           .lastStringNft b {
             margin: 0 5px 0 0;
@@ -31,14 +30,8 @@ export default function Layout({ children }) {
           .textNft {
             font-size: 1vw;
             margin: 15px;
-            text-align: center;
             font-family: "GmarketSansLight";
           }
-          .iconSlider {
-          margin-top: 0;
-          width: 65px;
-          height: 65px;
-        }
         `}</style>
       </main>
       <Footer />
