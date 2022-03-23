@@ -51,7 +51,7 @@ export default function Explore() {
         (i) => (minPrice || 0) < i.price && i.price < (e.target.value || 1000)
       );
     setNewNft([...Nft]);
-    
+    console.log(Nft);
   }
   function setMinPrice(e) {
     setMinPriceOld(e.target.value);
@@ -63,20 +63,8 @@ export default function Explore() {
         (i) => (maxPrice || 1000) > i.price && i.price > (e.target.value || 0)
       );
     setNewNft([...Nft]);
-    
+    console.log(Nft);
   }
-  function clear() {
-      setMaxPriceOld(1000);
-      setMinPriceOld(0);
-      let Nft = nft
-      .sort((a, b) =>
-        (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
-      )
-      .filter(
-        (i) =>  1000 > i.price && i.price >  0
-      );
-    setNewNft([...Nft]);
-  };
 
   return (
     <div className="mainExplore">
@@ -171,7 +159,7 @@ export default function Explore() {
                 value={maxPrice}
                 type="text"
               />
-              <b className="searchPrice" onClick={clear}/>
+              <b className="searchPrice" />
             </div>
             <div className="categories">
               <p onClick={() => setCategoriesView(!categoriesView)}>
@@ -514,17 +502,17 @@ export default function Explore() {
               20px no-repeat;
           }
           .status p {
-            background: #f9f9f9 url(${!statusView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url(${!priceView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
               20px no-repeat;
             border-bottom: ${statusView ? "1px solid #c9c9c9" : "none"};
           }
           .categories p {
-            background: #f9f9f9 url(${!categoriesView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url(${!priceView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
               20px no-repeat;
             border-bottom: ${categoriesView ? "1px solid #c9c9c9" : "none"};
           }
           .planets p {
-            background: #f9f9f9 url(${!planetView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url(${!priceView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
               20px no-repeat;
             border-bottom: 1px solid #c9c9c9;
           }

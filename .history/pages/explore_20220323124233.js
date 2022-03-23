@@ -73,7 +73,7 @@ export default function Explore() {
         (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
       )
       .filter(
-        (i) =>  1000 > i.price && i.price >  0
+        (i) => (maxPrice || 1000) > i.price && i.price > (e.target.value || 0)
       );
     setNewNft([...Nft]);
   };

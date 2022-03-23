@@ -68,14 +68,6 @@ export default function Explore() {
   function clear() {
       setMaxPriceOld(1000);
       setMinPriceOld(0);
-      let Nft = nft
-      .sort((a, b) =>
-        (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
-      )
-      .filter(
-        (i) =>  1000 > i.price && i.price >  0
-      );
-    setNewNft([...Nft]);
   };
 
   return (

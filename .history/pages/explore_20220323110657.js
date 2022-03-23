@@ -1,4 +1,4 @@
-import react, { useState, useRef } from "react";
+import react, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +25,6 @@ export default function Explore() {
   const [categoriesView, setCategoriesView] = useState(false);
   const [planetView, setPlanetView] = useState(false);
   const [newNft, setNewNft] = useState(nft);
-  const [sort, setSort] = useState("priceLow");
   const [minPrice, setMinPriceOld] = useState(0);
   const [maxPrice, setMaxPriceOld] = useState(1000);
 
@@ -33,50 +32,22 @@ export default function Explore() {
     if (e.target.value === "priceHight") {
       let Nft = newNft.sort((a, b) => (a.price < b.price ? 1 : -1));
       setNewNft([...Nft]);
-      setSort(e.target.value);
     } else {
       let Nft = newNft.sort((a, b) => (a.price > b.price ? 1 : -1));
       setNewNft([...Nft]);
-      setSort(e.target.value);
     }
-  }
+  };
 
   function setMaxPrice(e) {
-    setMaxPriceOld(e.target.value);
-    let Nft = nft
-      .sort((a, b) =>
-        (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
-      )
-      .filter(
-        (i) => (minPrice || 0) < i.price && i.price < (e.target.value || 1000)
-      );
+    setMaxPriceOld(e.target.value || 1000);  
+    let Nft = nft.filter(i=> (minPrice < i.price && i.price < e.target.value));
     setNewNft([...Nft]);
-    
   }
   function setMinPrice(e) {
-    setMinPriceOld(e.target.value);
-    let Nft = nft
-      .sort((a, b) =>
-        (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
-      )
-      .filter(
-        (i) => (maxPrice || 1000) > i.price && i.price > (e.target.value || 0)
-      );
+      setMinPriceOld(e.target.value || 0);
+    let Nft = nft.filter(i=> (maxPrice> i.price && i.price > e.target.value));
     setNewNft([...Nft]);
-    
   }
-  function clear() {
-      setMaxPriceOld(1000);
-      setMinPriceOld(0);
-      let Nft = nft
-      .sort((a, b) =>
-        (sort === "priceLow" ? a.price > b.price : a.price < b.price) ? 1 : -1
-      )
-      .filter(
-        (i) =>  1000 > i.price && i.price >  0
-      );
-    setNewNft([...Nft]);
-  };
 
   return (
     <div className="mainExplore">
@@ -165,13 +136,13 @@ export default function Explore() {
                 type="text"
               />
               <span style={{ margin: "0 10px" }}>-</span>
-              <input
+              <input 
                 className="priceInter"
                 onChange={setMaxPrice}
                 value={maxPrice}
-                type="text"
+                type="text" 
               />
-              <b className="searchPrice" onClick={clear}/>
+              <b className="searchPrice" />
             </div>
             <div className="categories">
               <p onClick={() => setCategoriesView(!categoriesView)}>
@@ -273,7 +244,7 @@ export default function Explore() {
         <div className="filterItem">
           {newNft.map((i, index) => (
             <>
-              <Link href="/nft/one" passHref key={index}>
+              <Link href="/nft/one" passHref>
                 <div
                   key={index}
                   className="itemSliderImageNft"
@@ -502,7 +473,7 @@ export default function Explore() {
             border-top: 1px solid #c9c9c9;
           }
           .price p {
-            background: #f9f9f9 url(${!priceView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url("/icon_filtermn_btn_off.svg") 95% center /
               20px no-repeat;
             border-bottom: ${priceView ? "1px solid #c9c9c9" : "none"};
           }
@@ -514,17 +485,17 @@ export default function Explore() {
               20px no-repeat;
           }
           .status p {
-            background: #f9f9f9 url(${!statusView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url("/icon_filtermn_btn_off.svg") 95% center /
               20px no-repeat;
             border-bottom: ${statusView ? "1px solid #c9c9c9" : "none"};
           }
           .categories p {
-            background: #f9f9f9 url(${!categoriesView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url("/icon_filtermn_btn_off.svg") 95% center /
               20px no-repeat;
             border-bottom: ${categoriesView ? "1px solid #c9c9c9" : "none"};
           }
           .planets p {
-            background: #f9f9f9 url(${!planetView ? "/icon_filtermn_btn_off.svg" : "/icon_filtermn_btn_on.svg"}) 95% center /
+            background: #f9f9f9 url("/icon_filtermn_btn_off.svg") 95% center /
               20px no-repeat;
             border-bottom: 1px solid #c9c9c9;
           }
@@ -558,7 +529,7 @@ export default function Explore() {
             border: 1px solid #c7c7c7;
             border-radius: 10px;
             height: 38px;
-            font-size: 18px;
+            font-size: 14px;
             padding: 10px;
             outline: none;
           }
