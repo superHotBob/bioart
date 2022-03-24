@@ -221,9 +221,7 @@ const NFT = () => {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref>
-            <button className="BtnPriceOffer">Price Offer</button>
-          </Link>
+          <button className="BtnPriceOffer">Price Offer</button>
           <div className="viewOffers">
             <h3>
               <b style={{ float: "left", margin: "9px" }}>

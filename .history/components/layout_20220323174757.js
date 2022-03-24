@@ -24,7 +24,7 @@ export default function Layout({ children }) {
             flex-grow: 1;
           }
           .iconGraph {
-            margin: 0px 15px;
+            margin: 0px 10px;
             vertical-align: top;
             display: inline-block;
           }

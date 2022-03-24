@@ -278,7 +278,7 @@ export default function Explore() {
                   key={index}
                   className="itemSliderImageNft"
                   style={{
-                    height: "500px",
+                    height: "520px",
                     width: "300px",
                     paddingTop: "270px",
                     backgroundImage:
@@ -291,7 +291,7 @@ export default function Explore() {
                     className="iconItemNft"
                     style={{ backgroundImage: "url(/icon_ba.svg)" }}
                   />
-                  <p style={{ textAlign: "center",margin: '10px 0 2px' }}>
+                  <p style={{ textAlign: "center" }}>
                     <b className="iconGraph">
                       <Image
                         src="/icon_graph_01.svg"
@@ -446,7 +446,16 @@ export default function Explore() {
             width: 18%;
             text-align: center;
           }
-          
+          .iconItemNft {
+            width: 65px;
+            height: 65px;
+            display: block;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            outline: 1px solid #ddd;
+          }
           .itemSliderImageNft p:first-of-type {
             font-size: 30px;
             margin: 15px;

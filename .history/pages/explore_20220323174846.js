@@ -291,7 +291,7 @@ export default function Explore() {
                     className="iconItemNft"
                     style={{ backgroundImage: "url(/icon_ba.svg)" }}
                   />
-                  <p style={{ textAlign: "center",margin: '10px 0 2px' }}>
+                  <p style={{ textAlign: "center" }}>
                     <b className="iconGraph">
                       <Image
                         src="/icon_graph_01.svg"

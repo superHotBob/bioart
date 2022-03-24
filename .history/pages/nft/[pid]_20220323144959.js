@@ -222,7 +222,7 @@ const NFT = () => {
         </div>
         <div className="offerPiceList">
           <Link href="/sell" passHref>
-            <button className="BtnPriceOffer">Price Offer</button>
+          <button className="BtnPriceOffer">Price Offer</button>
           </Link>
           <div className="viewOffers">
             <h3>

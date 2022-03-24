@@ -24,7 +24,7 @@ export default function Layout({ children }) {
             flex-grow: 1;
           }
           .iconGraph {
-            margin: 0px 15px;
+            margin: 0px 10px;
             vertical-align: top;
             display: inline-block;
           }
@@ -36,7 +36,7 @@ export default function Layout({ children }) {
           }
           .textNft {
             font-size: 1vw;
-            margin: 0 0 15px;
+            margin: 15px;
             text-align: center;
             font-weight: 300;
             font-family: "GmarketSansLight";

@@ -221,9 +221,7 @@ const NFT = () => {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref>
-            <button className="BtnPriceOffer">Price Offer</button>
-          </Link>
+          <button className="BtnPriceOffer">Price Offer</button>
           <div className="viewOffers">
             <h3>
               <b style={{ float: "left", margin: "9px" }}>
@@ -416,7 +414,6 @@ const NFT = () => {
           height: 500px;
           width: 40%;
           margin: 0;
-          border-radius: 10px;
           display: inline-block;
           background-image: url("/article-img.png");
           background-size: 100%;
