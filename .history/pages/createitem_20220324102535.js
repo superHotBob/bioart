@@ -20,7 +20,7 @@ export default function CreateItem() {
       const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
       const tokenAccounts = await connection.getTokenAccountsByOwner(
-        new PublicKey(wallet.publicKey.toBase58()),
+        new PublicKey('7NDNkxWFHFsFrw93pxv5UC8613pm67E8CoAYmd8mZ3rT'),
         {
           programId: TOKEN_PROGRAM_ID,
         }
