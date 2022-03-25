@@ -57,7 +57,7 @@ export default function Geno() {
       <h2 className="planetsHeader">Planets</h2>
       <div className="planets">
         <div className="planetItems">
-          <div className="image" />
+          <Image src="/planet-img-01.png" width={650} height={325} alt="item" />
           <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
           <h2>Genom NFT</h2>
           <p className="planetRslt">Sequencing date · 01.01.2022</p>
@@ -68,10 +68,7 @@ export default function Geno() {
           </div>
         </div>
         <div className="planetItems">
-          <div
-            className="image"
-            style={{ backgroundImage: "url(/planet-img-02.png)" }}
-          />
+          <Image src="/planet-img-02.png" width={650} height={325} alt="item" />
           <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
           <h2>Geno`s Colections</h2>
           <p className="planetRslt">Genome store</p>
@@ -81,10 +78,7 @@ export default function Geno() {
           </div>
         </div>
         <div className="planetItems">
-          <div
-            className="image"
-            style={{ backgroundImage: "url(/article-img.png)" }}
-          />
+          <Image src="/article-img.png" width={650} height={325} alt="item" />
           <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
           <h2>NYC Underground Stories</h2>
           <p className="planetRslt">Genome store</p>
@@ -94,10 +88,7 @@ export default function Geno() {
           </div>
         </div>
         <div className="planetItems">
-          <div
-            className="image"
-            style={{ backgroundImage: "url(/planet-img-02.png)" }}
-          />
+          <Image src="/planet-img-02.png" width={650} height={325} alt="item" />
           <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
           <h2>Genome Store</h2>
           <p className="planetRslt">Genome store</p>
@@ -469,10 +460,9 @@ export default function Geno() {
           background-size: 100%;
           background-position: center;
           outline: 1px solid #c9c9c9;
+          
         }
-        .planetItems b {
-          margin-top: -37px;
-        }
+
         .lastString {
           position: absolute;
           width: 90%;

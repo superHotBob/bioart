@@ -470,9 +470,7 @@ export default function Geno() {
           background-position: center;
           outline: 1px solid #c9c9c9;
         }
-        .planetItems b {
-          margin-top: -37px;
-        }
+
         .lastString {
           position: absolute;
           width: 90%;

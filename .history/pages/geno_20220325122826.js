@@ -463,16 +463,14 @@ export default function Geno() {
           position: relative;
           background-color: aliceblue;
           z-index: 12;
-          margin-top: -50px;
+          margin-top: -37px;
           display: inline-block;
           background-repeat: no-repeat;
           background-size: 100%;
           background-position: center;
           outline: 1px solid #c9c9c9;
         }
-        .planetItems b {
-          margin-top: -37px;
-        }
+
         .lastString {
           position: absolute;
           width: 90%;
