@@ -4,10 +4,7 @@ import styles from "../styles/Home.module.css";
 export default function Navbar() {
   return (
     <div className={styles.header}>
-      <Link href='/explore' passHref>
-        <Image src="/symbol.svg" width={70} height={50} alt="symbol" />
-      </Link>
-      
+      <Image src="/symbol.svg" width={70} height={50} alt="symbol" />
       <Link href="/">
         <a className={styles.learn}>Learn more about me &#9654;</a>
       </Link>
