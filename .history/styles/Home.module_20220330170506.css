@@ -518,7 +518,7 @@ p.headerTable:hover {
     display: inline-block;
   }
   .volumeIcon {
-    background: url(/icon_graph_01.svg) 0% 5%/ 32% no-repeat
+    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
   }
   .br {
     display: inline;

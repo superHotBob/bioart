@@ -498,7 +498,7 @@ p.headerTable:hover {
     display: inline-block;
     vertical-align: top;
     margin-left: 10px;
-    color: gray;
+    color: #c9c9c9;
     width: 79%;
   }
   .wrapFirstBlock {
@@ -518,7 +518,7 @@ p.headerTable:hover {
     display: inline-block;
   }
   .volumeIcon {
-    background: url(/icon_graph_01.svg) 0% 5%/ 32% no-repeat
+    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
   }
   .br {
     display: inline;
@@ -530,8 +530,7 @@ p.headerTable:hover {
     display: inline !important;
   }
   .headerTable span, .headerTableFirst span {
-    width: fit-content;
-    flex-grow: 0;
+    width: auto;
     line-height: 28px;
     text-align: right;
     

@@ -474,13 +474,13 @@ p.headerTable:hover {
   .tab03active,
   .tab03,
   .iconLike {
-    margin-left: 10px;
+    margin-left: 15px;
   }
   .tab01 {
     margin: 0;
   }
   .header .learn {
-    width: 100px;
+    width: 120px;
     margin: -34px 10px 0; 
   }
   .menu_tab {
@@ -497,16 +497,14 @@ p.headerTable:hover {
   .firstBlockTextOnly {
     display: inline-block;
     vertical-align: top;
-    margin-left: 10px;
-    color: gray;
-    width: 79%;
+    margin-left: 20px;
+    width: 70%;
   }
   .wrapFirstBlock {
     height: auto;
   }
   .sliderWraper {
     width: 100%;
-    margin: 20px auto 100px;
   }
   .itemSlider {
     height: 150vw;
@@ -518,7 +516,7 @@ p.headerTable:hover {
     display: inline-block;
   }
   .volumeIcon {
-    background: url(/icon_graph_01.svg) 0% 5%/ 32% no-repeat
+    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
   }
   .br {
     display: inline;
@@ -530,8 +528,7 @@ p.headerTable:hover {
     display: inline !important;
   }
   .headerTable span, .headerTableFirst span {
-    width: fit-content;
-    flex-grow: 0;
+    width: auto;
     line-height: 28px;
     text-align: right;
     
@@ -541,8 +538,5 @@ p.headerTable:hover {
   }
   .icons {
     width: 200px;
-  } 
-  .sliderBtnNext, .sliderBtnPrev {
-    display: none;
-  }
+  }  
 }

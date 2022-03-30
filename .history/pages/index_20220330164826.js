@@ -87,8 +87,8 @@ const settings = {
   speed: 500,
   slidesToShow: myscreen > 500 ? 3 : 1,
   slidesToScroll: myscreen > 500 ? 3 : 1,
-  nextArrow:  <NextArrow /> ,
-  prevArrow:  <PrevArrow /> ,
+  nextArrow: myscreen > 500 ? <NextArrow /> : '',
+  prevArrow: myscreen > 500 ? <PrevArrow /> : '',
   // appendDots: dots => (
   //   <div
   //     style={{
@@ -116,7 +116,7 @@ const settings = {
 function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <button type="button"  className={styles.sliderBtnNext} onClick={onClick} />
+    <button type="button" style={{right: myscreen > 500 ? '0' : '-25px'}} className={styles.sliderBtnNext} onClick={onClick} />
   );
 }
 

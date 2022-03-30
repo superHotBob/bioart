@@ -497,9 +497,8 @@ p.headerTable:hover {
   .firstBlockTextOnly {
     display: inline-block;
     vertical-align: top;
-    margin-left: 10px;
-    color: gray;
-    width: 79%;
+    margin-left: 20px;
+    width: 70%;
   }
   .wrapFirstBlock {
     height: auto;
@@ -518,7 +517,7 @@ p.headerTable:hover {
     display: inline-block;
   }
   .volumeIcon {
-    background: url(/icon_graph_01.svg) 0% 5%/ 32% no-repeat
+    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
   }
   .br {
     display: inline;
@@ -530,8 +529,7 @@ p.headerTable:hover {
     display: inline !important;
   }
   .headerTable span, .headerTableFirst span {
-    width: fit-content;
-    flex-grow: 0;
+    width: auto;
     line-height: 28px;
     text-align: right;
     
@@ -542,7 +540,7 @@ p.headerTable:hover {
   .icons {
     width: 200px;
   } 
-  .sliderBtnNext, .sliderBtnPrev {
-    display: none;
+  .slick-next {
+    right: 0 !important; 
   }
 }

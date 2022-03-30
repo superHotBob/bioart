@@ -116,7 +116,7 @@ const settings = {
 function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <button type="button"  className={styles.sliderBtnNext} onClick={onClick} />
+    <button type="button" style={{right: myscreen > 500 ? '0' : '-25px'}} className={styles.sliderBtnNext} onClick={onClick} />
   );
 }
 

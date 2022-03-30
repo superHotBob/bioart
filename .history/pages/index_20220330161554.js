@@ -87,8 +87,8 @@ const settings = {
   speed: 500,
   slidesToShow: myscreen > 500 ? 3 : 1,
   slidesToScroll: myscreen > 500 ? 3 : 1,
-  nextArrow:  <NextArrow /> ,
-  prevArrow:  <PrevArrow /> ,
+  nextArrow: myscreen > 500 ? <SampleNextArrow /> : null,
+  prevArrow: myscreen > 500 ? <SamplePrevArrow /> : null,
   // appendDots: dots => (
   //   <div
   //     style={{
@@ -113,14 +113,14 @@ const settings = {
   //   </div>
   // )
 };
-function NextArrow(props) {
+function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
-    <button type="button"  className={styles.sliderBtnNext} onClick={onClick} />
+    <button type="button" style={{...style,display: myscreen > 500 ? 'block' : none}} className={styles.sliderBtnNext} onClick={onClick} />
   );
 }
 
-function PrevArrow(props) {
+function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <button
@@ -157,10 +157,7 @@ function PrevArrow(props) {
       </section>
 
       <section className={styles.slider}>
-        <h2 style={{ textAlign: "center",margin: '100px 0 0' }}>
-          {myscreen > 500 ? 'Popular NFTs' : 'Notable NFTs'}
-        </h2>
-       
+        <h2 style={{ textAlign: "center" }}>Popular NFTs</h2>
         <div className={styles.sliderWraper}>
           <Slider {...settings}>
             <div className={styles.itemSlider}>
