@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+* {
+  background-repeat: no-repeat;
+}
+input, select, button, textarea {
+  outline: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+input::placeholder {
+  color: #c9c9c9;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  font-family: "GmarketSansMedium";
+}
+.error {
+  color: red;
+  font-size: 20px;
+}
+figure {
+  margin: 0;
+  display: inline-block;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  height: 44px;
+  padding-left: 20px;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid #c9c9c9;
+  border-radius: 20px;
+  background: url(/icon_drp_arr.svg) no-repeat 100% / 34% 35%;
+}
+.blue {
+  color: rgb(0, 180, 230);
+  font-size: 18px;
+  position: relative;
+}
+.solana::before {
+  content: url('/icon_graph_01.svg');
+  width: 24px;
+  display: inline-block;
+  margin-right: 5px;
+  position: absolute;
+  left: 20px;
+}
