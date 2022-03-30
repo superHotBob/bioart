@@ -43,6 +43,7 @@
   font-size: 14px;
   cursor: pointer;
   font-family: "GmarketSansLight";
+
   color: #333;
 }
 .header a:hover {
@@ -138,14 +139,14 @@
 .firstBlockText {
   position: absolute;
   top: 57%;
-  left: 75%;
+  left: 73%;
 }
-.firstBlockTextOnly h3 {
+.firstBlock h3 {
   font-size: 28px;
   font-weight: 400;
   margin: 10px 0;
 }
-.firstBlockTextOnly p {
+.firstBlock p {
   font-size: 18px;
   line-height: 1.3;
   font-family: "GmarketSansLight";
@@ -160,6 +161,7 @@
 .slider h2,
 .sliderNft h2 {
   font-size: 30px;
+
   letter-spacing: 2px;
   font-family: "GmarketSansLight";
   font-weight: 800;
@@ -222,15 +224,15 @@
   margin-bottom: 40px;
   cursor: pointer;
 }
-.sliderText {
+.itemSlider p:first-of-type {
   font-size: 26px;
   margin: 15px;
   font-family: "GmarketSansMedium";
   font-weight: 400;
 }
-.sliderText p {
+.itemSlider p:last-of-type {
   font-size: 20px;
-  margin: 15px 0 0;
+  margin: 15px;
   font-family: "GmarketSansLight";
 }
 .itemSlider .img {
@@ -248,8 +250,6 @@
 .icons {
   width: 164px;
   margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
 }
 .icons img:hover {
   cursor: pointer;
@@ -294,7 +294,7 @@ p.headerTable:hover {
   cursor: pointer;
   box-shadow: 0 1px 10px 5px rgba(220, 220, 220, 0.3);
 }
-.volumeIcon,.volumeIcon_2 {
+.volumeIcon {
   background: url("/icon_graph_01.svg") 21% 47%/ 16% no-repeat;
   padding-left: 10px;
 }
@@ -315,6 +315,7 @@ p.headerTable:hover {
   margin: 50px auto;
   text-align: center;
 }
+
 .btnPrev,
 .btnNext {
   border: none;
@@ -377,9 +378,6 @@ p.headerTable:hover {
   border-image-slice: 1;
   border-bottom: 1px solid #333;
 }
-.br {
-  display: none;
-}
 .footerIconText {
   font-size: 34px;
   font-family: "GmarketSansMedium";
@@ -389,8 +387,7 @@ p.headerTable:hover {
 }
 .footerText {
   font-size: 24px;
-  font-family: "GmarketSansMedium";
-  color: #c9c9c9;
+  font-family: "MyWebFontSCMediun", sans-serif;
 }
 .learnFooter {
   color: #00b4e6;
@@ -441,22 +438,6 @@ p.headerTable:hover {
   width: 35%;
   text-align: left;
 }
-.mobile {
-  display: inline-block;
-}
-.mobileYes {
-  display: none !important;
-}
-.planetsTableData { 
-    flex-grow: 4;
-    font-size: 28px;
-    height: 50px;
-    text-align: left;
-    background-image: url('/icon_ba.svg');
-    background-repeat: no-repeat;
-    background-size: 50px;
-    padding-left: 60px; 
-}
 @media screen and (max-width: 550px) {
   .search_input,
   .symbol {
@@ -493,49 +474,4 @@ p.headerTable:hover {
     background-color: #f9f9f9;
     padding: 30px 20px;
   }
-  .firstBlockTextOnly {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 20px;
-    width: 70%;
-  }
-  .wrapFirstBlock {
-    height: auto;
-  }
-  .sliderWraper {
-    width: 100%;
-  }
-  .itemSlider {
-    height: 150vw;
-    text-align: initial;
-  }
-  .sliderText {
-    width: 75%;
-    vertical-align: top;
-    display: inline-block;
-  }
-  .volumeIcon {
-    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
-  }
-  .br {
-    display: inline;
-  }
-  .mobile, .czczxc, .volumeIcon_2 {
-    display: none !important;
-  }
-  .mobileYes {
-    display: inline !important;
-  }
-  .headerTable span, .headerTableFirst span {
-    width: auto;
-    line-height: 28px;
-    text-align: right;
-    
-  }
-  .tableBody {
-    width: 90%;
-  }
-  .icons {
-    width: 200px;
-  }  
 }

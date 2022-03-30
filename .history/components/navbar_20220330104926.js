@@ -16,7 +16,9 @@ export default function Navbar() {
   return (
     <div className={styles.header}>
       <Link href="/explore" passHref>
-        <figure className={styles.symbol_icon}/>       
+        <figure className={styles.symbol_icon}/>
+        <Image src="/symbol.svg" width={70} height={50} alt="symbol" />
+        
       </Link>
 
       <Link href="/">

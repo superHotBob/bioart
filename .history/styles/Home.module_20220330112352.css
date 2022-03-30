@@ -43,6 +43,7 @@
   font-size: 14px;
   cursor: pointer;
   font-family: "GmarketSansLight";
+
   color: #333;
 }
 .header a:hover {
@@ -58,7 +59,7 @@
   height: 50px;
   width: 50px;
   display: inline-block;
-  background: url("/symbol.svg") center / 100% no-repeat;
+  background: url('/symbol.svg') center / 100% no-repeat;
 }
 .search_input {
   position: relative;
@@ -81,7 +82,7 @@
 .tab03active,
 .tab03,
 .iconLike {
-  height: 40px;
+  height: 40px;  
   width: 40px;
   vertical-align: sub;
   display: inline-block;
@@ -95,10 +96,10 @@
 .iconLike::before {
   position: absolute;
   font-size: 18px;
-  content: "250";
+  content: '250';
   left: -45px;
   top: 11px;
-  font-family: "GmarketSansLight";
+  font-family: 'GmarketSansLight';
   display: inline-block;
 }
 .tab01 {
@@ -128,30 +129,36 @@
 .wrapFirstBlock {
   width: 100%;
   height: 70.1vh;
-  background: url('/main_top_bgline.jpg')  bottom center / 100% 1px repeat-x;  
+  background-image: url(/main_top_bgline.jpg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-size: 100% 1px;
 }
 .firstBlock {
-  background: url('/main_top_bg.jpg') center / 100% auto no-repeat; 
+  background-image: url("/main_top_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
   height: 70vh;
   position: relative;
 }
 .firstBlockText {
   position: absolute;
   top: 57%;
-  left: 75%;
+  left: 73%;
 }
-.firstBlockTextOnly h3 {
+.firstBlock h3 {
   font-size: 28px;
   font-weight: 400;
   margin: 10px 0;
 }
-.firstBlockTextOnly p {
+.firstBlock p {
   font-size: 18px;
   line-height: 1.3;
-  font-family: "GmarketSansLight";
+  font-family: 'GmarketSansLight';
   font-weight: 800;
 }
-.gold {
+.firstBlock span {
   color: #ffa300;
   font-size: 16px;
   display: block;
@@ -160,8 +167,9 @@
 .slider h2,
 .sliderNft h2 {
   font-size: 30px;
+  
   letter-spacing: 2px;
-  font-family: "GmarketSansLight";
+  font-family: 'GmarketSansLight';
   font-weight: 800;
 }
 .sliderWraper,
@@ -222,15 +230,15 @@
   margin-bottom: 40px;
   cursor: pointer;
 }
-.sliderText {
+.itemSlider p:first-of-type {
   font-size: 26px;
   margin: 15px;
   font-family: "GmarketSansMedium";
   font-weight: 400;
 }
-.sliderText p {
+.itemSlider p:last-of-type {
   font-size: 20px;
-  margin: 15px 0 0;
+  margin: 15px;
   font-family: "GmarketSansLight";
 }
 .itemSlider .img {
@@ -248,8 +256,6 @@
 .icons {
   width: 164px;
   margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
 }
 .icons img:hover {
   cursor: pointer;
@@ -294,7 +300,7 @@ p.headerTable:hover {
   cursor: pointer;
   box-shadow: 0 1px 10px 5px rgba(220, 220, 220, 0.3);
 }
-.volumeIcon,.volumeIcon_2 {
+.volumeIcon {
   background: url("/icon_graph_01.svg") 21% 47%/ 16% no-repeat;
   padding-left: 10px;
 }
@@ -315,6 +321,7 @@ p.headerTable:hover {
   margin: 50px auto;
   text-align: center;
 }
+
 .btnPrev,
 .btnNext {
   border: none;
@@ -377,9 +384,6 @@ p.headerTable:hover {
   border-image-slice: 1;
   border-bottom: 1px solid #333;
 }
-.br {
-  display: none;
-}
 .footerIconText {
   font-size: 34px;
   font-family: "GmarketSansMedium";
@@ -389,8 +393,7 @@ p.headerTable:hover {
 }
 .footerText {
   font-size: 24px;
-  font-family: "GmarketSansMedium";
-  color: #c9c9c9;
+  font-family: "MyWebFontSCMediun", sans-serif;
 }
 .learnFooter {
   color: #00b4e6;
@@ -410,10 +413,10 @@ p.headerTable:hover {
   z-index: 100;
   text-align: center;
   padding: 20px;
-  background-color: #fff;
-  overflow-y: auto;
-  border: 1px solid #c9c9c9;
-  border-top: none;
+    background-color: #fff;
+    overflow-y: auto;
+    border: 1px solid #c9c9c9;
+    border-top: none;
 }
 .block_likes p {
   font-family: "GmarketSansLight";
@@ -431,7 +434,7 @@ p.headerTable:hover {
   outline-offset: 2px;
   vertical-align: middle;
 }
-.icon_like_last span {
+.icon_like_last span{
   border-radius: 0;
   outline: 1px solid #c9c9c9;
   outline-offset: 2px;
@@ -441,26 +444,9 @@ p.headerTable:hover {
   width: 35%;
   text-align: left;
 }
-.mobile {
-  display: inline-block;
-}
-.mobileYes {
-  display: none !important;
-}
-.planetsTableData { 
-    flex-grow: 4;
-    font-size: 28px;
-    height: 50px;
-    text-align: left;
-    background-image: url('/icon_ba.svg');
-    background-repeat: no-repeat;
-    background-size: 50px;
-    padding-left: 60px; 
-}
 @media screen and (max-width: 550px) {
-  .search_input,
-  .symbol {
-    display: none;
+  .search_input, .symbol {
+      display: none;
   }
   .header {
     padding: 20px 10px;
@@ -470,72 +456,18 @@ p.headerTable:hover {
     width: 50px;
   }
   .tab01,
-  .tab02,
-  .tab03active,
-  .tab03,
-  .iconLike {
-    margin-left: 15px;
-  }
-  .tab01 {
-    margin: 0;
-  }
-  .header .learn {
-    width: 120px;
-  }
-  .menu_tab {
-    margin-top: 5px;
-  }
-  .firstBlock {
-    height: 24vh;
-  }
-  .firstBlockText {
-    position: static;
-    background-color: #f9f9f9;
-    padding: 30px 20px;
-  }
-  .firstBlockTextOnly {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 20px;
-    width: 70%;
-  }
-  .wrapFirstBlock {
-    height: auto;
-  }
-  .sliderWraper {
-    width: 100%;
-  }
-  .itemSlider {
-    height: 150vw;
-    text-align: initial;
-  }
-  .sliderText {
-    width: 75%;
-    vertical-align: top;
-    display: inline-block;
-  }
-  .volumeIcon {
-    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
-  }
-  .br {
-    display: inline;
-  }
-  .mobile, .czczxc, .volumeIcon_2 {
-    display: none !important;
-  }
-  .mobileYes {
-    display: inline !important;
-  }
-  .headerTable span, .headerTableFirst span {
-    width: auto;
-    line-height: 28px;
-    text-align: right;
-    
-  }
-  .tableBody {
-    width: 90%;
-  }
-  .icons {
-    width: 200px;
-  }  
+.tab02,
+.tab03active,
+.tab03,
+.iconLike {
+  margin-left: 15px;
 }
+.tab01 {
+  margin: 0;
+}
+.header .learn {
+  width: 120px;
+}
+
+}
+

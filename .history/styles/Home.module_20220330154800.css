@@ -514,9 +514,6 @@ p.headerTable:hover {
     vertical-align: top;
     display: inline-block;
   }
-  .volumeIcon {
-    background: url(/icon_graph_01.svg) 50% 15%/ 16% no-repeat
-  }
   .br {
     display: inline;
   }
@@ -526,11 +523,9 @@ p.headerTable:hover {
   .mobileYes {
     display: inline !important;
   }
-  .headerTable span, .headerTableFirst span {
-    width: auto;
+  .headerTable span {
+    width: 100%;
     line-height: 28px;
-    text-align: right;
-    
   }
   .tableBody {
     width: 90%;

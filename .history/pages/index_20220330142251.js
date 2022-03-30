@@ -274,51 +274,63 @@ function SamplePrevArrow(props) {
         </div>
         <div className={styles.tableBody}>
           <div className={styles.headerTable}>
-            <span className={styles.mobile} style={{ textAlign: "left" }}>Ranking</span>
+            <span className={styles.modileNo} style={{ textAlign: "left" }}>Ranking</span>
             <span style={{ flexGrow: 4, textAlign: "left" }}>Planet</span>
-            <span >Volume ▼</span>
-            <span className={styles.mobile}>24h%</span>
-            <span className={styles.mobile}>7d%</span>
-            <span className={styles.mobile} >Floor price</span>
-            <span className={styles.mobile} >Owners</span>
-            <span className={styles.mobile} >Items</span>
+            <span className={styles.modileNo}>Volume ▼</span>
+            <span className={styles.modile}>24h%</span>
+            <span className={styles.modile}>7d%</span>
+            <span className={styles.modile}>Floor price</span>
+            <span className={styles.modile}>Owners</span>
+            <span className={styles.modile}>Items</span>
           </div>
 
           <div className={styles.data}>
             <p className={styles.headerTableFirst}>
-              <span className={styles.mobile} style={{ textAlign: "left", fontSize: "28px" }}>1239</span>
-              <span className={styles.planetsTableData}
-               style={{textAlign: 'left'}}
+              <span style={{ textAlign: "left", fontSize: "28px" }}>1239</span>
+              <span
+                style={{
+                  flexGrow: 4,
+                  fontSize: "28px",
+                  height: "50px",
+                  textAlign: "left",
+                  backgroundImage: "url(/icon_ba.svg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "50px",
+                  paddingLeft: 60,
+                }}
               >
-                BioArts <br className={styles.br} /> <span className={styles.mobileYes}> Rankin 1247</span>
+                BioArt
               </span>
-              <span className={styles.volumeIcon}>
-                17.61
-                <br className={styles.br} /> <span className={styles.mobileYes}> -53.52%</span>
-              </span>
-              <span className={styles.mobile}>-53.52%</span>
-              <span className={styles.mobile} style={{ color: "#00b4e6" }}>4.41%</span>
-              <span className={styles.volumeIcon_2}>1.3</span>
-              <span className={styles.mobile}>163</span>
+              <span className={styles.volumeIcon}>17.61</span>
+              <span>-53.52%</span>
+              <span style={{ color: "#00b4e6" }}>4.41%</span>
+              <span className={styles.volumeIcon}>1.3</span>
+              <span>163</span>
               <span className={styles.czczxc}>150</span>
             </p>
-            <h2 >All</h2>
+            <h2 className={styles.mobile}>All</h2>
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
-                <span className={styles.mobile} style={{ textAlign: "left" }}>Rankin {i.ranking}</span>
-                <span className={styles.planetsTableData} style={{textAlign: 'left'}}>
-                  
-                
-                  {i.planet} <br /><span className={styles.mobileYes}>Ranking {i.ranking}</span>
+                <span style={{ textAlign: "left" }}>{i.ranking}</span>
+                <span
+                  style={{
+                    flexGrow: 4,
+                    height: "50px",
+                    textAlign: "left",
+                    backgroundImage: "url(/icon_ba.svg)",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "50px",
+                    paddingLeft: 60,
+                  }}
+                >
+                  {i.planet}
                 </span>
-                <span className={styles.volumeIcon}>{i.volume}
-                <br className={styles.br} /> <span className={styles.mobileYes}>{i.hours}</span>
-                </span>
-                <span className={styles.mobile}>{i.hours}</span>
-                <span className={styles.mobile} style={{ color: "#00b4e6" }}>{i.days}</span>
-                <span className={styles.volumeIcon_2}>{i.floorPrice}</span>
-                <span className={styles.mobile}>{i.owners}</span>
-                <span className={styles.mobile}>{i.items}</span>
+                <span className={styles.volumeIcon}>{i.volume}</span>
+                <span>{i.hours}</span>
+                <span style={{ color: "#00b4e6" }}>{i.days}</span>
+                <span className={styles.volumeIcon}>{i.floorPrice}</span>
+                <span>{i.owners}</span>
+                <span>{i.items}</span>
               </p>
             ))}
           </div>

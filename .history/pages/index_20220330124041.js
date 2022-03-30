@@ -1,14 +1,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState, useEffect } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-export default function Home() {
-const [myscreen, setMyScreen] = useState(1300);
-useEffect(() => setMyScreen(window.screen.width));
+const myscreen = screen.width;
 const data = [
   {
     ranking: 1229,
@@ -85,10 +82,10 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: myscreen > 500 ? 3 : 1,
-  slidesToScroll: myscreen > 500 ? 3 : 1,
-  nextArrow: myscreen > 500 ? <SampleNextArrow /> : null,
-  prevArrow: myscreen > 500 ? <SamplePrevArrow /> : null,
+  slidesToShow: window.innerWidth > 500 ? 3 : 1,
+  slidesToScroll: window.innerWidth > 500 ? 3 : 1,
+  nextArrow: window.innerWidth > 500 ? <SampleNextArrow /> : null,
+  prevArrow: window.innerWidth > 500 ? <SamplePrevArrow /> : null,
   // appendDots: dots => (
   //   <div
   //     style={{
@@ -131,7 +128,7 @@ function SamplePrevArrow(props) {
     />
   );
 }
-
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -167,10 +164,10 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
               </span>
-              <div className={styles.sliderText}>
+              <div className="slider_text">
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -182,13 +179,11 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
               </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+              <p>BioArts</p>
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
@@ -197,7 +192,7 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image
                   src="/icon_facebook_b.png"
                   width={55}
@@ -205,10 +200,8 @@ function SamplePrevArrow(props) {
                   alt="facebook"
                 />
               </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+              <p>BioArts</p>
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
@@ -217,13 +210,11 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
               </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+              <p>BioArts</p>
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
@@ -232,13 +223,11 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
               </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+              <p>BioArts</p>
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
@@ -247,7 +236,7 @@ function SamplePrevArrow(props) {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <span style={{ marginLeft: 15 }}>
                 <Image
                   src="/icon_facebook_b.png"
                   width={55}
@@ -255,17 +244,15 @@ function SamplePrevArrow(props) {
                   alt="facebook"
                 />
               </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+              <p>BioArts</p>
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
           </Slider>
         </div>
       </section>
       <section className={styles.table}>
         <h2>
-          Rankings of Planets <br className={styles.br}/><a>over last 7 days ▼</a>
+          Rankings of Planets <a>over last 7 days ▼</a>
         </h2>
         <div className={styles.icons}>
           <Image src="/icon_cate_on_01.svg" width={54} height={40} alt="icon" />
@@ -274,51 +261,62 @@ function SamplePrevArrow(props) {
         </div>
         <div className={styles.tableBody}>
           <div className={styles.headerTable}>
-            <span className={styles.mobile} style={{ textAlign: "left" }}>Ranking</span>
+            <span style={{ textAlign: "left" }}>Ranking</span>
             <span style={{ flexGrow: 4, textAlign: "left" }}>Planet</span>
-            <span >Volume ▼</span>
-            <span className={styles.mobile}>24h%</span>
-            <span className={styles.mobile}>7d%</span>
-            <span className={styles.mobile} >Floor price</span>
-            <span className={styles.mobile} >Owners</span>
-            <span className={styles.mobile} >Items</span>
+            <span>Volume ▼</span>
+            <span>24h%</span>
+            <span>7d%</span>
+            <span>Floor price</span>
+            <span>Owners</span>
+            <span>Items</span>
           </div>
-
           <div className={styles.data}>
             <p className={styles.headerTableFirst}>
-              <span className={styles.mobile} style={{ textAlign: "left", fontSize: "28px" }}>1239</span>
-              <span className={styles.planetsTableData}
-               style={{textAlign: 'left'}}
+              <span style={{ textAlign: "left", fontSize: "28px" }}>1239</span>
+              <span
+                style={{
+                  flexGrow: 4,
+                  fontSize: "28px",
+                  height: "50px",
+                  textAlign: "left",
+                  backgroundImage: "url(/icon_ba.svg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "50px",
+                  paddingLeft: 60,
+                }}
               >
-                BioArts <br className={styles.br} /> <span className={styles.mobileYes}> Rankin 1247</span>
+                BioArt
               </span>
-              <span className={styles.volumeIcon}>
-                17.61
-                <br className={styles.br} /> <span className={styles.mobileYes}> -53.52%</span>
-              </span>
-              <span className={styles.mobile}>-53.52%</span>
-              <span className={styles.mobile} style={{ color: "#00b4e6" }}>4.41%</span>
-              <span className={styles.volumeIcon_2}>1.3</span>
-              <span className={styles.mobile}>163</span>
-              <span className={styles.czczxc}>150</span>
+              <span className={styles.volumeIcon}>17.61</span>
+              <span>-53.52%</span>
+              <span style={{ color: "#00b4e6" }}>4.41%</span>
+              <span className={styles.volumeIcon}>1.3</span>
+              <span>163</span>
+              <span>150</span>
             </p>
-            <h2 >All</h2>
+            <h2>All</h2>
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
-                <span className={styles.mobile} style={{ textAlign: "left" }}>Rankin {i.ranking}</span>
-                <span className={styles.planetsTableData} style={{textAlign: 'left'}}>
-                  
-                
-                  {i.planet} <br /><span className={styles.mobileYes}>Ranking {i.ranking}</span>
+                <span style={{ textAlign: "left" }}>{i.ranking}</span>
+                <span
+                  style={{
+                    flexGrow: 4,
+                    height: "50px",
+                    textAlign: "left",
+                    backgroundImage: "url(/icon_ba.svg)",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "50px",
+                    paddingLeft: 60,
+                  }}
+                >
+                  {i.planet}
                 </span>
-                <span className={styles.volumeIcon}>{i.volume}
-                <br className={styles.br} /> <span className={styles.mobileYes}>{i.hours}</span>
-                </span>
-                <span className={styles.mobile}>{i.hours}</span>
-                <span className={styles.mobile} style={{ color: "#00b4e6" }}>{i.days}</span>
-                <span className={styles.volumeIcon_2}>{i.floorPrice}</span>
-                <span className={styles.mobile}>{i.owners}</span>
-                <span className={styles.mobile}>{i.items}</span>
+                <span className={styles.volumeIcon}>{i.volume}</span>
+                <span>{i.hours}</span>
+                <span style={{ color: "#00b4e6" }}>{i.days}</span>
+                <span className={styles.volumeIcon}>{i.floorPrice}</span>
+                <span>{i.owners}</span>
+                <span>{i.items}</span>
               </p>
             ))}
           </div>

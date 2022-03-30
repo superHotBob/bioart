@@ -526,7 +526,7 @@ p.headerTable:hover {
   .mobileYes {
     display: inline !important;
   }
-  .headerTable span, .headerTableFirst span {
+  .headerTable span {
     width: auto;
     line-height: 28px;
     text-align: right;

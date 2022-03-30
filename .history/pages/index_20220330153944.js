@@ -288,7 +288,7 @@ function SamplePrevArrow(props) {
             <p className={styles.headerTableFirst}>
               <span className={styles.mobile} style={{ textAlign: "left", fontSize: "28px" }}>1239</span>
               <span className={styles.planetsTableData}
-               style={{textAlign: 'left'}}
+               
               >
                 BioArts <br className={styles.br} /> <span className={styles.mobileYes}> Rankin 1247</span>
               </span>
@@ -306,7 +306,7 @@ function SamplePrevArrow(props) {
             {data.map((i, index) => (
               <p key={index} className={styles.headerTable}>
                 <span className={styles.mobile} style={{ textAlign: "left" }}>Rankin {i.ranking}</span>
-                <span className={styles.planetsTableData} style={{textAlign: 'left'}}>
+                <span className={styles.planetsTableData}>
                   
                 
                   {i.planet} <br /><span className={styles.mobileYes}>Ranking {i.ranking}</span>
