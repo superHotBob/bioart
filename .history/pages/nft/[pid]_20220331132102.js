@@ -286,7 +286,7 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref >
+          <Link href="/sell" passHref className="mobileNo">
             <button className="BtnPriceOffer">Price Offer</button>
           </Link>
           <div className="viewOffers">
@@ -884,9 +884,6 @@ export default function NFT() {
           }
           .comment {
             margin-left: 0;
-          }
-          .BtnPriceOffer {
-            display: none;
           }
         }
       `}</style>

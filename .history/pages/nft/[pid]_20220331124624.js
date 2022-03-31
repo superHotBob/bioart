@@ -227,11 +227,11 @@ export default function NFT() {
             </h3>
             {viewListing && (
               <div className="datablock" >
-                <p className="headerData bold" style={{paddingLeft: (myscreen < 600) ? 40 : 0}}>
+                <p className="headerData bold">
                   <span>Price</span>
                   <span className="mobileNo" style={{ width: "86%" }}>Expiration</span>
                   <span>From</span>
-                  <span/>
+                  <span className="mobileNo"/>
                 </p>
                 {offers.map((i, index) => (
                   <p key={index} className="headerData data">
@@ -286,8 +286,8 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref >
-            <button className="BtnPriceOffer">Price Offer</button>
+          <Link href="/sell" passHref>
+            <button className="BtnPriceOffer mobileNo">Price Offer</button>
           </Link>
           <div className="viewOffers">
             <h3>
@@ -868,7 +868,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-         
           .menu {
             margin: 10px 0 0 86%;
           }
@@ -884,9 +883,6 @@ export default function NFT() {
           }
           .comment {
             margin-left: 0;
-          }
-          .BtnPriceOffer {
-            display: none;
           }
         }
       `}</style>

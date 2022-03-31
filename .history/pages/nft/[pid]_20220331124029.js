@@ -224,16 +224,15 @@ export default function NFT() {
                   onClick={() => setViewListing(!viewListing)}
                 />
               </b>
-            </h3>
-            {viewListing && (
-              <div className="datablock" >
-                <p className="headerData bold" style={{paddingLeft: (myscreen < 600) ? 40 : 0}}>
+            </h3>           
+              <div  className={`${viewListing ? "datablock" : "mobileNo"}`}>
+                <p className="headerData bold">
                   <span>Price</span>
                   <span className="mobileNo" style={{ width: "86%" }}>Expiration</span>
                   <span>From</span>
-                  <span/>
+                  <span />
                 </p>
-                {offers.map((i, index) => (
+                {offers.map((i, index) => (<>
                   <p key={index} className="headerData data">
                     <span className="solana blue">
                       {i.price}
@@ -245,10 +244,9 @@ export default function NFT() {
                     <span className="mobileNo" style={{ width: "40%" }}>{i.expiration}</span>
                     <span className="blue">{i.from}</span>
                     <figure className="delete_listing" />
-                  </p>
+                  </p></>
                 ))}
-              </div>
-            )}
+              </div>           
           </div>
           <div className="viewOffers">
             <h3>
@@ -286,8 +284,8 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref >
-            <button className="BtnPriceOffer">Price Offer</button>
+          <Link href="/sell" passHref>
+            <button className="BtnPriceOffer mobileNo">Price Offer</button>
           </Link>
           <div className="viewOffers">
             <h3>
@@ -868,7 +866,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-         
           .menu {
             margin: 10px 0 0 86%;
           }
@@ -884,9 +881,6 @@ export default function NFT() {
           }
           .comment {
             margin-left: 0;
-          }
-          .BtnPriceOffer {
-            display: none;
           }
         }
       `}</style>

@@ -99,7 +99,7 @@ export default function NFT() {
               style={{ flexGrow: 4, textAlign: "left" }}
               className="mobileNo"
             >
-              Owner by <b className="blue" style={{ margin:'0 5px', padding: 0 }}>you</b>
+              Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
             </div>
             <div className="view mobileNo">
               <b>
@@ -226,12 +226,12 @@ export default function NFT() {
               </b>
             </h3>
             {viewListing && (
-              <div className="datablock" >
-                <p className="headerData bold" style={{paddingLeft: (myscreen < 600) ? 40 : 0}}>
+              <div className="datablock">
+                <p className="headerData bold">
                   <span>Price</span>
-                  <span className="mobileNo" style={{ width: "86%" }}>Expiration</span>
+                  <span style={{ width: "86%" }}>Expiration</span>
                   <span>From</span>
-                  <span/>
+                  <span />
                 </p>
                 {offers.map((i, index) => (
                   <p key={index} className="headerData data">
@@ -242,7 +242,7 @@ export default function NFT() {
                         $316.46
                       </b>
                     </span>
-                    <span className="mobileNo" style={{ width: "40%" }}>{i.expiration}</span>
+                    <span style={{ width: "40%" }}>{i.expiration}</span>
                     <span className="blue">{i.from}</span>
                     <figure className="delete_listing" />
                   </p>
@@ -286,7 +286,7 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref >
+          <Link href="/sell" passHref>
             <button className="BtnPriceOffer">Price Offer</button>
           </Link>
           <div className="viewOffers">
@@ -850,7 +850,7 @@ export default function NFT() {
             display: inline-block;
           }
           .mobileNo {
-            display: none !important;
+            display: none;
           }
           .image,
           .content,
@@ -868,7 +868,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-         
           .menu {
             margin: 10px 0 0 86%;
           }
@@ -884,9 +883,6 @@ export default function NFT() {
           }
           .comment {
             margin-left: 0;
-          }
-          .BtnPriceOffer {
-            display: none;
           }
         }
       `}</style>

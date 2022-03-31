@@ -67,11 +67,19 @@ export default function NFT() {
         </div>
         {sidemenu && <SideMenu />}
       </div>
-      <div className="mobileYes" style={{ width: '100%',marginBottom: 10 }}>
+      <div className="mobileYes" style={{ width: "100%", marginBottom: 10 }}>
         <span>
           Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
         </span>
-        <span className="view" style={{marginTop: '-5px', alignItems: "center",float: 'right',width: '38%' }}>
+        <span
+          className="view"
+          style={{
+            marginTop: "-5px",
+            alignItems: "center",
+            float: "right",
+            width: "38%",
+          }}
+        >
           <b>
             <Image src="/icon_view.svg" width={30} height={30} alt="icon" />
           </b>
@@ -99,7 +107,10 @@ export default function NFT() {
               style={{ flexGrow: 4, textAlign: "left" }}
               className="mobileNo"
             >
-              Owner by <b className="blue" style={{ margin:'0 5px', padding: 0 }}>you</b>
+              Owner by{" "}
+              <b className="blue" style={{ margin: "0 5px", padding: 0 }}>
+                you
+              </b>
             </div>
             <div className="view mobileNo">
               <b>
@@ -226,12 +237,14 @@ export default function NFT() {
               </b>
             </h3>
             {viewListing && (
-              <div className="datablock" >
-                <p className="headerData bold" style={{paddingLeft: (myscreen < 600) ? 40 : 0}}>
+              <div className="datablock">
+                <p className="headerData bold">
                   <span>Price</span>
-                  <span className="mobileNo" style={{ width: "86%" }}>Expiration</span>
+                  <span className="mobileNo" style={{ width: "86%" }}>
+                    Expiration
+                  </span>
                   <span>From</span>
-                  <span/>
+                  <span />
                 </p>
                 {offers.map((i, index) => (
                   <p key={index} className="headerData data">
@@ -242,7 +255,9 @@ export default function NFT() {
                         $316.46
                       </b>
                     </span>
-                    <span className="mobileNo" style={{ width: "40%" }}>{i.expiration}</span>
+                    <span className="mobileNo" style={{ width: "40%" }}>
+                      {i.expiration}
+                    </span>
                     <span className="blue">{i.from}</span>
                     <figure className="delete_listing" />
                   </p>
@@ -286,8 +301,8 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref >
-            <button className="BtnPriceOffer">Price Offer</button>
+          <Link href="/sell" passHref>
+            <button className="BtnPriceOffer mobileNo">Price Offer</button>
           </Link>
           <div className="viewOffers">
             <h3>
@@ -302,30 +317,28 @@ export default function NFT() {
                 />
               </b>
             </h3>
-            {viewOffers && (
-              <div className="datablock">
-                <p className="headerData bold">
-                  <span style={{ width: "15%" }}>Price</span>
-                  <span>Expiration</span>
-                  <span>From</span>
+            <div className={viewOffers ? "datablock" : "mobileNo"}>
+              <p className="headerData bold">
+                <span style={{ width: "15%" }}>Price</span>
+                <span>Expiration</span>
+                <span>From</span>
+              </p>
+              {offers.map((i, index) => (
+                <p key={index} className="headerData data">
+                  <span className="solana blue">
+                    {i.price}
+                    <br />
+                    <b style={{ color: "#000", marginLeft: "-3.8vw" }}>
+                      $316.46
+                    </b>
+                  </span>
+                  <span>{i.expiration}</span>
+                  <span className="blue" style={{ padding: 0 }}>
+                    {i.from}
+                  </span>
                 </p>
-                {offers.map((i, index) => (
-                  <p key={index} className="headerData data">
-                    <span className="solana blue">
-                      {i.price}
-                      <br />
-                      <b style={{ color: "#000", marginLeft: "-3.8vw" }}>
-                        $316.46
-                      </b>
-                    </span>
-                    <span>{i.expiration}</span>
-                    <span className="blue" style={{ padding: 0 }}>
-                      {i.from}
-                    </span>
-                  </p>
-                ))}
-              </div>
-            )}
+              ))}
+            </div>
           </div>
           <div className="viewOffers">
             <h3 className="history">
@@ -340,18 +353,16 @@ export default function NFT() {
                 />
               </b>
             </h3>
-            {viewHistory && (
-              <div className="datablock">
-                <div style={{ height: 50 }}>
-                  <select>
-                    <option value="7">Last 7 Days</option>
-                  </select>
-                </div>
-                <div style={{ textAlign: "right", margin: "10px 0" }}>
-                  All Time Avg.Price <span className="solana blue">0.1</span>
-                </div>
+            <div className={viewHistory ? "datablock" : "mobileNo"}>
+              <div style={{ height: 50 }}>
+                <select>
+                  <option value="7">Last 7 Days</option>
+                </select>
               </div>
-            )}
+              <div style={{ textAlign: "right", margin: "10px 0" }}>
+                All Time Avg.Price <span className="solana blue">0.1</span>
+              </div>
+            </div>
           </div>
           <div className="viewOffers">
             <h3 className="log">
@@ -366,8 +377,8 @@ export default function NFT() {
                 />
               </b>
             </h3>
-            {viewLog && (
-              <div className="datablock">
+           
+              <div className={viewLog ? "datablock" : 'mobileNo'}>
                 <div style={{ height: 50 }}>
                   <select>
                     <option value="7">Filter</option>
@@ -404,7 +415,7 @@ export default function NFT() {
                   </span>
                 </p>
               </div>
-            )}
+          
           </div>
         </div>
         <section className={styles.sliderNft} style={{ marginTop: 150 }}>
@@ -555,7 +566,7 @@ export default function NFT() {
           display: inline-block;
           background-image: url("/article-img.png");
           background-size: 100%;
-          background-position: center top;         
+          background-position: center top;
         }
         .content {
           height: 500px;
@@ -707,7 +718,7 @@ export default function NFT() {
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
-          background-position: center top;          
+          background-position: center top;
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;
@@ -731,7 +742,7 @@ export default function NFT() {
         }
         .inputComment button {
           height: 44px;
-          width: 35%;         
+          width: 35%;
           border: 1px solid #c9c9c9;
           padding: 0 20px 0 30px;
           border-radius: 20px;
@@ -868,7 +879,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-         
           .menu {
             margin: 10px 0 0 86%;
           }
@@ -884,9 +894,6 @@ export default function NFT() {
           }
           .comment {
             margin-left: 0;
-          }
-          .BtnPriceOffer {
-            display: none;
           }
         }
       `}</style>

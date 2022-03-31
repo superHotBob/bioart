@@ -44,7 +44,6 @@ button {
   cursor: pointer;
   font-family: "GmarketSansMedium";
   font-size: 18px;
-  text-align: center;
 }
 .error {
   color: red;
