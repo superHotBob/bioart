@@ -17,7 +17,7 @@ const offers = [
 export default function NFT() {
   const router = useRouter();
   const [myscreen, setMyScreen] = useState(1300);
-  useEffect(() => setMyScreen(window.screen.width), []);
+  useEffect(() => setMyScreen(window.screen.width),[]);
   const [viewOffers, setViewOffers] = useState(false);
   const [viewLog, setViewLog] = useState(false);
   const [viewComment, setViewComment] = useState(false);
@@ -25,7 +25,7 @@ export default function NFT() {
   const [viewHistory, setViewHistory] = useState(false);
   const [sidemenu, viewSideMenu] = useState(false);
   const [viewInfo, setViewInfo] = useState(false);
-
+  
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -56,28 +56,17 @@ export default function NFT() {
     slidesToScroll: myscreen > 500 ? 4 : 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+   
   };
   return (
     <div className="mainNft">
-      <div style={{ margin: "20px 0", position: "relative" }}>
+      <div style={{ margin: "50px 0", position: "relative" }}>
         <div className="menu" onClick={() => viewSideMenu(!sidemenu)}>
           <p></p>
           <p></p>
           <p></p>
         </div>
         {sidemenu && <SideMenu />}
-      </div>
-      <div className="mobileYes" style={{ width: '100%',marginBottom: 10 }}>
-        <span>
-          Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
-        </span>
-        <span className="view" style={{marginTop: '-5px', alignItems: "center",float: 'right',width: '38%' }}>
-          <b>
-            <Image src="/icon_view.svg" width={30} height={30} alt="icon" />
-          </b>
-          <b className="bold">100</b>
-          <span>View</span>
-        </span>
       </div>
       <div>
         <div className="image" />
@@ -95,13 +84,10 @@ export default function NFT() {
             things in life. Appreciate all that you have. Soak in all the peace
           </p>
           <div className="lastString">
-            <div
-              style={{ flexGrow: 4, textAlign: "left" }}
-              className="mobileNo"
-            >
-              Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
+            <div style={{ flexGrow: 4, textAlign: "left" }}>
+              Owner by <b style={{color: 'rgb(0, 180, 230)'}}>you</b>
             </div>
-            <div className="view mobileNo">
+            <div className="view">
               <b>
                 <Image src="/icon_view.svg" width={30} height={30} alt="icon" />
               </b>
@@ -456,7 +442,7 @@ export default function NFT() {
                             />{" "}
                           </b>
                           <span style={{ flexGrow: 8, textAlign: "left" }}>
-                            15
+                            15.285
                           </span>
                           <b>
                             <Image
@@ -466,7 +452,7 @@ export default function NFT() {
                               alt="icon"
                             />
                           </b>
-                          <span>25</span>
+                          <span>25.000</span>
                         </h5>
                       </div>
                     </Link>
@@ -527,7 +513,7 @@ export default function NFT() {
           margin: 0 auto;
           height: auto;
           position: relative;
-        }
+        }       
         .menu {
           width: 40px;
           height: 40px;
@@ -555,7 +541,8 @@ export default function NFT() {
           display: inline-block;
           background-image: url("/article-img.png");
           background-size: 100%;
-          background-position: center top;         
+          background-position: center top;
+          background-repeat: no-repeat;
         }
         .content {
           height: 500px;
@@ -707,7 +694,8 @@ export default function NFT() {
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
-          background-position: center top;          
+          background-position: center top;
+          background-repeat: no-repeat;
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;
@@ -799,7 +787,7 @@ export default function NFT() {
           top: 3px;
         }
         .offer_comment {
-          background: #f3f3f3 url("/icon_bubblebk.svg") 16px 45% / 30px
+          background: #f3f3f3 url("/icon_bubblebk.svg") 16px center / 30px
             no-repeat;
         }
         h3 span.info:before {
@@ -836,33 +824,16 @@ export default function NFT() {
           outline: 1px solid #ccc;
           border: 2px solid #fff;
         }
-        .mobileYes {
-          display: none;
-        }
-        .mobileNo {
-          display: inline-flex;
-        }
         @media screen and (max-width: 1300px) {
           .mainNft {
             width: 80%;
           }
         }
         @media screen and (max-width: 550px) {
-          .mobileYes {
-            display: inline-block;
-          }
-          .mobileNo {
-            display: none;
-          }
-          .image,
-          .content,
-          .commemtListingInfo,
-          .offerPiceList {
+          .image, .content, .commemtListingInfo, .offerPiceList {
             display: block;
             width: 100%;
-          }
-          .image {
-            height: 110vw;
+
           }
           .mainNft {
             width: 98%;
@@ -875,16 +846,6 @@ export default function NFT() {
           }
           .itemSliderImageNft p:last-of-type {
             font-size: 14px;
-          }
-          h5 {
-            font-size: 14px;
-            align-items: center;
-          }
-          .lastString {
-            width: 70%;
-          }
-          .comment {
-            margin-left: 0;
           }
         }
       `}</style>

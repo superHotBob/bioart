@@ -67,7 +67,7 @@ export default function NFT() {
         </div>
         {sidemenu && <SideMenu />}
       </div>
-      <div className="mobileYes" style={{ width: '100%',marginBottom: 10 }}>
+      <div className="mobileYes" style={{ width: '100%' }}>
         <span>
           Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
         </span>

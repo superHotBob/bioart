@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 export default function Home() {
   const [myscreen, setMyScreen] = useState(1300);
-  useEffect(() => setMyScreen(window.screen.width),[]);
+  useEffect(() => setMyScreen(window.screen.width));
   const data = [
     {
       ranking: 1229,
@@ -89,11 +89,6 @@ export default function Home() {
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    afterChange: function(index) {
-      console.log(
-        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-      );
-    },
     appendDots: dots => (
       <div
         style={{

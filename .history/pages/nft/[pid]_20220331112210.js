@@ -67,7 +67,7 @@ export default function NFT() {
         </div>
         {sidemenu && <SideMenu />}
       </div>
-      <div className="mobileYes" style={{ width: '100%',marginBottom: 10 }}>
+      <div className="mobileYes" style={{ width: '100%' }}>
         <span>
           Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
         </span>
@@ -555,7 +555,8 @@ export default function NFT() {
           display: inline-block;
           background-image: url("/article-img.png");
           background-size: 100%;
-          background-position: center top;         
+          background-position: center top;
+          background-repeat: no-repeat;
         }
         .content {
           height: 500px;
@@ -707,7 +708,8 @@ export default function NFT() {
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
-          background-position: center top;          
+          background-position: center top;
+          background-repeat: no-repeat;
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;

@@ -493,9 +493,6 @@ p.headerTable:hover {
   }
   .menu_tab {
     margin-top: 5px;
-    justify-content: space-around;
-    display: flex;
-    width: 45%;
   }
   .firstBlock {
     height: 50vw;
@@ -503,23 +500,7 @@ p.headerTable:hover {
   .firstBlockText {
     position: static;
     background-color: #f9f9f9;
-    padding: 30px 15px;
-    border-image: linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(255, 0, 255, 1) 10%,
-    rgba(0, 0, 255, 1) 20%,
-    rgba(0, 255, 0, 1) 30%,
-    rgba(255, 255, 0, 1) 40%,
-    rgba(255, 0, 0, 1) 50%,
-    rgba(255, 255, 0, 1) 60%,
-    rgba(0, 255, 0, 1) 70%,
-    rgba(0, 0, 255, 1) 80%,
-    rgba(255, 0, 255, 1) 90%,
-    rgba(255, 0, 0, 1) 100%
-  );
-  border-image-slice: 1;
-  border-bottom: 1px solid #333;
+    padding: 30px 20px;
   }
   .firstBlockTextOnly {
     display: inline-block;
@@ -559,7 +540,7 @@ p.headerTable:hover {
     display: inline !important;
     font-size: 12px !important;
   }
-  .headerTable span, .headerTableFirst span, .bodyTable span {
+  .headerTable span, .headerTableFirst span {
     width: fit-content;
     flex-grow: 0;
     padding-top: 5px;
@@ -568,7 +549,6 @@ p.headerTable:hover {
   }
   .headerTable {
     justify-content: space-around;
-    padding: 5px 0;
   }
   .tableBody {
     width: 90%;
