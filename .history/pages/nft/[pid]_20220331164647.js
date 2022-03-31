@@ -498,7 +498,7 @@ export default function NFT() {
           padding: 0 20px 0 60px;
           height: 80px;          
           margin: 0;         
-          font: 400 22px/80px  "GmarketSansMedium";          
+          font: 800 22px/80px  "GmarketSansLight";          
         }        
         h3 span:before {
           width: 25px;
@@ -867,9 +867,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-          .datablock div select {
-            width: 100%;
-          }
          
           .menu {
             margin: 10px 0 0 86%;
@@ -890,9 +887,6 @@ export default function NFT() {
           }
           .BtnPriceOffer {
             display: none;
-          }
-          .info_block p {
-            font-size: 15px;
           }
         }
       `}</style>

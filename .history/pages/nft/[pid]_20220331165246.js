@@ -867,8 +867,8 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-          .datablock div select {
-            width: 100%;
+          .datablock select {
+            width: 65%;
           }
          
           .menu {

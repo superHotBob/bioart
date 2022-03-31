@@ -266,7 +266,7 @@ export default function NFT() {
               </b>
             </h3>
             {viewInfo && (
-              <div className="datablock info_block">
+              <div className="datablock">
                 <p>
                   <span>Contract Address</span>
                   <span className="blue">0xb47e...3bbb</span>
@@ -498,7 +498,7 @@ export default function NFT() {
           padding: 0 20px 0 60px;
           height: 80px;          
           margin: 0;         
-          font: 400 22px/80px  "GmarketSansMedium";          
+          font: 800 22px/80px  "GmarketSansLight";          
         }        
         h3 span:before {
           width: 25px;
@@ -628,11 +628,11 @@ export default function NFT() {
           border: 1px solid #c9c9c9;
           border-radius: 10px;          
         }
-        .info_block p {
+        .info p {
           font-size: 18px;
           color: #333;
         }
-        .info_block p span:last-of-type {
+        .info p span:last-of-type {
           float: right;
         }
         .iconSlider {
@@ -867,9 +867,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-          .datablock div select {
-            width: 100%;
-          }
          
           .menu {
             margin: 10px 0 0 86%;
@@ -890,9 +887,6 @@ export default function NFT() {
           }
           .BtnPriceOffer {
             display: none;
-          }
-          .info_block p {
-            font-size: 15px;
           }
         }
       `}</style>

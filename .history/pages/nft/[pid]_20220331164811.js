@@ -867,9 +867,6 @@ export default function NFT() {
           h1 {
             font-size: 25px;
           }
-          .datablock div select {
-            width: 100%;
-          }
          
           .menu {
             margin: 10px 0 0 86%;
@@ -890,9 +887,6 @@ export default function NFT() {
           }
           .BtnPriceOffer {
             display: none;
-          }
-          .info_block p {
-            font-size: 15px;
           }
         }
       `}</style>
