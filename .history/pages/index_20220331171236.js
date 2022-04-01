@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
-import   mainback  from '../public/main_top_bg.jpg';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -156,14 +155,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <section className={styles.wrapFirstBlock}>
-        <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" />
-        </div>
+        <div className={styles.firstBlock} />
         <div className={styles.firstBlockText}>
           <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
           <div className={styles.firstBlockTextOnly}>
-            {(myscreen < 500) && 
-            <Image src="/korona.png" width={25} height={25} alt="icon" />}
+          <Image src="/korona.png" width={25} height={25} alt="icon" className="mobileYes"/>
             <h3>BioArts</h3>
             <p>
               Artistic Transformation of

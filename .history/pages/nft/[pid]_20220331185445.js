@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import react, { useState, useEffect } from "react";
-import strelka from '../../public/strelka.png';
 import styles from "../../styles/Home.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -23,6 +22,7 @@ this collection is all about enjoying and cherishing the small
 things in life. Appreciate all that you have. Soak in all the peace`;
 
 export default function NFT() {
+ 
   const [myscreen, setMyScreen] = useState(1300);
   useEffect(() => setMyScreen(window.screen.width), []);
   const [viewText, setViewText] = useState(false);
@@ -75,19 +75,11 @@ export default function NFT() {
         </div>
         {sidemenu && <SideMenu />}
       </div>
-      <div className="mobileYes" style={{ width: "100%", marginBottom: 10 }}>
+      <div className="mobileYes" style={{ width: '100%',marginBottom: 10 }}>
         <span>
           Owner by <b style={{ color: "rgb(0, 180, 230)" }}>you</b>
         </span>
-        <span
-          className="view"
-          style={{
-            marginTop: "-5px",
-            alignItems: "center",
-            float: "right",
-            width: "38%",
-          }}
-        >
+        <span className="view" style={{marginTop: '-5px', alignItems: "center",float: 'right',width: '38%' }}>
           <b>
             <Image src="/icon_view.svg" width={30} height={30} alt="icon" />
           </b>
@@ -103,22 +95,19 @@ export default function NFT() {
             BioArts for Humans -<br /> # Night Explorer
           </h1>
           <p>{text}</p>
-          <div className="viewText" onClick={() => setViewText(!viewText)} />
+          <div className="viewText" onClick={()=>setViewText(!viewText)}/>          
           <div className="lastString">
-            <div
-              className="mobileNo"
-              style={{ flexGrow: 4, textAlign: "left" }}
+            <div className="mobileNo"
+              style={{ flexGrow: 4, textAlign: "left" }}              
             >
-              Owner by{" "}
-              <b className="blue" style={{ margin: "0 5px", padding: 0 }}>
-                you
-              </b>
+              Owner by <b className="blue" style={{ margin:'0 5px', padding: 0 }}>you</b>
             </div>
             <div className="view mobileNo">
               <b>
                 <Image src="/icon_view.svg" width={30} height={30} alt="icon" />
               </b>
-              1<span>View</span>
+              1
+              <span>View</span>
             </div>
             <div className="comment">
               <b>
@@ -129,7 +118,8 @@ export default function NFT() {
                   alt="icon"
                 />
               </b>
-              1<span>Comment</span>
+              1
+              <span>Comment</span>
             </div>
             <div className="like">
               <b>
@@ -140,26 +130,14 @@ export default function NFT() {
                   alt="icon"
                 />
               </b>
-              1<span>Like</span>
+              1
+              <span>Like</span>
             </div>
           </div>
+         
         </div>
       </div>
       <div style={{ marginTop: 50, height: "auto" }}>
-        <div className="sale">
-          <h3>
-            Sale end April 25,
-            <br /> 2020 at 10:15 KST
-          </h3>
-          <p>Minimum bid</p>
-
-          <div>
-            <b className="big blue">0.00</b>($ 0.00)
-            <span style={{margin: 5, verticalAlign: 'middle'}}>
-            <Image src={strelka} width="20" height="20" alt="strelka" /> </span>
-          </div>
-          <div className="saleBottom">Enter Bid</div>
-        </div>
         <div className="commemtListingInfo">
           <div className="viewOffers" style={{ marginTop: 0 }}>
             <h3 className="offer_comment">
@@ -250,17 +228,12 @@ export default function NFT() {
               </b>
             </h3>
             {viewListing && (
-              <div className="datablock">
-                <p
-                  className="headerData bold"
-                  style={{ paddingLeft: myscreen < 600 ? 40 : 0 }}
-                >
+              <div className="datablock" >
+                <p className="headerData bold" style={{paddingLeft: (myscreen < 600) ? 40 : 0}}>
                   <span>Price</span>
-                  <span className="mobileNo" style={{ width: "86%" }}>
-                    Expiration
-                  </span>
+                  <span className="mobileNo" style={{ width: "86%" }}>Expiration</span>
                   <span>From</span>
-                  <span />
+                  <span/>
                 </p>
                 {offers.map((i, index) => (
                   <p key={index} className="headerData data">
@@ -271,9 +244,7 @@ export default function NFT() {
                         $316.46
                       </b>
                     </span>
-                    <span className="mobileNo" style={{ width: "40%" }}>
-                      {i.expiration}
-                    </span>
+                    <span className="mobileNo" style={{ width: "40%" }}>{i.expiration}</span>
                     <span className="blue">{i.from}</span>
                     <figure className="delete_listing" />
                   </p>
@@ -283,7 +254,7 @@ export default function NFT() {
           </div>
           <div className="viewOffers">
             <h3 className="info">
-              Info
+            Info
               <b>
                 <Image
                   src={viewOffers ? "/icon_vwar_02.svg" : "/icon_vwar_01.svg"}
@@ -317,12 +288,12 @@ export default function NFT() {
           </div>
         </div>
         <div className="offerPiceList">
-          <Link href="/sell" passHref>
+          <Link href="/sell" passHref >
             <button className="BtnPriceOffer">Price Offer</button>
           </Link>
           <div className="viewOffers">
             <h3 className="offers">
-              Offers
+             Offers
               <b>
                 <Image
                   src={viewOffers ? "/icon_vwar_02.svg" : "/icon_vwar_01.svg"}
@@ -520,17 +491,17 @@ export default function NFT() {
           font-family: "GmarketSansLight";
           font-weight: 800;
         }
-        h1 {
+        h1 {         
           font: 400 38px/38px "GmarketSansMedium";
         }
-        h3 {
+        h3 {          
           padding: 0 20px 0 60px;
           height: 80px;
           border-top-left-radius: 12px;
-          border-top-right-radius: 12px;
-          margin: 0;
-          font: 400 22px/80px "GmarketSansMedium";
-        }
+          border-top-right-radius: 12px;            
+          margin: 0;         
+          font: 400 22px/80px  "GmarketSansMedium";          
+        }        
         h3 span:before {
           width: 25px;
           position: absolute;
@@ -575,7 +546,7 @@ export default function NFT() {
           display: inline-block;
           background-image: url("/article-img.png");
           background-size: 100%;
-          background-position: center top;
+          background-position: center top;         
         }
         .content {
           height: 500px;
@@ -586,26 +557,18 @@ export default function NFT() {
           position: relative;
         }
         .content p {
-          font: 800 20px/25px "GmarketSansLight";
-          height: ${viewText ? "auto" : "100px"};
+          font: 400 20px/25px "GmarketSansLight";
+          height: ${viewText ? 'auto' : '100px'};              
           color: #333;
-          -webkit-mask-image: ${viewText
-            ? "none"
-            : `-webkit-gradient(linear, left top, left bottom, 
+          -webkit-mask-image: ${viewText ? 'none' : `-webkit-gradient(linear, left top, left bottom, 
             from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))`};
         }
         .viewText {
           height: 30px;
-          background: url(${viewText
-              ? "/icon_vwar_01.svg"
-              : "/icon_vwar_02.svg"})
-            center / 5% no-repeat;
+          background: url(${viewText ? '/icon_vwar_01.svg' : '/icon_vwar_02.svg'}) center / 5% no-repeat;
         }
-        .viewText:hover {
-          background: url(${viewText
-              ? "/icon_vwar_01_hv.svg"
-              : "/icon_vwar_02_hv.svg"})
-            center / 5% no-repeat;
+        .viewText:hover {         
+          background: url(${viewText ? '/icon_vwar_01_hv.svg' : '/icon_vwar_02_hv.svg'}) center / 5% no-repeat;
         }
         .lastString {
           font-family: "GmarketSansMedium";
@@ -660,41 +623,12 @@ export default function NFT() {
           background-color: #f3f3f3;
           color: #000;
         }
-        .viewOffers,
-        .sale {
+        .viewOffers {
           width: 100%;
-          margin-bottom: 30px;
+          margin-top: 30px;
           height: auto;
           border: 1px solid #c9c9c9;
-          border-radius: 10px;
-        }
-        .sale {
-          height: 330px;
-          text-align: center;
-          position: relative;
-        }
-        .sale h3 {
-          line-height: 25px;
-          text-align: left;
-        }
-        .saleBottom {
-          position: absolute;
-          width: 100%;
-          border-bottom-left-radius: 6px;
-          border-bottom-right-radius: 6px;
-          bottom: 0;
-          color: #fff;
-          background: #00b4e6;
-          cursor: pointer;
-        }
-        .sale p, .saleBottom {
-          font: 400 24px/60px "GmarketSansMedium";
-          margin-bottom: 0;
-        }
-        .sale b {
-          font: 800 34px/60px "GmarketSansMedium";
-          padding: 0 10px 0 45px;
-          background: url("/icon_graph_01.svg") left 12% / 30% no-repeat;
+          border-radius: 10px;          
         }
         .info_block p {
           font-size: 18px;
@@ -730,11 +664,11 @@ export default function NFT() {
         }
         .viewItemBtn {
           width: 100%;
-          background-color: #00b4e6;
-          border-radius: 10px;
-          color: #fff;
-          border: none;
-          font: 400 18px/60px "GmarketSansMedium";
+          background-color: #00b4e6;        
+          border-radius: 10px;         
+          color: #fff;         
+          border: none;         
+          font: 400 18px/60px  "GmarketSansMedium";
           margin-bottom: 50px;
         }
         .viewItemBtn:hover {
@@ -765,7 +699,7 @@ export default function NFT() {
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
-          background-position: center top;
+          background-position: center top;          
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;
@@ -789,7 +723,7 @@ export default function NFT() {
         }
         .inputComment button {
           height: 44px;
-          width: 35%;
+          width: 35%;         
           border: 1px solid #c9c9c9;
           padding: 0 20px 0 30px;
           border-radius: 20px;
@@ -839,7 +773,7 @@ export default function NFT() {
           width: 20%;
           display: inline-block;
         }
-        .offers {
+        .offers {          
           background: #f3f3f3 url("/icon_graph_08.svg") 16px 13px / 30px
             no-repeat;
         }
@@ -854,12 +788,8 @@ export default function NFT() {
         .listing {
           background: #f3f3f3 url("/icon_pclbk.svg") 16px center / 30px
             no-repeat;
-        }
-        .sale h3 {
-          background: #f3f3f3 url(/clock_sale.jpg) 16px 35% / 30px no-repeat;
-          line-height: 30px;
-          height: 100px;
-          padding-top: 25px;
+         
+          
         }
         .offer_comment {
           background: #f3f3f3 url("/icon_bubblebk.svg") 16px 45% / 30px
@@ -868,6 +798,7 @@ export default function NFT() {
         .info {
           background: #f3f3f3 url("/icon_graph_09.svg") 16px 45% / 30px
             no-repeat;
+         
         }
         .filterLog {
           text-align: right;
@@ -927,7 +858,7 @@ export default function NFT() {
             margin: 0 auto;
           }
           .content p {
-            margin-top: 80px;
+            margin-top: 100px;
           }
           .image {
             height: 110vw;
@@ -941,7 +872,7 @@ export default function NFT() {
           .datablock div select {
             width: 100%;
           }
-
+         
           .menu {
             margin: 10px 0 0 86%;
           }

@@ -131,7 +131,7 @@
   background: url('/main_top_bgline.jpg')  bottom center / 100% 1px repeat-x;  
 }
 .firstBlock {
-  /* background: url('/main_top_bg.jpg') center / 100% auto no-repeat;  */
+  background: url('/main_top_bg.jpg') center / 100% auto no-repeat; 
   height: 70vh;
   position: relative;
 }

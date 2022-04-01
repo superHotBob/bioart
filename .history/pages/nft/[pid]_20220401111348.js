@@ -155,7 +155,7 @@ export default function NFT() {
 
           <div>
             <b className="big blue">0.00</b>($ 0.00)
-            <span style={{margin: 5, verticalAlign: 'middle'}}>
+            <span>
             <Image src={strelka} width="20" height="20" alt="strelka" /> </span>
           </div>
           <div className="saleBottom">Enter Bid</div>
@@ -680,8 +680,8 @@ export default function NFT() {
         .saleBottom {
           position: absolute;
           width: 100%;
-          border-bottom-left-radius: 6px;
-          border-bottom-right-radius: 6px;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
           bottom: 0;
           color: #fff;
           background: #00b4e6;
@@ -856,7 +856,7 @@ export default function NFT() {
             no-repeat;
         }
         .sale h3 {
-          background: #f3f3f3 url(/clock_sale.jpg) 16px 35% / 30px no-repeat;
+          background: #f3f3f3 url(/icon_bubblebk.svg) 16px 45% / 30px no-repeat;
           line-height: 30px;
           height: 100px;
           padding-top: 25px;

@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import react, { useState, useEffect } from "react";
-import strelka from '../../public/strelka.png';
 import styles from "../../styles/Home.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -151,14 +150,9 @@ export default function NFT() {
             Sale end April 25,
             <br /> 2020 at 10:15 KST
           </h3>
-          <p>Minimum bid</p>
+          <p>Minimum big</p>
 
-          <div>
-            <b className="big blue">0.00</b>($ 0.00)
-            <span style={{margin: 5, verticalAlign: 'middle'}}>
-            <Image src={strelka} width="20" height="20" alt="strelka" /> </span>
-          </div>
-          <div className="saleBottom">Enter Bid</div>
+          <div><b className="big solana blue">0.00</b></div>
         </div>
         <div className="commemtListingInfo">
           <div className="viewOffers" style={{ marginTop: 0 }}>
@@ -669,32 +663,14 @@ export default function NFT() {
           border-radius: 10px;
         }
         .sale {
-          height: 330px;
+          height: 300px;
           text-align: center;
-          position: relative;
         }
         .sale h3 {
           line-height: 25px;
-          text-align: left;
         }
-        .saleBottom {
-          position: absolute;
-          width: 100%;
-          border-bottom-left-radius: 6px;
-          border-bottom-right-radius: 6px;
-          bottom: 0;
-          color: #fff;
-          background: #00b4e6;
-          cursor: pointer;
-        }
-        .sale p, .saleBottom {
-          font: 400 24px/60px "GmarketSansMedium";
-          margin-bottom: 0;
-        }
-        .sale b {
-          font: 800 34px/60px "GmarketSansMedium";
-          padding: 0 10px 0 45px;
-          background: url("/icon_graph_01.svg") left 12% / 30% no-repeat;
+        .sale p {
+          font: 400 18px/60px "GmarketSansMedium";
         }
         .info_block p {
           font-size: 18px;
@@ -856,7 +832,7 @@ export default function NFT() {
             no-repeat;
         }
         .sale h3 {
-          background: #f3f3f3 url(/clock_sale.jpg) 16px 35% / 30px no-repeat;
+          background: #f3f3f3 url(/icon_bubblebk.svg) 16px 45% / 30px no-repeat;
           line-height: 30px;
           height: 100px;
           padding-top: 25px;

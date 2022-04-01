@@ -37,7 +37,6 @@ input::placeholder {
 }
 * {
   box-sizing: border-box;
-  background-repeat: no-repeat;
 }
 button {
   cursor: pointer;

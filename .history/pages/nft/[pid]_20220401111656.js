@@ -856,7 +856,7 @@ export default function NFT() {
             no-repeat;
         }
         .sale h3 {
-          background: #f3f3f3 url(/clock_sale.jpg) 16px 35% / 30px no-repeat;
+          background: #f3f3f3 url(/icon_bubblebk.svg) 16px 45% / 30px no-repeat;
           line-height: 30px;
           height: 100px;
           padding-top: 25px;

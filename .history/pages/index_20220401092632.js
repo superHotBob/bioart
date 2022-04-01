@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
-import   mainback  from '../public/main_top_bg.jpg';
+import { mainback } from './public/main_top_bg.jpg';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -156,9 +156,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <section className={styles.wrapFirstBlock}>
-        <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" />
-        </div>
+        <div className={styles.firstBlock} style={{background: `url(${mainback}) center / 100% auto no-repeat` }}/>
         <div className={styles.firstBlockText}>
           <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
           <div className={styles.firstBlockTextOnly}>
