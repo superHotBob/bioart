@@ -666,10 +666,8 @@ export default function Explore() {
           h5 span {
             font-size: 14px;
           }
-          .selectBlock input {
+          .one .selectBlock {
             width: 100%;
-            padding: 12px 28px 12px 60px;
-            background: url('/icon_search.svg') 6% 58% / 9% no-repeat;
           }
         }
         `}

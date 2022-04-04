@@ -668,8 +668,8 @@ export default function Explore() {
           }
           .selectBlock input {
             width: 100%;
-            padding: 12px 28px 12px 60px;
-            background: url('/icon_search.svg') 6% 58% / 9% no-repeat;
+            padding: 12px 20px 12px 50px;
+            background: url('/icon_search.svg') 5% 69% / 8% no-repeat;
           }
         }
         `}

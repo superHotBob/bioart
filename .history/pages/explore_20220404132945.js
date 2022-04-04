@@ -42,6 +42,7 @@ export default function Explore() {
       setSort(e.target.value);
     }
   }
+
   function setMaxPrice(e) {
     setMaxPriceOld(e.target.value);
     let Nft = nft
@@ -51,7 +52,8 @@ export default function Explore() {
       .filter(
         (i) => (minPrice || 0) < i.price && i.price < (e.target.value || 1000)
       );
-    setNewNft([...Nft]);    
+    setNewNft([...Nft]);
+    
   }
   function setMinPrice(e) {
     setMinPriceOld(e.target.value);
@@ -62,7 +64,8 @@ export default function Explore() {
       .filter(
         (i) => (maxPrice || 1000) > i.price && i.price > (e.target.value || 0)
       );
-    setNewNft([...Nft]);    
+    setNewNft([...Nft]);
+    
   }
   function clear() {
       setMaxPriceOld(1000);
@@ -346,7 +349,8 @@ export default function Explore() {
           }
           .filters {
             width: ${myscreen ?  20 : 100 }%;
-            margin-left: ${viewFilter ?  0 : myscreen ? -17 : 0}%;           
+            margin-left: ${viewFilter ?  0 : '-17%'};
+           
             display: inline-block;
             transition: all 0.5s;
           }
@@ -648,7 +652,8 @@ export default function Explore() {
           .selectBlock, .two {           
             margin: 20px auto;
             float: none;
-            width: 100%;           
+            width: 100%;
+            display: block;
             margin: 20px auto 0;
           }
           .count {
@@ -665,11 +670,6 @@ export default function Explore() {
           }
           h5 span {
             font-size: 14px;
-          }
-          .selectBlock input {
-            width: 100%;
-            padding: 12px 28px 12px 60px;
-            background: url('/icon_search.svg') 6% 58% / 9% no-repeat;
           }
         }
         `}
