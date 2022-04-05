@@ -1,5 +1,4 @@
 import styles from "../styles/Home.module.css";
-
 export const sliderGenoOne = {
     dots: false,
     infinite: true,
@@ -9,19 +8,19 @@ export const sliderGenoOne = {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,    
   };
-  export function NextArrow(props) {
+  function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <button type="button" style={{top: '49%'}} className={styles.sliderBtnNext} onClick={onClick} />
+      <button type="button" style={{top: '45%'}} className={styles.sliderBtnNext} onClick={onClick} />
     );
   }
   
-  export function PrevArrow(props) {
+  function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
       <button
         type="button"
-        style={{ zIndex: 1 , top: '49%'}}
+        style={{ zIndex: 1 , top: '45%'}}
         className={styles.sliderBtnPrev}
         onClick={onClick}
       />
@@ -37,4 +36,12 @@ export const sliderGenoOne = {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-  
+  export const sliderGenoTwoMobile = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    nextArrow: '',
+    prevArrow: '',
+  };

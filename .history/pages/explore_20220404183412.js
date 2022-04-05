@@ -641,7 +641,7 @@ export default function Explore() {
             border: none;
           }
           .itemSliderImageNft {
-            height: auto;
+            height: 344px;
             width: 48%;
             padding-top: 134px;
           }  
@@ -662,11 +662,9 @@ export default function Explore() {
           h5 b {            
             width: 17px;
             height: 17px;
-            
           }
-          h5 {
+          h5 span {
             font-size: 14px;
-            margin: 0 auto;            
           }
           .selectBlock input {
             width: 100%;

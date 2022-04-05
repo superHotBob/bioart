@@ -193,10 +193,9 @@ export default function Geno() {
             <Slider {...sliderGenoTwo}>
               {Array(8)
                 .fill(1)
-                .map((i, index) => (<>
-                   <Link href="/nft/one" passHref>
+                .map((i, index) => (
                   <div className="itemSliderNft" key={index}>
-                   
+                    <Link href="/nft/one" passHref>
                       <div
                         className="itemSliderImageNft"
                         style={{
@@ -205,8 +204,7 @@ export default function Geno() {
                           marginBottom: 0,
                           backgroundImage: (index % 2 == 0) ? "url(/article-img.png)" : "url(/cat.png)",
                         }}
-                      /> 
-                   
+                      >
                         <b
                           className="iconSlider"
                           style={{ backgroundImage: "url(/icon_ba.svg)" }}
@@ -236,7 +234,7 @@ export default function Geno() {
                             />{" "}
                           </b>
                           <span style={{ flexGrow: 8, textAlign: "left" }}>
-                            15
+                            15.285
                           </span>
                           <b>
                             <Image
@@ -246,12 +244,11 @@ export default function Geno() {
                               alt="icon"
                             />
                           </b>
-                          <span>25</span>
+                          <span>25.000</span>
                         </h5>
-                      
-                   
+                      </div>
+                    </Link>
                   </div>
-                  </Link></>
                 ))}
             </Slider>
           </div>
@@ -266,7 +263,7 @@ export default function Geno() {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           height: 56%;
-          background-size: cover;
+          background-size: contain;
           background-position: center top;
          
         }
@@ -460,7 +457,8 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {          
+        .planetItems {
+          margin-bottom: 30px;
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;
@@ -492,19 +490,18 @@ export default function Geno() {
         .planetItems b,
         .iconSlider {
           border-radius: 50%;
-          border: 1px solid #c9c9c9;
+          border: 3px solid #fff;
           width: 70px;
           height: 70px;
           position: relative;
           background-color: aliceblue;
-          padding: 1px 2px;
           z-index: 12;
-          margin-top: -35px;
+          margin-top: -50px;
           display: inline-block;
           background-repeat: no-repeat;
-          background-size: 96%;
+          background-size: 100%;
           background-position: center;
-          
+          outline: 1px solid #c9c9c9;
         }
         .planetItems b {
           margin-top: -37px;
@@ -575,10 +572,8 @@ export default function Geno() {
         }
         .itemSliderNft {
           height: auto;
-          margin: 5px;
+          padding: 0 10px;
           text-align: center;
-          border-radius: 10px;
-          border: 1px solid #ddd;
         }
         .itemSliderNft p:first-of-type {
           font-size: 26px;
@@ -591,25 +586,26 @@ export default function Geno() {
           margin: 15px;
           font-family: "GmarketSansLight";
         }
-       
+        .itemSliderNft .img {
+          margin: 15px;
+        }
         .itemSliderImageNft {
-          
-          border-bottom: 1px solid #ddd;
-          background-size: cover;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
+          outline-offset: 3px;
+          outline: 1px solid #ddd;
+          background-size: 100% auto;
+          border-radius: 10px;
           background-position: center top;
           background-repeat: no-repeat;
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;
         }
-        .itemSliderNft:hover {
-          box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2);
+        .itemSliderImageNft:hover {
+          box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
         h5 {
           width: 90%;
-          margin: 0 auto;
+          margin: 10px auto;
           padding: 10px 0;
           border-top: 1px solid #c9c9c9;
           font-size: 18px;
@@ -676,36 +672,8 @@ export default function Geno() {
           .iconSlider {
             width: 50px;
             height: 50px;
-            margin-top: 25px;
-          }
-          .itemSliderNft p:last-of-type, .itemSliderNft p:first-of-type {
-            font-size: 3.5vw;
-            margin: 0 0 15px;
-          }
-          .itemSliderNft p:first-of-type {
-            font-size: 22px;
-            margin: 0 0 5px;
-          }
-          .iconGraph {
-            height: 21px;
-            width: 21px;
-            margin: 5px;
-            vertical-align: text-bottom;
-          }
-         
-          h5 span {
-            font-size: 14px;
-            font-family: "GmarketSansLight";
-          }
-          h5 b {
-            height: 14px;
-            width: 5px;
-          }
-          .planetsHeader {
-            margin: 150px 0 35px;
           }
         }  
-
       `}</style>
     </div>
   );

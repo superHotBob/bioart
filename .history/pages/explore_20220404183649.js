@@ -662,11 +662,10 @@ export default function Explore() {
           h5 b {            
             width: 17px;
             height: 17px;
-            
           }
-          h5 {
+          h5 span {
             font-size: 14px;
-            margin: 0 auto;            
+            margin: 0 auto;
           }
           .selectBlock input {
             width: 100%;

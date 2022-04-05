@@ -12,7 +12,7 @@ export const sliderGenoOne = {
   export function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <button type="button" style={{top: '49%'}} className={styles.sliderBtnNext} onClick={onClick} />
+      <button type="button" style={{top: '45%'}} className={styles.sliderBtnNext} onClick={onClick} />
     );
   }
   
@@ -21,7 +21,7 @@ export const sliderGenoOne = {
     return (
       <button
         type="button"
-        style={{ zIndex: 1 , top: '49%'}}
+        style={{ zIndex: 1 , top: '45%'}}
         className={styles.sliderBtnPrev}
         onClick={onClick}
       />

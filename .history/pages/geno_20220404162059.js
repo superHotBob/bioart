@@ -1,37 +1,16 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { sliderGenoOne, PrevArrow, NextArrow } from "../components/sliders";
+import { sliderGenoOne, sliderGenoTwo } from "../components/sliders";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Link from "next/link";
 import ConnectWallet from "../components/connectWallet";
 import Wallet from "../components/wallet";
-import react, { useState, useEffect } from "react";
+import react, { useState } from "react";
 
 export default function Geno() {
   const [ wallet, setWallet] = useState(true);
-  const [myscreen, setMyScreen] = useState(true);
-
- const sliderGenoTwo = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: myscreen ? 4 : 2,
-    slidesToScroll: myscreen ? 4 : 2,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  }; 
-  const sliderGenoOne = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: myscreen ? 2 : 1,
-    slidesToScroll: myscreen ? 2 : 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-  }; 
-  useEffect(() => setMyScreen(window.screen.width > 500), []);
   const MySetWallet = () => setWallet(!wallet);
   return (
     <div className="genosMain">
@@ -55,8 +34,8 @@ export default function Geno() {
           <span>0.00</span>
         </div>
         <div className="token">
-          {myscreen && <><span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
-          <button>Copy</button></>}
+          <span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
+          <button>Copy</button>
           <div className="menu">
             <p></p>
             <p></p>
@@ -71,9 +50,8 @@ export default function Geno() {
           <span>0.00</span>
         </div>
         <div className="token">
-          {myscreen && <>
           <span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
-          <button>Copy</button></>}
+          <button>Copy</button>
           <div className="menu">
             <p></p>
             <p></p>
@@ -84,8 +62,7 @@ export default function Geno() {
       <h2 className="planetsHeader">Planets</h2>
       <div className="planets">
         <div className="planetItems">
-          <div className="image" style={{
-            backgroundImage: "url(/planet-img-01.png)"}}/>
+          <div className="image" />
           <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
           <h2>Genom NFT</h2>
           <p className="planetRslt">Sequencing date · 01.01.2022</p>
@@ -142,7 +119,7 @@ export default function Geno() {
         <div className={styles.sliderWraper} style={{ width: "100%" }}>
           <Slider {...sliderGenoOne}>
             <div className="planetItems slider">
-              <div className="image" style={{backgroundImage: "url(/article-img.png)"}} />
+              <div className="image" />
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
               <h2>Genom NFT</h2>
               <p className="planetRslt">Sequencing date · 01.01.2022</p>
@@ -153,7 +130,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider" style={{ width: "98%" }}>
-              <div className="image"  style={{backgroundImage: "url(/flower.png)"}}/>
+              <div className="image" />
               <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
               <h2>Genome Store</h2>
               <p className="planetRslt">Genome store</p>
@@ -163,7 +140,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider">
-              <div className="image" style={{backgroundImage: "url(/article-img.png)"}}/>
+              <div className="image" />
               <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
               <h2>Genome Store</h2>
               <p className="planetRslt">Genome store</p>
@@ -173,7 +150,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider">
-              <div className="image" style={{backgroundImage: "url(/flower.png)"}}/>
+              <div className="image" />
 
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
               <h2>Genom NFT</h2>
@@ -193,20 +170,18 @@ export default function Geno() {
             <Slider {...sliderGenoTwo}>
               {Array(8)
                 .fill(1)
-                .map((i, index) => (<>
-                   <Link href="/nft/one" passHref>
+                .map((i, index) => (
                   <div className="itemSliderNft" key={index}>
-                   
+                    <Link href="/nft/one" passHref>
                       <div
                         className="itemSliderImageNft"
                         style={{
                           paddingTop: "106%",
                           height: "100%",
                           marginBottom: 0,
-                          backgroundImage: (index % 2 == 0) ? "url(/article-img.png)" : "url(/cat.png)",
+                          backgroundImage: "url(/article-img.png)",
                         }}
-                      /> 
-                   
+                      >
                         <b
                           className="iconSlider"
                           style={{ backgroundImage: "url(/icon_ba.svg)" }}
@@ -236,7 +211,7 @@ export default function Geno() {
                             />{" "}
                           </b>
                           <span style={{ flexGrow: 8, textAlign: "left" }}>
-                            15
+                            15.285
                           </span>
                           <b>
                             <Image
@@ -246,12 +221,11 @@ export default function Geno() {
                               alt="icon"
                             />
                           </b>
-                          <span>25</span>
+                          <span>25.000</span>
                         </h5>
-                      
-                   
+                      </div>
+                    </Link>
                   </div>
-                  </Link></>
                 ))}
             </Slider>
           </div>
@@ -266,9 +240,7 @@ export default function Geno() {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           height: 56%;
-          background-size: cover;
-          background-position: center top;
-         
+          background: url("/planet-img-01.png") center / 100% no-repeat;
         }
         .genosMain {
           width: 69%;
@@ -460,7 +432,8 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {          
+        .planetItems {
+          margin-bottom: 30px;
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;
@@ -492,19 +465,18 @@ export default function Geno() {
         .planetItems b,
         .iconSlider {
           border-radius: 50%;
-          border: 1px solid #c9c9c9;
+          border: 3px solid #fff;
           width: 70px;
           height: 70px;
           position: relative;
           background-color: aliceblue;
-          padding: 1px 2px;
           z-index: 12;
-          margin-top: -35px;
+          margin-top: -50px;
           display: inline-block;
           background-repeat: no-repeat;
-          background-size: 96%;
+          background-size: 100%;
           background-position: center;
-          
+          outline: 1px solid #c9c9c9;
         }
         .planetItems b {
           margin-top: -37px;
@@ -575,10 +547,8 @@ export default function Geno() {
         }
         .itemSliderNft {
           height: auto;
-          margin: 5px;
+          padding: 0 10px;
           text-align: center;
-          border-radius: 10px;
-          border: 1px solid #ddd;
         }
         .itemSliderNft p:first-of-type {
           font-size: 26px;
@@ -591,25 +561,26 @@ export default function Geno() {
           margin: 15px;
           font-family: "GmarketSansLight";
         }
-       
+        .itemSliderNft .img {
+          margin: 15px;
+        }
         .itemSliderImageNft {
-          
-          border-bottom: 1px solid #ddd;
-          background-size: cover;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
+          outline-offset: 3px;
+          outline: 1px solid #ddd;
+          background-size: 100% auto;
+          border-radius: 10px;
           background-position: center top;
           background-repeat: no-repeat;
           height: 60%;
           margin-bottom: 40px;
           cursor: pointer;
         }
-        .itemSliderNft:hover {
-          box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2);
+        .itemSliderImageNft:hover {
+          box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
         h5 {
           width: 90%;
-          margin: 0 auto;
+          margin: 10px auto;
           padding: 10px 0;
           border-top: 1px solid #c9c9c9;
           font-size: 18px;
@@ -642,73 +613,10 @@ export default function Geno() {
         }
         @media screen and (max-width: 550px) {
           .genosMain {
-            width: 96%;
-            margin: 0 auto;
-          }
-          .planetItems {
             width: 100%;
-            height: 96vw;
-          }
-          .planetItems h2 {
-            font-size: 20px;
-          }
-          .btnGenomData, .plus {
-            width: 100%;
-          }
-          .sol {
-            padding: 0 25px;
-          }
-          .token {
-            width: 0;
-          }
-          .plus {
-            height: 96vw;
-          }
-          .lastString {
-            padding: 10px 0;
-          }
-          .lastString span:first-of-type:before,
-          .lastString span:first-of-type,
-          .lastString span:last-of-type,
-          .lastString span:last-of-type:before {
-            font-size: 12px;
-          }
-          .iconSlider {
-            width: 50px;
-            height: 50px;
-            margin-top: 25px;
-          }
-          .itemSliderNft p:last-of-type, .itemSliderNft p:first-of-type {
-            font-size: 3.5vw;
-            margin: 0 0 15px;
-          }
-          .itemSliderNft p:first-of-type {
-            font-size: 22px;
-            margin: 0 0 5px;
-          }
-          .iconGraph {
-            height: 21px;
-            width: 21px;
-            margin: 5px;
-            vertical-align: text-bottom;
-          }
-         
-          h5 span {
-            font-size: 14px;
-            font-family: "GmarketSansLight";
-          }
-          h5 b {
-            height: 14px;
-            width: 5px;
-          }
-          .planetsHeader {
-            margin: 150px 0 35px;
           }
         }  
-
       `}</style>
     </div>
   );
 }
-
-

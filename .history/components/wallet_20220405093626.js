@@ -177,12 +177,6 @@ export default function Wallet(props) {
                 right: 0;
                 width: 100%;
             }
-            h4 {
-              font-size: 32px;
-            }
-            .setting, .logOut {
-              padding-left: 60px;
-            }
           }    
         `}
       </style>

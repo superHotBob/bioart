@@ -460,7 +460,8 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {          
+        .planetItems {
+          margin-bottom: 30px;
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;
@@ -499,7 +500,7 @@ export default function Geno() {
           background-color: aliceblue;
           padding: 1px 2px;
           z-index: 12;
-          margin-top: -35px;
+          margin-top: -25px;
           display: inline-block;
           background-repeat: no-repeat;
           background-size: 96%;
@@ -591,7 +592,9 @@ export default function Geno() {
           margin: 15px;
           font-family: "GmarketSansLight";
         }
-       
+        .itemSliderNft .img {
+          margin: 15px;
+        }
         .itemSliderImageNft {
           
           border-bottom: 1px solid #ddd;
@@ -604,12 +607,12 @@ export default function Geno() {
           margin-bottom: 40px;
           cursor: pointer;
         }
-        .itemSliderNft:hover {
-          box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2);
+        .itemSliderImageNft:hover {
+          box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
         h5 {
           width: 90%;
-          margin: 0 auto;
+          margin: 10px auto;
           padding: 10px 0;
           border-top: 1px solid #c9c9c9;
           font-size: 18px;
@@ -676,7 +679,6 @@ export default function Geno() {
           .iconSlider {
             width: 50px;
             height: 50px;
-            margin-top: 25px;
           }
           .itemSliderNft p:last-of-type, .itemSliderNft p:first-of-type {
             font-size: 3.5vw;
@@ -687,12 +689,14 @@ export default function Geno() {
             margin: 0 0 5px;
           }
           .iconGraph {
-            height: 21px;
-            width: 21px;
+            height: 25px;
+            width: 25px;
             margin: 5px;
-            vertical-align: text-bottom;
+            vertical-align: bottom;
           }
-         
+          h5 {
+            margin: 0 auto;
+          }
           h5 span {
             font-size: 14px;
             font-family: "GmarketSansLight";
@@ -700,9 +704,6 @@ export default function Geno() {
           h5 b {
             height: 14px;
             width: 5px;
-          }
-          .planetsHeader {
-            margin: 150px 0 35px;
           }
         }  
 

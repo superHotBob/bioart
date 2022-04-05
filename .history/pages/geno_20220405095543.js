@@ -460,7 +460,8 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {          
+        .planetItems {
+          margin-bottom: 30px;
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;

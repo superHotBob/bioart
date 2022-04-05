@@ -659,15 +659,12 @@ export default function Explore() {
           .textNft {
             font-size: 14px;
           }
-          h5 b {            
+          h5 b, h5 span{            
             width: 17px;
             height: 17px;
-            
-          }
-          h5 {
             font-size: 14px;
-            margin: 0 auto;            
           }
+       
           .selectBlock input {
             width: 100%;
             padding: 12px 28px 12px 60px;

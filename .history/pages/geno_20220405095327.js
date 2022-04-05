@@ -460,7 +460,8 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {          
+        .planetItems {
+          margin-bottom: 30px;
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;
@@ -605,7 +606,7 @@ export default function Geno() {
           cursor: pointer;
         }
         .itemSliderNft:hover {
-          box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 0px 12px 5px rgba(34, 60, 80, 0.2);
         }
         h5 {
           width: 90%;

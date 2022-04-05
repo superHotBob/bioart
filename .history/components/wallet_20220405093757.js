@@ -180,9 +180,6 @@ export default function Wallet(props) {
             h4 {
               font-size: 32px;
             }
-            .setting, .logOut {
-              padding-left: 60px;
-            }
           }    
         `}
       </style>
