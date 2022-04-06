@@ -1,7 +1,6 @@
 import react, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LastStringNft from "../components/lastStringNft";
 
 const nft = [
   { price: "" },
@@ -14,7 +13,6 @@ const nft = [
 
 export default function Explore() {
   const [myscreen, setMyScreen] = useState(true);
-  const [viewMenu, setViewMenu] = useState(false);
   useEffect(() => setMyScreen(window.screen.width > 500), []);
   const [viewFilter, setViewFilter] = useState(false);
   const [statusView, setStatusView] = useState(false);
@@ -26,7 +24,6 @@ export default function Explore() {
   const [sort, setSort] = useState("priceLow");
   const [minPrice, setMinPriceOld] = useState(0);
   const [maxPrice, setMaxPriceOld] = useState(1000);
-  const [searchValue, setSearchValue] = useState('');
 
   function selectSort(e) {
     if (e.target.value === "priceHight") {
@@ -75,8 +72,8 @@ export default function Explore() {
 
   return (
     <>
-    <div className="header__image" />
-      <div className="main">        
+      <div className="mainExplore">
+        <div className="header__image" />
         <div className="filters">
           <div className="filtersHeader">
             <p>
@@ -87,169 +84,160 @@ export default function Explore() {
               />
             </p>
           </div>
-          <div style={{ opacity: viewFilter ? 1 : 0, transition: "all 0.5s" }}>
-            <div className="status">
-              <p onClick={() => setStatusView(!statusView)}>Status</p>
-              <label>
-                <input type="checkbox" />
-                <span>Buy Now</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>One Action</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>New</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Has offer</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Solid out</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Ready</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <span>Hidden</span>
-              </label>
-            </div>
-            <div className="price">
-              <p onClick={() => setPriceView(!priceView)}>Price</p>
-              <label>
+          {viewFilter && (
+            <>
+              <div className="status">
+                <p onClick={() => setStatusView(!statusView)}>Status</p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Buy Now</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>One Action</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>New</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>Has offer</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>Solid out</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>Ready</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>Hidden</span>
+                </label>
+              </div>
+              <div className="price">
+                <p onClick={() => setPriceView(!priceView)}>Price</p>
+                <label>
+                  <input
+                    type="radio"
+                    checked={priceСurrenсy === "usd"}
+                    onClick={() => setPriceCurrency("usd")}
+                  />
+                  <b>
+                    <Image
+                      src="/icon_cate_12.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>USD</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    checked={priceСurrenсy === "solana"}
+                    onClick={() => setPriceCurrency("solana")}
+                  />
+                  <b>
+                    <Image
+                      src="/icon_cate_off_13.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>SOLANA</span>
+                </label>
                 <input
-                  type="radio"
-                  checked={priceСurrenсy === "usd"}
-                  onClick={() => setPriceCurrency("usd")}
+                  style={{ margin: "0 0 15px 55px" }}
+                  className="priceInter"
+                  onChange={setMinPrice}
+                  value={minPrice}
+                  type="text"
                 />
-                <b>
-                  <Image
-                    src="/icon_cate_12.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>USD</span>
-              </label>
-              <label>
+                <span style={{ margin: "0 10px" }}>-</span>
                 <input
-                  type="radio"
-                  checked={priceСurrenсy === "solana"}
-                  onClick={() => setPriceCurrency("solana")}
+                  className="priceInter"
+                  onChange={setMaxPrice}
+                  value={maxPrice}
+                  type="text"
                 />
-                <b>
-                  <Image
-                    src="/icon_cate_off_13.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>SOLANA</span>
-              </label>
-              <input
-                style={{ margin: "0 0 15px 55px" }}
-                className="priceInter"
-                onChange={setMinPrice}
-                value={minPrice}
-                type="text"
-              />
-              <span style={{ margin: "0 10px" }}>-</span>
-              <input
-                className="priceInter"
-                onChange={setMaxPrice}
-                value={maxPrice}
-                type="text"
-              />
-              <b className="searchPrice" onClick={clear} />
-            </div>
-            <div className="categories">
-              <p onClick={() => setCategoriesView(!categoriesView)}>
-                Categories
-              </p>
-              <label>
-                <input type="checkbox" />
-                <b>
-                  <Image
-                    src="/icon_cate_star.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>Subscribe</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <b>
-                  <Image
-                    src="/icon_cate_off_01.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>All</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <b>
-                  <Image
-                    src="/icon_cate_off_02.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>Genome</span>
-              </label>
-              <label>
-                <input type="checkbox" />
-                <b>
-                  <Image
-                    src="/icon_cate_04.svg"
-                    width={30}
-                    height={30}
-                    alt="icon"
-                  />{" "}
-                </b>
-                <span>Common</span>
-              </label>
-            </div>
-            <div className="planets">
-              <p onClick={() => setPlanetView(!planetView)}>Planets</p>
-              <label className="planetsSearchLabel">
-                <input
-                  type="search"
-                  placeholder="search"
-                  value={searchValue}
-                  onChange={(e)=>setSearchValue(e.target.value)}
-                  className="planetsSearch"
-                />
-              </label>
-            </div>
-          </div>
+                <b className="searchPrice" onClick={clear} />
+              </div>
+              <div className="categories">
+                <p onClick={() => setCategoriesView(!categoriesView)}>
+                  Categories
+                </p>
+                <label>
+                  <input type="checkbox" />
+                  <b>
+                    <Image
+                      src="/icon_cate_star.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>Subscribe</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <b>
+                    <Image
+                      src="/icon_cate_off_01.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>All</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <b>
+                    <Image
+                      src="/icon_cate_off_02.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>Genome</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <b>
+                    <Image
+                      src="/icon_cate_04.svg"
+                      width={30}
+                      height={30}
+                      alt="icon"
+                    />{" "}
+                  </b>
+                  <span>Common</span>
+                </label>
+              </div>
+              <div className="planets">
+                <p onClick={() => setPlanetView(!planetView)}>Planets</p>
+                <label className="planetsSearchLabel">
+                  <input
+                    type="search"
+                    placeholder="search"
+                    className="planetsSearch"
+                  />
+                </label>
+              </div>
+            </>
+          )}
         </div>
         <div className="items">
-          <div className="items__icons">
-            <b
-              className="iconFilterMobile"
-              onClick={() => setViewFilter(!viewFilter)}
-            />
-            <div className="menuMobile" onClick={() => setViewMenu(!viewMenu)}>
-              <p/><p/><p/>              
-            </div>
-          </div>
           <div className="genomeStoreHeader">
             <div className="genomeStoreHeader__text">
               <h2>Gemone Story</h2>
-              <div className="icons">
+              <p className="icons">
                 <figure>
                   <Image
                     src="/icon_tele_b.png"
@@ -282,11 +270,11 @@ export default function Explore() {
                     alt="icon"
                   />
                 </figure>
-                <Link href="/">
-                  <a>bioart.net</a>
-                </Link>
-              </div>
-              <p>Artistic Transformation of Life into Information.</p>
+                <Link href='/'>
+                    <a>bioart.net</a>
+                </Link>                
+              </p>
+              <p>Artistic Transformation of  Life into Information.</p>
               <div className="counters">
                 <span>
                   Item <b>8</b>
@@ -297,7 +285,11 @@ export default function Explore() {
                 <span>
                   Floor price
                   <figure>
-                    <Image src="/icon_graph_01.svg" layout="fill" alt="icon" />
+                    <Image
+                      src="/icon_graph_01.svg"
+                      layout="fill"
+                      alt="icon"
+                    />
                   </figure>{" "}
                   <b>---</b>
                 </span>
@@ -315,14 +307,14 @@ export default function Explore() {
           </div>
           <div className="allSorting">
             <div className="selectBlock">
-              {myscreen && (
+              {myscreen && 
                 <select className="one">
                   <option>All</option>
                   <option>Subscribe</option>
                   <option>Genome</option>
                   <option>Common</option>
                 </select>
-              )}
+              }
               <input type="search" placeholder="search" />
             </div>
             <select className="two" onChange={selectSort}>
@@ -342,7 +334,7 @@ export default function Explore() {
             </select>
           </div>
           <p className="count">
-            <span className="mobileNo">All NFTs</span>
+            <span>All NFTs</span>
             <span>12,258 Items</span>
           </p>
           <div className="filterItem">
@@ -353,7 +345,7 @@ export default function Explore() {
                   <div
                     key={index}
                     className="itemSliderImageNft"
-                    style={{
+                    style={{                    
                       backgroundImage:
                         index % 2
                           ? "url(/article-img.png)"
@@ -364,28 +356,50 @@ export default function Explore() {
                       className="iconItemNft"
                       style={{ backgroundImage: "url(/icon_ba.svg)" }}
                     />
-                    <div className="itemSlider__solana" style={{ textAlign: "center", margin: "10px 0 2px" }}>
+                    <p style={{ textAlign: "center", margin: "10px 0 2px" }}>
                       {i.price ? (
                         <>
                           {" "}
-                          <figure className="itemSlider__iconGraph">
+                          <b className="iconGraph">
                             <Image
                               src="/icon_graph_01.svg"
                               alt="icon"
-                              layout="fill"
+                              width={35}
+                              height={35}
                             />
-                          </figure>
-                          <span className="itemSlider__price">{i.price}</span>
+                          </b>
+                          <span>{i.price}</span>
                         </>
                       ) : (
                         <b className="solidout">SOLID OUT</b>
                       )}
-                    </div>
-                    <p className="itemSlider__textNft">
-                      Artistic Transformation ... 
-                      <span>of Life into Information.</span>
                     </p>
-                    <LastStringNft />
+                    <p className="textNft">
+                      Artistic Transformation of Life into Information.
+                    </p>
+
+                    <h5>
+                      <b>
+                        <Image
+                          src="/icon_like_on.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />{" "}
+                      </b>
+                      <span style={{ flexGrow: 8, textAlign: "left" }}>
+                        15.285
+                      </span>
+                      <b>
+                        <Image
+                          src="/icon_bubble.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />
+                      </b>
+                      <span>25.000</span>
+                    </h5>
                   </div>
                 </Link>{" "}
               </>
@@ -395,57 +409,34 @@ export default function Explore() {
       </div>
       <style jsx>
         {`
-          .main {
-            display: flex;
-            align-items: top;
-          }              
+          .mainExplore {
+            width: 100%;
+          }
           .header__image {
             background: url("/planet_top_bg.jpg") 100% / 100% no-repeat;
             height: 240px;
             border-bottom: 1px solid #c9c9c9;
           }
           .filtersHeader {
-            display: ${myscreen ? "block" : "none"};
-            height: 85px;            
+            height: 85px;
             padding: 30px 10px 10px 25px;
             background-color: ${viewFilter ? "#999" : "#f9f9f9"};
           }
           .filters {
-            width: ${myscreen ? 20 : 100}%;
-            margin-left: ${viewFilter ? 0 : myscreen ? -17 : 0}%;
-            height: ${myscreen ? 'auto' : viewFilter ? 'auto' : 0};
+            width: 20%;
+            margin-left: ${viewFilter ? "0" : "-17%"};
             display: inline-block;
-            transition: all 0.5s;            
+            transition: all 0.5s;
           }
           .iconFilter {
             display: ${viewFilter ? "inline-block" : "none"};
-            font: 400 24px/24px "GmarketSansMedium";
+            font-size: 24px;
             color: #fff;
             width: 100px;
             text-align: right;
             background: url("/icon_filter.svg") left center / 30% no-repeat;
-          }
-          .iconFilterMobile {
-            display: ${!myscreen ? "inline-block" : "none"};
-            background: url("/filter_blk.png") right center / 100% no-repeat;
-            height: 40px;
-            width: 30px;
-            margin: 0 20px 0 71%;
-          }
-          .menuMobile {
-            display: ${!myscreen ? "inline-block" : "none"};
-            height: 40px;
-            margin: 0;
-            width: 45px;
-            border: 2px solid #ddd;
-            border-radius: 12px;
-          }
-          .menuMobile p {
-            height: 5px;
-            width: 5px;
-            border-radius: 5px;
-            margin: 5px auto;
-            background-color: #000;
+            font-family: "GmarketSansMedium";
+            font-weight: 400;
           }
           .viewFilter {
             display: inline-block;
@@ -460,7 +451,8 @@ export default function Explore() {
           }
           .items {
             display: inline-block;
-            padding: 2%;           
+            padding: 2%;
+            vertical-align: top;
             width: ${viewFilter ? "80%" : "97%"};
             border-left: 1px solid #c7c7c7;
           }
@@ -501,10 +493,13 @@ export default function Explore() {
             border: 1px solid #c9c9c9;
           }
           .count {
-            margin: 100px 0 50px;            
+            margin: 100px 0 50px;
+            font-size: 20px;
             display: flex;
-            justify-content: space-between;            
-            font: 800 18px/18px  "GmarketSansLight";
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 800;
+            font-family: "GmarketSansLight";
           }
           .filterItem {
             display: flex;
@@ -513,13 +508,14 @@ export default function Explore() {
           }
           .itemSliderImageNft {
             outline-offset: 3px;
+            height: 500px;
             width: 300px;
-            padding-top: 268px;
             outline: 1px solid #ddd;
             background-size: 100% auto;
             border-radius: 10px;
             background-position: center top;
             background-repeat: no-repeat;
+           
             margin-bottom: 40px;
             cursor: pointer;
           }
@@ -532,7 +528,7 @@ export default function Explore() {
             text-align: center;
           }
 
-          .itemSlider__solana {
+          .itemSliderImageNft p:first-of-type {
             font-size: 30px;
             margin: 15px;
             font-family: "GmarketSansMedium";
@@ -543,7 +539,7 @@ export default function Explore() {
           .status {
             height: ${statusView ? "auto" : "60px"};
             background-color: #fff;
-            transition: all 0.5s;
+            transition: all 1s;
             overflow: hidden;
           }
           .price {
@@ -688,16 +684,20 @@ export default function Explore() {
           input:hover ~ span {
             color: #000;
           }
-          .itemSlider__iconGraph {
-            height: 20px;
-            width: 20px;
-            vertical-align: middle;
-            margin-right: 10px;
-            position: relative;
+          h5 {
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px 0;
+            border-top: 1px solid #c9c9c9;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
           }
-          .itemSlider__price {
-            font: 800 30px/30px "GmarketSansLight";
-          }          
+          h5 b {
+            margin: 0 5px 0 0;
+            flex-grow: 1;
+          }
           select {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -708,7 +708,7 @@ export default function Explore() {
             background: transparent;
             border: 1px solid #c9c9c9;
             border-radius: 20px;
-            background: url(/icon_drp_arr.svg) no-repeat 100% / 20% 35%;
+            background: url(/icon_drp_arr.svg) no-repeat 100% / 34% 35%;
           }
           .genomeStoreHeader {
             height: 350px;
@@ -732,7 +732,9 @@ export default function Explore() {
             outline: 1px solid #c9c9c9;
           }
           .genomeStoreHeader__text h2 {
-            font: 800 35px/35px "GmarketSansLight";
+            font-size: 35px;
+            font-family: "GmarketSansLight";
+            font-weight: 800;
           }
           .icons figure {
             margin-right: 10px;
@@ -775,10 +777,8 @@ export default function Explore() {
             width: 200px;
             height: 40px;
             position: absolute;
-            transition: all 0.5s;
-            right: 0;
-            top: ${myscreen ? 0 : viewMenu ? 0 : "-50px"};
-            z-index: 0;
+            right: 0%;
+            top: 0;
             display: flex;
             justify-content: space-between;
           }
@@ -811,7 +811,6 @@ export default function Explore() {
           figure.fourMark:hover {
             background: url("/icon_subs_on.svg") center / cover no-repeat;
           }
-
           .solidout {
             font-size: 18px;
             border: 3px solid #c9c9c9;
@@ -835,47 +834,37 @@ export default function Explore() {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
-          .blockPlus {
+          .blockPlus {            
             background: #f3f3f3 url("/icon_mrwt.svg") center / 120px no-repeat;
           }
-          .blockPlus:hover {
+          .blockPlus:hover {            
             background: #f3f3f3 url("/icon_mrbk.svg") center / 120px no-repeat;
           }
           @media screen and (max-width: 550px) {
-            .main {
-              width: 100%;
-              flex-direction: column;
-              margin: 0 auto;
-            }
-            .items {
-              border: none;
-              padding: 0;
-              width: 94%;
+              .mainExplore {
+              width: 96%;
               margin: 0 auto;
             }
             .header__image {
               background: url("/planet_top_bg.jpg") center / cover no-repeat;
-              height: 300px;             
+              height: 300px;
               border-bottom: 1px solid #c9c9c9;
             }
-            .selectBlock,
-            .two {
-              margin: 20px auto;
-              float: none;
-              width: 100%;
-              margin: 20px auto 0;
-            }
+            .selectBlock, .two {           
+            margin: 20px auto;
+            float: none;
+            width: 100%;           
+            margin: 20px auto 0;
+          }
             .selectBlock input {
               width: 100%;
               padding: 12px 28px 12px 60px;
-              background: url("/icon_search.svg") 6% 58% / 9% no-repeat;
+              background: url('/icon_search.svg') 6% 58% / 9% no-repeat;
             }
             .itemSliderImageNft {
-              height: auto;
-              width: 48%;
-              padding-top: 134px;
-              text-align: center;
-              font-size: 14px;
+            height: auto;
+            width: 48%;
+            padding-top: 134px;
             }
             .genomeStoreHeader {
               padding: 35px 0 0 107px;
@@ -883,48 +872,31 @@ export default function Explore() {
               margin-bottom: 20px;
             }
             .genomeStoreHeader__text:before {
-              width: 70px;
-              height: 70px;
+              width: 90px;
+              height: 90px;
               left: -100px;
               top: -30px;
             }
             .genomeStoreHeader__text h2 {
-              font: 300 20px/30px "GmarketSansMedium";
-            }
-            p,
-            a {
+              font-size: 20px;
+            } 
+            p, a {
               font-size: 16px;
               display: block;
             }
-            .counters span {
-              display: block;
-              font: 400 14px/27px "GmarketSansMedium";
+            .counters span {              
+              display: block;              
+              font: 400  14px/27px "GmarketSansMedium";
             }
             .icons figure {
               margin-right: 15px;
             }
-           
-            .count {
-              margin: 30px 0 15px;
-            }
-            .mobileNo {
-              opacity: 0;
-            }
-            .items__icons {
-              margin: 15px 0;
-              background-color: #fff;
-              z-index: 10;
-              position: relative;
-            }
-            .itemSlider__price {
-            font: 800 20px/30px "GmarketSansLight";
-            }
-            .itemSlider__textNft span{
-              display: none;
-            }
           }
+
         `}
       </style>
     </>
   );
 }
+
+

@@ -1,7 +1,6 @@
 import react, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LastStringNft from "../components/lastStringNft";
 
 const nft = [
   { price: "" },
@@ -381,11 +380,29 @@ export default function Explore() {
                         <b className="solidout">SOLID OUT</b>
                       )}
                     </div>
-                    <p className="itemSlider__textNft">
-                      Artistic Transformation ... 
-                      <span>of Life into Information.</span>
+                    <p className="textNft">
+                      Artistic Transformation of Life into Information.
                     </p>
-                    <LastStringNft />
+                    <div className="lastString">
+                      <b>
+                        <Image
+                          src="/icon_like_on.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />{" "}
+                      </b>
+                      <span style={{ flexGrow: 8, textAlign: "left" }}>15</span>
+                      <b>
+                        <Image
+                          src="/icon_bubble.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />
+                      </b>
+                      <span>25</span>
+                    </div>
                   </div>
                 </Link>{" "}
               </>
@@ -697,7 +714,21 @@ export default function Explore() {
           }
           .itemSlider__price {
             font: 800 30px/30px "GmarketSansLight";
-          }          
+          }
+          .lastString {
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px 0 5px;
+            border-top: 1px solid #c9c9c9;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+          }
+          .lastString b {
+            margin: 0 5px 0 0;
+            flex-grow: 1;
+          }
           select {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -874,8 +905,6 @@ export default function Explore() {
               height: auto;
               width: 48%;
               padding-top: 134px;
-              text-align: center;
-              font-size: 14px;
             }
             .genomeStoreHeader {
               padding: 35px 0 0 107px;
@@ -903,7 +932,13 @@ export default function Explore() {
             .icons figure {
               margin-right: 15px;
             }
-           
+            .lastString span {
+              font: 800 14px/25px "GmarketSansLight";
+            }
+            .lastString b {
+              height: 10px;
+              width: 10px;
+            }
             .count {
               margin: 30px 0 15px;
             }
@@ -918,10 +953,7 @@ export default function Explore() {
             }
             .itemSlider__price {
             font: 800 20px/30px "GmarketSansLight";
-            }
-            .itemSlider__textNft span{
-              display: none;
-            }
+          }
           }
         `}
       </style>

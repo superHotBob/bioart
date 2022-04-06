@@ -10,10 +10,10 @@ import Wallet from "../components/wallet";
 import react, { useState, useEffect } from "react";
 
 export default function Geno() {
-  const [wallet, setWallet] = useState(true);
+  const [ wallet, setWallet] = useState(true);
   const [myscreen, setMyScreen] = useState(true);
 
-  const sliderGenoTwo = {
+ const sliderGenoTwo = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -21,7 +21,7 @@ export default function Geno() {
     slidesToScroll: myscreen ? 4 : 2,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-  };
+  }; 
   const sliderGenoOne = {
     dots: false,
     infinite: true,
@@ -30,7 +30,7 @@ export default function Geno() {
     slidesToScroll: myscreen ? 2 : 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-  };
+  }; 
   useEffect(() => setMyScreen(window.screen.width > 500), []);
   const MySetWallet = () => setWallet(!wallet);
   return (
@@ -55,12 +55,8 @@ export default function Geno() {
           <span>0.00</span>
         </div>
         <div className="token">
-          {myscreen && (
-            <>
-              <span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
-              <button>Copy</button>
-            </>
-          )}
+          {myscreen && <><span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
+          <button>Copy</button></>}
           <div className="menu">
             <p></p>
             <p></p>
@@ -75,12 +71,9 @@ export default function Geno() {
           <span>0.00</span>
         </div>
         <div className="token">
-          {myscreen && (
-            <>
-              <span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
-              <button>Copy</button>
-            </>
-          )}
+          {myscreen && <>
+          <span>0xd5b8848a29ab901b63910ce175c55be4648953d8</span>
+          <button>Copy</button></>}
           <div className="menu">
             <p></p>
             <p></p>
@@ -91,12 +84,8 @@ export default function Geno() {
       <h2 className="planetsHeader">Planets</h2>
       <div className="planets">
         <div className="planetItems">
-          <div
-            className="image"
-            style={{
-              backgroundImage: "url(/planet-img-01.png)",
-            }}
-          />
+          <div className="image" style={{
+            backgroundImage: "url(/planet-img-01.png)"}}/>
           <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
           <h2>Genom NFT</h2>
           <p className="planetRslt">Sequencing date · 01.01.2022</p>
@@ -153,10 +142,7 @@ export default function Geno() {
         <div className={styles.sliderWraper} style={{ width: "100%" }}>
           <Slider {...sliderGenoOne}>
             <div className="planetItems slider">
-              <div
-                className="image"
-                style={{ backgroundImage: "url(/article-img.png)" }}
-              />
+              <div className="image" style={{backgroundImage: "url(/article-img.png)"}} />
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
               <h2>Genom NFT</h2>
               <p className="planetRslt">Sequencing date · 01.01.2022</p>
@@ -167,10 +153,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider" style={{ width: "98%" }}>
-              <div
-                className="image"
-                style={{ backgroundImage: "url(/flower.png)" }}
-              />
+              <div className="image"  style={{backgroundImage: "url(/flower.png)"}}/>
               <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
               <h2>Genome Store</h2>
               <p className="planetRslt">Genome store</p>
@@ -180,10 +163,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider">
-              <div
-                className="image"
-                style={{ backgroundImage: "url(/article-img.png)" }}
-              />
+              <div className="image" style={{backgroundImage: "url(/article-img.png)"}}/>
               <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
               <h2>Genome Store</h2>
               <p className="planetRslt">Genome store</p>
@@ -193,10 +173,7 @@ export default function Geno() {
               </div>
             </div>
             <div className="planetItems slider">
-              <div
-                className="image"
-                style={{ backgroundImage: "url(/flower.png)" }}
-              />
+              <div className="image" style={{backgroundImage: "url(/flower.png)"}}/>
 
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
               <h2>Genom NFT</h2>
@@ -216,23 +193,20 @@ export default function Geno() {
             <Slider {...sliderGenoTwo}>
               {Array(8)
                 .fill(1)
-                .map((i, index) => (
-                  <>
-                    <Link href="/nft/one" passHref>
-                      <div className="itemSliderNft" key={index}>
-                        <div
-                          className="itemSliderImageNft"
-                          style={{
-                            paddingTop: "106%",
-                            height: "100%",
-                            marginBottom: 0,
-                            backgroundImage:
-                              index % 2 == 0
-                                ? "url(/article-img.png)"
-                                : "url(/cat.png)",
-                          }}
-                        />
-
+                .map((i, index) => (<>
+                   <Link href="/nft/one" passHref>
+                  <div className="itemSliderNft" key={index}>
+                   
+                      <div
+                        className="itemSliderImageNft"
+                        style={{
+                          paddingTop: "106%",
+                          height: "100%",
+                          marginBottom: 0,
+                          backgroundImage: (index % 2 == 0) ? "url(/article-img.png)" : "url(/cat.png)",
+                        }}
+                      /> 
+                   
                         <b
                           className="iconSlider"
                           style={{ backgroundImage: "url(/icon_ba.svg)" }}
@@ -251,6 +225,7 @@ export default function Geno() {
                         <p className="textNft">
                           Artistic Transformation of Life into Information.
                         </p>
+
                         <h5>
                           <b>
                             <Image
@@ -273,19 +248,16 @@ export default function Geno() {
                           </b>
                           <span>25</span>
                         </h5>
-                      </div>
-                    </Link>
-                  </>
+                      
+                   
+                  </div>
+                  </Link></>
                 ))}
             </Slider>
           </div>
         </div>
       </div>
-      {wallet ? (
-        <ConnectWallet wallet={MySetWallet} />
-      ) : (
-        <Wallet logOut={MySetWallet} />
-      )}
+      {wallet ? <ConnectWallet  wallet={MySetWallet}/> : <Wallet logOut={MySetWallet}/>}
       <style jsx>{`
         * {
           font-family: "GmarketSansMedium";
@@ -296,6 +268,7 @@ export default function Geno() {
           height: 56%;
           background-size: cover;
           background-position: center top;
+         
         }
         .genosMain {
           width: 69%;
@@ -487,7 +460,7 @@ export default function Geno() {
           font-family: "GmarketSansLight";
           font-size: 18px;
         }
-        .planetItems {
+        .planetItems {          
           border: 2px solid #ddd;
           border-radius: 10px;
           width: 48%;
@@ -531,6 +504,7 @@ export default function Geno() {
           background-repeat: no-repeat;
           background-size: 96%;
           background-position: center;
+          
         }
         .planetItems b {
           margin-top: -37px;
@@ -617,8 +591,9 @@ export default function Geno() {
           margin: 15px;
           font-family: "GmarketSansLight";
         }
-
+       
         .itemSliderImageNft {
+          
           border-bottom: 1px solid #ddd;
           background-size: cover;
           border-top-left-radius: 10px;
@@ -646,7 +621,7 @@ export default function Geno() {
           margin: 0 5px 0 0;
           flex-grow: 1;
         }
-
+      
         @media screen and (max-width: 1300px) {
           .genosMain {
             width: 80%;
@@ -663,6 +638,7 @@ export default function Geno() {
           .planetItems h2 {
             font-size: 28px;
           }
+         
         }
         @media screen and (max-width: 550px) {
           .genosMain {
@@ -677,8 +653,7 @@ export default function Geno() {
           .planetItems h2 {
             font-size: 20px;
           }
-          .btnGenomData,
-          .plus {
+          .btnGenomData, .plus {
             width: 100%;
           }
           .sol {
@@ -704,8 +679,7 @@ export default function Geno() {
             height: 50px;
             margin-top: 25px;
           }
-          .itemSliderNft p:last-of-type,
-          .itemSliderNft p:first-of-type {
+          .itemSliderNft p:last-of-type, .itemSliderNft p:first-of-type {
             font-size: 3.5vw;
             margin: 0 0 15px;
           }
@@ -719,7 +693,7 @@ export default function Geno() {
             margin: 5px;
             vertical-align: text-bottom;
           }
-
+         
           h5 span {
             font-size: 14px;
             font-family: "GmarketSansLight";
@@ -731,8 +705,11 @@ export default function Geno() {
           .planetsHeader {
             margin: 150px 0 35px;
           }
-        }
+        }  
+
       `}</style>
     </div>
   );
 }
+
+

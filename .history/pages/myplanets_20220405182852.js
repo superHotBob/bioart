@@ -1,7 +1,6 @@
 import react, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import LastStringNft from "../components/lastStringNft";
 
 const nft = [
   { price: "" },
@@ -26,7 +25,6 @@ export default function Explore() {
   const [sort, setSort] = useState("priceLow");
   const [minPrice, setMinPriceOld] = useState(0);
   const [maxPrice, setMaxPriceOld] = useState(1000);
-  const [searchValue, setSearchValue] = useState('');
 
   function selectSort(e) {
     if (e.target.value === "priceHight") {
@@ -228,8 +226,6 @@ export default function Explore() {
                 <input
                   type="search"
                   placeholder="search"
-                  value={searchValue}
-                  onChange={(e)=>setSearchValue(e.target.value)}
                   className="planetsSearch"
                 />
               </label>
@@ -243,13 +239,15 @@ export default function Explore() {
               onClick={() => setViewFilter(!viewFilter)}
             />
             <div className="menuMobile" onClick={() => setViewMenu(!viewMenu)}>
-              <p/><p/><p/>              
+              <p />
+              <p />
+              <p />
             </div>
           </div>
           <div className="genomeStoreHeader">
             <div className="genomeStoreHeader__text">
               <h2>Gemone Story</h2>
-              <div className="icons">
+              <p className="icons">
                 <figure>
                   <Image
                     src="/icon_tele_b.png"
@@ -285,7 +283,7 @@ export default function Explore() {
                 <Link href="/">
                   <a>bioart.net</a>
                 </Link>
-              </div>
+              </p>
               <p>Artistic Transformation of Life into Information.</p>
               <div className="counters">
                 <span>
@@ -364,7 +362,7 @@ export default function Explore() {
                       className="iconItemNft"
                       style={{ backgroundImage: "url(/icon_ba.svg)" }}
                     />
-                    <div className="itemSlider__solana" style={{ textAlign: "center", margin: "10px 0 2px" }}>
+                    <p style={{ textAlign: "center", margin: "10px 0 2px" }}>
                       {i.price ? (
                         <>
                           {" "}
@@ -380,12 +378,30 @@ export default function Explore() {
                       ) : (
                         <b className="solidout">SOLID OUT</b>
                       )}
-                    </div>
-                    <p className="itemSlider__textNft">
-                      Artistic Transformation ... 
-                      <span>of Life into Information.</span>
                     </p>
-                    <LastStringNft />
+                    <p className="textNft">
+                      Artistic Transformation of Life into Information.
+                    </p>
+                    <div className="lastString">
+                      <b>
+                        <Image
+                          src="/icon_like_on.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />{" "}
+                      </b>
+                      <span style={{ flexGrow: 8, textAlign: "left" }}>15</span>
+                      <b>
+                        <Image
+                          src="/icon_bubble.svg"
+                          width={25}
+                          height={25}
+                          alt="icon"
+                        />
+                      </b>
+                      <span>25</span>
+                    </div>
                   </div>
                 </Link>{" "}
               </>
@@ -405,7 +421,7 @@ export default function Explore() {
             border-bottom: 1px solid #c9c9c9;
           }
           .filtersHeader {
-            display: ${myscreen ? "block" : "none"};
+            
             height: 85px;            
             padding: 30px 10px 10px 25px;
             background-color: ${viewFilter ? "#999" : "#f9f9f9"};
@@ -532,7 +548,7 @@ export default function Explore() {
             text-align: center;
           }
 
-          .itemSlider__solana {
+          .itemSliderImageNft p:first-of-type {
             font-size: 30px;
             margin: 15px;
             font-family: "GmarketSansMedium";
@@ -697,7 +713,21 @@ export default function Explore() {
           }
           .itemSlider__price {
             font: 800 30px/30px "GmarketSansLight";
-          }          
+          }
+          .lastString {
+            width: 90%;
+            margin: 0 auto;
+            padding: 15px 0 5px;
+            border-top: 1px solid #c9c9c9;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+          }
+          .lastString b {
+            margin: 0 5px 0 0;
+            flex-grow: 1;
+          }
           select {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -874,8 +904,6 @@ export default function Explore() {
               height: auto;
               width: 48%;
               padding-top: 134px;
-              text-align: center;
-              font-size: 14px;
             }
             .genomeStoreHeader {
               padding: 35px 0 0 107px;
@@ -903,7 +931,13 @@ export default function Explore() {
             .icons figure {
               margin-right: 15px;
             }
-           
+            .lastString span {
+              font: 800 14px/25px "GmarketSansLight";
+            }
+            .lastString b {
+              height: 10px;
+              width: 10px;
+            }
             .count {
               margin: 30px 0 15px;
             }
@@ -918,10 +952,7 @@ export default function Explore() {
             }
             .itemSlider__price {
             font: 800 20px/30px "GmarketSansLight";
-            }
-            .itemSlider__textNft span{
-              display: none;
-            }
+          }
           }
         `}
       </style>

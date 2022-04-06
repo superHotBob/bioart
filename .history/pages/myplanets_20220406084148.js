@@ -903,7 +903,13 @@ export default function Explore() {
             .icons figure {
               margin-right: 15px;
             }
-           
+            .lastString span {
+              font: 800 14px/25px "GmarketSansLight";
+            }
+            .lastString b {
+              height: 10px;
+              width: 10px;
+            }
             .count {
               margin: 30px 0 15px;
             }

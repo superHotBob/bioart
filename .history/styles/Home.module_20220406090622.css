@@ -214,8 +214,8 @@
 }
 .itemSliderImage {
   
-  border: 1px solid #ccc;
-  background-size: cover;
+  border: 1px solid #ddd;
+  background-size: 100% auto;
   border-radius: 10px;
   background-position: center top;
   background-repeat: no-repeat;
@@ -239,7 +239,7 @@
 }
 .sliderDot {
   margin: 0 auto;
-  background-color: gray;
+  background-color: red;
   width: 89%;
 }
 
@@ -541,16 +541,13 @@ p.headerTable:hover {
   }
   .sliderText {
     width: 70%;
-    font-size: 20px;
     vertical-align: top;
     display: inline-block;
-  }
-  .sliderText p {
-    font-size: 16px;
   }
   .volumeIcon {
     background: url(/icon_graph_01.svg) 0% 19%/ 32% no-repeat;
     padding-left: 15px;
+
   }
   .br {
     display: inline;

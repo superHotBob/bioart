@@ -283,7 +283,7 @@ export default function Home() {
               </div>
             </div>
           </Slider>
-          <p className={styles.sliderDot} style={{border: '1px solid gray'}}>
+          <p className={styles.sliderDot} style={{border: '2px solid gray'}}>
             {(new Array(6)).fill(' ').map((i,index)=>
             <span style={{backgroundColor: 'blue'}} key={index}>{i}</span>
             )}
