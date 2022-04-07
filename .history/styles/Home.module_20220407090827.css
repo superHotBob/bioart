@@ -56,7 +56,7 @@
 }
 .symbol_icon {
   height: 50px;
-  width: 70px;
+  width: 50px;
   display: inline-block;
   background: url("/symbol.svg") center / 100% no-repeat;
 }
@@ -212,9 +212,6 @@
   height: 40vw;
  width: 96% !important;
   
-}
-.itemSlider span {
-  margin-left: 15px;
 }
 .itemSliderImage {
   
@@ -543,7 +540,6 @@ p.headerTable:hover {
     height: 150vw;
     text-align: left;
   }
- 
   .sliderText {
     width: 70%;
     font-size: 20px;

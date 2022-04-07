@@ -638,7 +638,7 @@ export default function Geno() {
         @media screen and (max-width: 550px) {
           .hide {
             display: ${viewText ? "inline-block" : "none"};
-            font: 300 12px/16px  'GmarketSansLight';
+            
           }
           .textNft {
             font: 300 12px/16px  'GmarketSansLight';

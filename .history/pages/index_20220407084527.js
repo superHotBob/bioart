@@ -2,14 +2,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
-import   mainback  from '../public/main_top_bg.jpg';
+import mainback from "../public/main_top_bg.jpg";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 export default function Home() {
   const [myscreen, setMyScreen] = useState(1300);
-  useEffect(() => setMyScreen(window.screen.width),[]);
+  useEffect(() => setMyScreen(window.screen.width), []);
   const data = [
     {
       ranking: 1229,
@@ -90,40 +90,49 @@ export default function Home() {
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    afterChange: function(index) {
+    afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
       );
     },
-    appendDots: dots => (
+    appendDots: (dots) => (
       <div
         style={{
           backgroundColor: "red",
           borderRadius: "1px",
-          display: 'flex',
-          justifyContent: 'space-between'
-          
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
         <ul>
-        <span style={{height: '20px', width: '50px', margin: "0 10px",padding: '20px',color: "red"}}> {dots} </span>
-          </ul>
-        
+          <span
+            style={{
+              height: "20px",
+              width: "50px",
+              margin: "0 10px",
+              padding: "20px",
+              color: "red",
+            }}
+          >
+            {" "}
+            {dots}{" "}
+          </span>
+        </ul>
       </div>
     ),
-    customPaging: i => (
+    customPaging: (i) => (
       <div
         style={{
           width: "50%",
-          float: 'left',
+          float: "left",
           color: "blue",
-          backgroundColor: 'yellow',
-          border: "1px blue solid"
+          backgroundColor: "yellow",
+          border: "1px blue solid",
         }}
       >
         {i + 1}
       </div>
-    )
+    ),
   };
   function NextArrow(props) {
     const { className, style, onClick } = props;
@@ -156,14 +165,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <section className={styles.wrapFirstBlock}>
-        <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" />
+        <div className={styles.firstBlock}>
+          <Image src={mainback} layout="fill" alt="mainbackground" />
         </div>
         <div className={styles.firstBlockText}>
           <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
           <div className={styles.firstBlockTextOnly}>
-            {(myscreen < 500) && 
-            <Image src="/korona.png" width={25} height={25} alt="icon" />}
+            {myscreen < 500 && (
+              <Image src="/korona.png" width={25} height={25} alt="icon" />
+            )}
             <h3>BioArts</h3>
             <p>
               Artistic Transformation of
@@ -189,11 +199,9 @@ export default function Home() {
                   style={{ backgroundImage: "url(/twowoman.png)" }}
                 />
               </Link>
-              
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
               <div className={styles.sliderText}>
+                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+                <br />
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -205,10 +213,8 @@ export default function Home() {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
               <div className={styles.sliderText}>
+                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" /><br/>
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -220,15 +226,13 @@ export default function Home() {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <div className={styles.sliderText}>
                 <Image
                   src="/icon_facebook_b.png"
                   width={55}
                   height={55}
                   alt="facebook"
-                />
-              </span>
-              <div className={styles.sliderText}>
+                /><br/>
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -240,10 +244,8 @@ export default function Home() {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
               <div className={styles.sliderText}>
+                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" /><br/>
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -255,10 +257,8 @@ export default function Home() {
                   style={{ backgroundImage: "url(/twowoman.png)" }}
                 />
               </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
               <div className={styles.sliderText}>
+                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" /><br/>
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
@@ -270,24 +270,24 @@ export default function Home() {
                   style={{ backgroundImage: "url(/article-img.png)" }}
                 />
               </Link>
-              <span>
+              <div className={styles.sliderText}>
                 <Image
                   src="/icon_facebook_b.png"
                   width={55}
                   height={55}
                   alt="facebook"
-                />
-              </span>
-              <div className={styles.sliderText}>
+                /><br/>
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>
             </div>
           </Slider>
-          <p className={styles.sliderDot} style={{border: '1px solid gray'}}>
-            {(new Array(6)).fill(' ').map((i,index)=>
-            <span style={{backgroundColor: 'blue'}} key={index}>{i}</span>
-            )}
+          <p className={styles.sliderDot} style={{ border: "1px solid gray" }}>
+            {new Array(6).fill(" ").map((i, index) => (
+              <span style={{ backgroundColor: "blue" }} key={index}>
+                {i}
+              </span>
+            ))}
           </p>
         </div>
       </section>

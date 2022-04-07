@@ -365,8 +365,6 @@ export default function Explore() {
             margin-left: ${viewFilter ? 0 : myscreen ? -17 : 0}%;
             display: inline-block;
             transition: all 0.5s;
-            background-color: #f9f9f9;
-
           }
           .iconFilter,
           .iconFilterMobile {

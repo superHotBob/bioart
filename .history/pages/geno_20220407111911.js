@@ -12,7 +12,6 @@ import react, { useState, useEffect } from "react";
 
 export default function Geno() {
   const [wallet, setWallet] = useState(true);
-  const [viewText, setViewText] = useState(false);
   const [myscreen, setMyScreen] = useState(true);
   useEffect(() => setMyScreen(window.screen.width > 500), []);
   const sliderGenoTwo = {
@@ -33,7 +32,7 @@ export default function Geno() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
-
+ 
   const MySetWallet = () => setWallet(!wallet);
   return (
     <div className="genosMain">
@@ -220,8 +219,8 @@ export default function Geno() {
                 .fill(1)
                 .map((i, index) => (
                   <>
-                    <div className="itemSliderNft" key={index}>
-                      <Link href="/nft/one" passHref>
+                    <Link href="/nft/one" passHref>
+                      <div className="itemSliderNft" key={index}>
                         <div
                           className="itemSliderImageNft"
                           style={{
@@ -234,33 +233,28 @@ export default function Geno() {
                                 : "url(/cat.png)",
                           }}
                         />
-                      </Link>
 
-                      <b
-                        className="iconSlider"
-                        style={{ backgroundImage: "url(/icon_ba.svg)" }}
-                      />
-                      <p style={{ textAlign: "center" }}>
-                        <b className="iconGraph">
-                          <Image
-                            src="/icon_graph_01.svg"
-                            alt="icon"
-                            width={30}
-                            height={30}
-                          />
-                        </b>
-                        <span>1.3</span>
-                      </p>
-                      <p
-                        className="textNft"
-                        onClick={() => setViewText(!viewText)}
-                      >
-                        Artistic Transformation
-                        {!viewText && <>...</>}
-                        <span className="hide"> of Life into Information.</span>
-                      </p>
-                      <LastStringNft mobile={myscreen} />
-                    </div>
+                        <b
+                          className="iconSlider"
+                          style={{ backgroundImage: "url(/icon_ba.svg)" }}
+                        />
+                        <p style={{ textAlign: "center" }}>
+                          <b className="iconGraph">
+                            <Image
+                              src="/icon_graph_01.svg"
+                              alt="icon"
+                              width={30}
+                              height={30}
+                            />
+                          </b>
+                          <span>1.3</span>
+                        </p>
+                        <p className="textNft">
+                          Artistic Transformation...<b className="hide">of Life into Information.</b> 
+                        </p>
+                        <LastStringNft  mobile={myscreen} />                        
+                      </div>
+                    </Link>
                   </>
                 ))}
             </Slider>
@@ -597,10 +591,10 @@ export default function Geno() {
           font-family: "GmarketSansMedium";
           font-weight: 400;
         }
-        .textNft {
-          
-          margin: 15px 0;
-          font-family: 300 18px/22px 'GmarketSansLight';
+        .itemSliderNft p:last-of-type {
+          font-size: 1vw;
+          margin: 15px;
+          font-family: "GmarketSansLight";
         }
 
         .itemSliderImageNft {
@@ -616,7 +610,7 @@ export default function Geno() {
         }
         .itemSliderNft:hover {
           box-shadow: 0px 0px 15px 2px rgba(34, 60, 80, 0.2);
-        }
+        }     
 
         @media screen and (max-width: 1300px) {
           .genosMain {
@@ -637,11 +631,7 @@ export default function Geno() {
         }
         @media screen and (max-width: 550px) {
           .hide {
-            display: ${viewText ? "inline-block" : "none"};
-            font: 300 12px/16px  'GmarketSansLight';
-          }
-          .textNft {
-            font: 300 12px/16px  'GmarketSansLight';
+            display: none;
           }
           .genosMain {
             width: 96%;
@@ -681,8 +671,12 @@ export default function Geno() {
             width: 50px;
             height: 50px;
             margin-top: 25px;
-          }         
-         
+          }
+          .itemSliderNft p:last-of-type,
+          .itemSliderNft p:first-of-type {
+            font-size: 3.5vw;
+            margin: 0 0 15px;
+          }
           .itemSliderNft p:first-of-type {
             font-size: 22px;
             margin: 0 0 5px;

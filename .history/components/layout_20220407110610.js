@@ -36,12 +36,7 @@ export default function Layout({ children }) {
             margin: 10px 0 0;
             font-family: "GmarketSansMedium";
           }
-          .textNft {
-            font: 300 18px/22px GmarketSansLight;
-            margin: 0 0 15px;
-            text-align: center;
-            
-          }
+          
           .iconSlider {
           margin-top: 0;
           width: 65px;

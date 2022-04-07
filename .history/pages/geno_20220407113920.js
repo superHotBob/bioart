@@ -600,7 +600,7 @@ export default function Geno() {
         .textNft {
           
           margin: 15px 0;
-          font-family: 300 18px/22px 'GmarketSansLight';
+          font-family: 300 18px/22px GmarketSansLight;
         }
 
         .itemSliderImageNft {
@@ -638,10 +638,10 @@ export default function Geno() {
         @media screen and (max-width: 550px) {
           .hide {
             display: ${viewText ? "inline-block" : "none"};
-            font: 300 12px/16px  'GmarketSansLight';
+            
           }
           .textNft {
-            font: 300 12px/16px  'GmarketSansLight';
+            font: 300 14px/16px  GmarketSansLight;
           }
           .genosMain {
             width: 96%;

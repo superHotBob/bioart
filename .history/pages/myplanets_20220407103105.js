@@ -512,7 +512,7 @@ export default function Explore() {
             flex-wrap: wrap;
           }
           .itemSliderImageNft {            
-            width: 305px;
+            width: 300px;
             padding-top: 268px;
             border: 1px solid #ddd;
             background-size: 100% auto;

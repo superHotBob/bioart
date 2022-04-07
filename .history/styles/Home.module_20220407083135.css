@@ -56,7 +56,7 @@
 }
 .symbol_icon {
   height: 50px;
-  width: 70px;
+  width: 50px;
   display: inline-block;
   background: url("/symbol.svg") center / 100% no-repeat;
 }
@@ -170,7 +170,7 @@
 .sliderWraperNft {
   height: auto;
   width: 76%;
-  margin: 50px auto 150px;
+  margin: 50px auto;
   position: relative;
 }
 .sliderWraperNft {
@@ -210,11 +210,8 @@
 
 .itemSlider {
   height: 40vw;
- width: 96% !important;
-  
-}
-.itemSlider span {
-  margin-left: 15px;
+  padding: 0 20px;
+  text-align: center;
 }
 .itemSliderImage {
   
@@ -541,9 +538,8 @@ p.headerTable:hover {
   }
   .itemSlider {
     height: 150vw;
-    text-align: left;
+    text-align: initial;
   }
- 
   .sliderText {
     width: 70%;
     font-size: 20px;

@@ -256,8 +256,8 @@ export default function Geno() {
                         onClick={() => setViewText(!viewText)}
                       >
                         Artistic Transformation
-                        {!viewText && <>...</>}
-                        <span className="hide"> of Life into Information.</span>
+                        {viewText && <>...</>}
+                        <span className="hide">of Life into Information.</span>
                       </p>
                       <LastStringNft mobile={myscreen} />
                     </div>
@@ -597,10 +597,10 @@ export default function Geno() {
           font-family: "GmarketSansMedium";
           font-weight: 400;
         }
-        .textNft {
-          
-          margin: 15px 0;
-          font-family: 300 18px/22px 'GmarketSansLight';
+        .itemSliderNft p:last-of-type {
+          font-size: 1vw;
+          margin: 15px;
+          font-family: "GmarketSansLight";
         }
 
         .itemSliderImageNft {
@@ -637,11 +637,7 @@ export default function Geno() {
         }
         @media screen and (max-width: 550px) {
           .hide {
-            display: ${viewText ? "inline-block" : "none"};
-            font: 300 12px/16px  'GmarketSansLight';
-          }
-          .textNft {
-            font: 300 12px/16px  'GmarketSansLight';
+            display: ${viewText ? "inline-display" : "none"};
           }
           .genosMain {
             width: 96%;
@@ -681,8 +677,12 @@ export default function Geno() {
             width: 50px;
             height: 50px;
             margin-top: 25px;
-          }         
-         
+          }
+          .itemSliderNft p:last-of-type,
+          .itemSliderNft p:first-of-type {
+            font-size: 3.5vw;
+            margin: 0 0 15px;
+          }
           .itemSliderNft p:first-of-type {
             font-size: 22px;
             margin: 0 0 5px;

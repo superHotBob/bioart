@@ -189,11 +189,11 @@ export default function Home() {
                   style={{ backgroundImage: "url(/twowoman.png)" }}
                 />
               </Link>
-              
-              <span>
+               <div className={styles.sliderText}>
+              <p>
                 <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
+              </p>
+             
                 BioArts
                 <p>Artistic Transformation of Life into Information.</p>
               </div>

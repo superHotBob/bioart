@@ -310,7 +310,7 @@ export default function Explore() {
                       onClick={() => setViewText(!viewText)}
                     >
                       Artistic Transformation
-                      {viewText && <>...</>}
+                      {!viewText && <>...</>}
                       <span className="hide"> of Life into Information.</span>
                     </p>
 
@@ -365,8 +365,6 @@ export default function Explore() {
             margin-left: ${viewFilter ? 0 : myscreen ? -17 : 0}%;
             display: inline-block;
             transition: all 0.5s;
-            background-color: #f9f9f9;
-
           }
           .iconFilter,
           .iconFilterMobile {
@@ -673,7 +671,6 @@ export default function Explore() {
             }
             .textNft {
               font: 300 12px/16px "GmarketSansLight";
-              margin-bottom: 10px;
             }
             .mainExplore {
               flex-direction: column;

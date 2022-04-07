@@ -4,15 +4,15 @@ export default function LastStringNft({mobile}) {
   
   return (
     <div className="lastString">
-      <b>
+      {/* <b>
         <Image src="/icon_like_on.svg" layout="fill" alt="icon" />{" "}
-      </b>
-      <span style={{ flexGrow: 8, textAlign: "left" }}>15</span>
-      {!mobile && <span>25</span>}
-      <b>
+      </b> */}
+      <span className="like">15</span>
+      {!mobile && <span className="boble">25</span>}
+      {/* <b>
         <Image src="/icon_bubble.svg" layout="fill" alt="icon" />
-      </b>
-      {mobile && <span>25</span>}
+      </b> */}
+      {mobile && <span className="boble">25</span>}
      
       <style jsx>
         {`
@@ -27,27 +27,51 @@ export default function LastStringNft({mobile}) {
             display: flex;
             justify-content: space-between;
           }
+          .like {
+            position: relative;
+            padding-left: 20px;
+          }
+          .boble {
+            position: relative;
+            padding-right: 20px;
+          }
           .lastString b {
-           
+            margin: 0 5px 0 0;
             flex-grow: 1;
             height: 19px;
             width: 10px;
             position: relative;
-          } 
+          }
+          .like:before {
+            content: url('/icon_like_on.svg');
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            top: 2px;
+            left: 62%;
+
+          }
+          .boble:after {
+            content: url('/icon_bubble.svg');
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            top: 2px;
+            left: 0;
+
+          }    
           @media screen and (max-width: 550px) {
             .lastString span {
-              font: 800 14px/15px "GmarketSansLight";
+              font: 800 14px/25px "GmarketSansLight";
             }
             .lastString b {
               height: 15px;
               width: 15px;
             }
-            span {
-              display: inline-block;
-              margin-top: 5px;
-            }
             .lastString {
-                padding: 10px 0;
+                padding: 10px 0 0;
             }
           }
         `}
