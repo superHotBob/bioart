@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 
 import { useState, useEffect, useRef } from "react";
-import   mainback  from '../public/main_top_bg.webp';
+import   mainback  from '../public/main_top_bg.jpg';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -151,11 +151,11 @@ export default function Home() {
       </section>
 
       <section className={styles.slider}>
-        <h2>
+        <h2 style={{ textAlign: "center", margin: "100px 0 0" }}>
           {myscreen > 500 ? "Popular NFTs" : "Notable NFTs"}
         </h2>
- 
-       
+
+        <div className={styles.sliderWraper}>
           <Slider ref={slider} {...settings}>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
@@ -225,7 +225,7 @@ export default function Home() {
             </div>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
-                <div
+                <
                   className={styles.itemSliderImage}
                   style={{ backgroundImage: "url(/twowoman.webp)" }}
                 />
@@ -267,7 +267,7 @@ export default function Home() {
             onChange={e => slider.current.slickGoTo(e.target.value)}
             value={slideIndex}
           />
-       
+        </div>
       </section>
       <section className={styles.table}>
         <h2>

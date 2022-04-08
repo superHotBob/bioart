@@ -151,10 +151,10 @@ export default function Home() {
       </section>
 
       <section className={styles.slider}>
-        <h2>
+        <h2 style={{ textAlign: "center", margin: "100px 0 0" }}>
           {myscreen > 500 ? "Popular NFTs" : "Notable NFTs"}
         </h2>
- 
+
        
           <Slider ref={slider} {...settings}>
             <div className={styles.itemSlider}>
