@@ -61,8 +61,8 @@ export default function NFT() {
   const settings = {
     dots: false,
     infinite: true,
+    
     speed: 500,
-    cssEase: "linear",    
     slidesToShow: myscreen ? 4 : 2,
     slidesToScroll: myscreen ? 4 : 2,
     nextArrow: <NextArrow />,
@@ -448,55 +448,60 @@ export default function NFT() {
             )}
           </div>
         </div>
-        <section
-          className={styles.sliderNft}
-          style={{ margin: "150px 0 50px" }}
-        >
+        <section className={styles.sliderNft} style={{ marginTop: 150 }}>
           <h2 style={{ textAlign: "center" }}>More from this Planet</h2>
-
-          <Slider {...settings}>
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i, index) => (
-              <div key={index} style={{ width: 300 }}>
-                <div className="itemSlider">
-                  <Link href="/nft/one" passHref key={index}>
-                    <figure
-                      className="imageSlider"
-                      style={{                       
-                        background:
-                          "url(/article-img.png) center / cover no-repeat",
-                       
-                      }}
-                    />
-                  </Link>{" "}
-                  <span className="iconItemNft">
-                    <Image
-                      src="/icon_ba.svg"
-                      width={60}
-                      height={60}
-                      alt="icon"
-                    />
-                  </span>
-                  <p style={{ textAlign: "center" }}>
-                    <b className="iconGraph">
-                      <Image
-                        src="/icon_graph_01.svg"
-                        alt="icon"
-                        layout="fill"
-                      />
-                    </b>
-                    <span>1.3</span>
-                  </p>
-                  <p className="textNft" onClick={() => setViewText(!viewText)}>
-                    Artistic Transformation
-                    {viewText && <>...</>}
-                    <span className="hide"> of Life into Information.</span>
-                  </p>
-                  <LastStringNft mobile={myscreen} />
-                </div>
-              </div>
-            ))}
-          </Slider>
-
+          <div style={{ height: "auto" }} className="sliderWraperNft">
+            <Slider {...settings}>
+              {Array(8)
+                .fill(1)
+                .map((i, index) => (                 
+                    <div className="itemSlider" key={index}>
+                      <Link href="/nft/one" passHref key={index}>
+                        <Image
+                          width={318}
+                          height={250}
+                          layout="intrinsic"
+                          alt="image"
+                          src={
+                            index % 2
+                              ? "/article-img.png"
+                              : "/planet-img-01.png"
+                          }
+                        />
+                      </Link>{" "}
+                      <span className="iconItemNft">
+                        <Image
+                          src="/icon_ba.svg"
+                          width={60}
+                          height={60}
+                          alt="icon"
+                        />
+                      </span>
+                      <p style={{ textAlign: "center" }}>
+                        <b className="iconGraph">
+                          <Image
+                            src="/icon_graph_01.svg"
+                            alt="icon"
+                            width={30}
+                            height={30}
+                          />
+                        </b>
+                        <span>1.3</span>
+                      </p>
+                      <p
+                        className="textNft"
+                        onClick={() => setViewText(!viewText)}
+                      >
+                        Artistic Transformation
+                        {viewText && <>...</>}
+                        <span className="hide"> of Life into Information.</span>
+                      </p>
+                      <LastStringNft mobile={myscreen} />
+                    </div>
+                  
+                ))}
+            </Slider>
+          </div>
           <button className="viewItemBtn">View Planet</button>
         </section>
       </div>
@@ -700,9 +705,6 @@ export default function NFT() {
         }
         .iconGraph {
           margin: 0px 10px;
-          height: 30px;
-          width: 30px;
-          position: relative;
           vertical-align: top;
           display: inline-block;
         }
@@ -713,7 +715,7 @@ export default function NFT() {
           color: #fff;
           border: none;
           font: 400 18px/60px "GmarketSansMedium";
-          margin: 50px 0;
+          margin-bottom: 50px;
         }
         .viewItemBtn:hover {
           color: #000;
@@ -728,7 +730,7 @@ export default function NFT() {
         }
         .itemSlider p:first-of-type {
           margin: 15px;
-          font: 400 26px/36px "GmarketSansMedium";
+          font: 400 26px/26px "GmarketSansMedium";
         }
         .itemSlider p:last-of-type {
           font-size: 1vw;
@@ -739,12 +741,11 @@ export default function NFT() {
           margin: 15px;
         }
 
-        .imageSlider {
+        .imageNft {
           width: 100%;
-          height: 255px;
+          height: 250px;
           position: relative;
-          border-top-left-radius: 15px ;
-          border-top-right-radius: 15px ;
+          border-radius: 15px !important;
           z-index: 1;
         }
         .imageNft img {
@@ -950,16 +951,8 @@ export default function NFT() {
           }
           .itemSlider p:last-of-type {
             font-size: 14px;
-            margin: 5px 10px;
+            margin: 10px;
           }
-          .itemSlider p:first-of-type {
-          margin: 5px;
-          font: 400 20px/24px "GmarketSansMedium";
-        }
-        .iconGraph {
-          margin: 0px 10px;
-          height: 20px;
-          width: 20px;
           h3 {
             font-size: 18px;
           }

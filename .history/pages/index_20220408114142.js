@@ -1,5 +1,6 @@
 import Slider from "react-slick";
-
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect, useRef } from "react";
 import   mainback  from '../public/main_top_bg.jpg';
 import Head from "next/head";
@@ -89,8 +90,7 @@ export default function Home() {
     dots: false,
     infinite: true,
     speed: 500,
-    lazyLoad: true,  
-    cssEase: "linear",    
+    lazyLoad: true,   
     slidesToShow: myscreen > 500 ? 3 : 1,
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,

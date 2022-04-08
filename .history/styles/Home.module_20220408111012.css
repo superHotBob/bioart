@@ -173,8 +173,14 @@
   margin: 50px auto 150px;
   position: relative;
 }
-
-
+.sliderWraperNft {
+  width: 100%;
+}
+.bodySlider {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
 .sliderBtnPrev,
 .sliderBtnNext {
   position: absolute;
@@ -204,8 +210,7 @@
 
 .itemSlider {
   height: 40vw;
- width: 24.5vw !important;
-
+  width: 96% ;
   
 }
 .itemSlider span {

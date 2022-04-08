@@ -90,7 +90,7 @@ export default function Home() {
     infinite: true,
     speed: 500,
     lazyLoad: true,  
-    cssEase: "linear",    
+    cssEase: "linear", 
     slidesToShow: myscreen > 500 ? 3 : 1,
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,

@@ -62,7 +62,6 @@ export default function NFT() {
     dots: false,
     infinite: true,
     speed: 500,
-    cssEase: "linear",    
     slidesToShow: myscreen ? 4 : 2,
     slidesToScroll: myscreen ? 4 : 2,
     nextArrow: <NextArrow />,
@@ -481,7 +480,8 @@ export default function NFT() {
                       <Image
                         src="/icon_graph_01.svg"
                         alt="icon"
-                        layout="fill"
+                        width={30}
+                        height={30}
                       />
                     </b>
                     <span>1.3</span>
@@ -701,8 +701,6 @@ export default function NFT() {
         .iconGraph {
           margin: 0px 10px;
           height: 30px;
-          width: 30px;
-          position: relative;
           vertical-align: top;
           display: inline-block;
         }
@@ -728,7 +726,7 @@ export default function NFT() {
         }
         .itemSlider p:first-of-type {
           margin: 15px;
-          font: 400 26px/36px "GmarketSansMedium";
+          font: 400 26px/26px "GmarketSansMedium";
         }
         .itemSlider p:last-of-type {
           font-size: 1vw;
@@ -950,16 +948,12 @@ export default function NFT() {
           }
           .itemSlider p:last-of-type {
             font-size: 14px;
-            margin: 5px 10px;
+            margin: 10px;
           }
           .itemSlider p:first-of-type {
-          margin: 5px;
-          font: 400 20px/24px "GmarketSansMedium";
+          margin: 15px;
+          font: 400 20px/20px "GmarketSansMedium";
         }
-        .iconGraph {
-          margin: 0px 10px;
-          height: 20px;
-          width: 20px;
           h3 {
             font-size: 18px;
           }

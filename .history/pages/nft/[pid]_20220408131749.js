@@ -62,7 +62,6 @@ export default function NFT() {
     dots: false,
     infinite: true,
     speed: 500,
-    cssEase: "linear",    
     slidesToShow: myscreen ? 4 : 2,
     slidesToScroll: myscreen ? 4 : 2,
     nextArrow: <NextArrow />,

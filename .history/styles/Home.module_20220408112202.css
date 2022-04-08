@@ -173,7 +173,9 @@
   margin: 50px auto 150px;
   position: relative;
 }
-
+.sliderWraperNft {
+  width: 100%;
+}
 
 .sliderBtnPrev,
 .sliderBtnNext {
@@ -204,7 +206,6 @@
 
 .itemSlider {
   height: 40vw;
- width: 24.5vw !important;
 
   
 }
