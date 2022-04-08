@@ -1,19 +1,15 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import   mainback  from '../public/main_top_bg.jpg';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-
 export default function Home() {
-
   const [myscreen, setMyScreen] = useState(1300);
-  const [slideIndex, setSlideIndex] = useState(0);
   useEffect(() => setMyScreen(window.screen.width),[]);
-
   const data = [
     {
       ranking: 1229,
@@ -95,12 +91,42 @@ export default function Home() {
     slidesToShow: myscreen > 500 ? 3 : 1,
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,    
-    beforeChange: (current, next) => setSlideIndex(next),
-    
-     
+    prevArrow: <PrevArrow />,
+    afterChange: function(index) {
+      console.log(
+        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+      );
+    },
+    appendDots: dots => (
+      <div
+        style={{
+          backgroundColor: "red",
+          borderRadius: "1px",
+          display: 'flex',
+          justifyContent: 'space-between'
+          
+        }}
+      >
+        <ul>
+        <span style={{height: '20px', width: '50px', margin: "0 10px",padding: '20px',color: "red"}}> {dots} </span>
+          </ul>
+        
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "50%",
+          float: 'left',
+          color: "blue",
+          backgroundColor: 'yellow',
+          border: "1px blue solid"
+        }}
+      >
+        {i + 1}
+      </div>
+    )
   };
-  const slider = useRef();
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -157,7 +183,7 @@ export default function Home() {
         </h2>
 
         <div className={styles.sliderWraper}>
-          <Slider ref={slider} {...settings}>
+          <Slider {...settings}>
             <div className={styles.itemSlider}>
               <Link href="/nft/one" passHref>
                 <div
@@ -260,14 +286,7 @@ export default function Home() {
               </div>
             </div>
           </Slider>
-          <input style={{width: '100%'}}
-            type="range" 
-            className={styles.range}
-            min={0}
-            max={5}
-            onChange={e => slider.current.slickGoTo(e.target.value)}
-            value={slideIndex}
-          />
+          <input type="range" />
         </div>
       </section>
       <section className={styles.table}>

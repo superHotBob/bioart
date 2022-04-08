@@ -283,9 +283,10 @@ export default function Explore() {
                 <div key={index} className="itemSlider">
                   <Link href="/nft/one" passHref key={index}>
                     <figure className="imageNft" 
-                    style={{ backgroundImage: 'url("/article-img.png")' }}
-                    />    
-                    
+                    style={{ background: 'url("/article-img.png") center / cover no-repeat' }}
+                    >
+                     
+                    </figure>
                   </Link>{" "}
                   <b
                     className="iconItemNft"
@@ -338,7 +339,10 @@ export default function Explore() {
           .mainExplore {
             width: 100%;
             display: flex;
-          }         
+          }
+          .Image {
+            border-radius: 15px;
+          }
           .filtersHeader {
             display: ${myscreen ? "inline-block" : "none"};
             height: 85px;
@@ -451,11 +455,8 @@ export default function Explore() {
           .imageNft {
             width: 100%;
             height: 250px;
-            background-size: cover;
-            background-position: center;
             position: relative;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            border-radius: 15px;
             z-index: 1;
           }
           .textNft {

@@ -7,13 +7,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
-
 export default function Home() {
-
   const [myscreen, setMyScreen] = useState(1300);
   const [slideIndex, setSlideIndex] = useState(0);
   useEffect(() => setMyScreen(window.screen.width),[]);
-
   const data = [
     {
       ranking: 1229,
@@ -95,10 +92,38 @@ export default function Home() {
     slidesToShow: myscreen > 500 ? 3 : 1,
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,    
-    beforeChange: (current, next) => setSlideIndex(next),
+    prevArrow: <PrevArrow />,
     
-     
+    beforeChange: (current, next) => setSlideIndex(next),
+    appendDots: dots => (
+      <div
+        style={{
+          backgroundColor: "red",
+          borderRadius: "1px",
+          display: 'flex',
+          justifyContent: 'space-between'
+          
+        }}
+      >
+        <ul>
+        <span style={{height: '20px', width: '50px', margin: "0 10px",padding: '20px',color: "red"}}> {dots} </span>
+          </ul>
+        
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "50%",
+          float: 'left',
+          color: "blue",
+          backgroundColor: 'yellow',
+          border: "1px blue solid"
+        }}
+      >
+        {i + 1}
+      </div>
+    )
   };
   const slider = useRef();
   function NextArrow(props) {
@@ -260,12 +285,11 @@ export default function Home() {
               </div>
             </div>
           </Slider>
-          <input style={{width: '100%'}}
+          <input 
             type="range" 
-            className={styles.range}
             min={0}
-            max={5}
-            onChange={e => slider.current.slickGoTo(e.target.value)}
+            max={1}
+            onChange={e => slider.slickGoTo(e.target.value)}
             value={slideIndex}
           />
         </div>

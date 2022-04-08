@@ -262,9 +262,8 @@ export default function Home() {
           </Slider>
           <input style={{width: '100%'}}
             type="range" 
-            className={styles.range}
             min={0}
-            max={5}
+            max={1}
             onChange={e => slider.current.slickGoTo(e.target.value)}
             value={slideIndex}
           />

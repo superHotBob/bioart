@@ -472,29 +472,13 @@ p.headerTable:hover {
 .range {
   -webkit-appearance: none;
   -moz-appearance: none;
+ 
+ 
   background-color: rgb(87, 74, 69);
-  height: 2px;
+  height: 3px;
   width: 100%;
   margin-top: 10px;
   
-}
-.range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  
-  height: 5px;
-  width: 55px;
-  max-width: 80px;
-  position: relative;
-  bottom: 0;
-  background-color: red;
-  cursor: -webkit-grab;
-
-  -webkit-transition: border 1000ms ease;
-  transition: border 1000ms ease;
-}
-
-.range.blue::-webkit-slider-thumb {
-  border-color: rgb(14, 29, 36);
 }
 @media screen and (max-width: 550px) {
   .search_input,
@@ -571,9 +555,7 @@ p.headerTable:hover {
     text-align: left;
     width: 100% !important;
   }
-  .itemSliderImage {
-    height: 94vw;
-  }
+ 
   .sliderText {
     width: 70%;
     font-size: 20px;

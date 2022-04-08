@@ -454,8 +454,7 @@ export default function Explore() {
             background-size: cover;
             background-position: center;
             position: relative;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            border-radius: 15px;
             z-index: 1;
           }
           .textNft {
