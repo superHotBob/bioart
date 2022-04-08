@@ -284,7 +284,7 @@ export default function Home() {
             <span className={styles.mobile} style={{ textAlign: "left" }}>
               Ranking
             </span>
-            <span style={{ textAlign: "left",flexGrow: 3 }}>Planet</span>
+            <span style={{ textAlign: "left" }}>Planet</span>
             <span>Volume ▼</span>
             <span className={styles.mobile}>24h%</span>
             <span className={styles.mobile}>7d%</span>
@@ -302,7 +302,7 @@ export default function Home() {
               </span>
               <span
                 className={styles.planetsTableData}
-                style={{ textAlign: "left", flexGrow: 3 }}
+                style={{ textAlign: "left" }}
               >
                 BioArts <br className={styles.br} />{" "}
                 <span className={styles.mobileYes}> Rankin 1247</span>
@@ -328,7 +328,7 @@ export default function Home() {
                 </span>
                 <span
                   className={styles.planetsTableData}
-                  style={{ textAlign: "left" ,flexGrow: 3}}
+                  style={{ textAlign: "left" ,flex: 5}}
                 >
                   {i.planet} <br />
                   <span className={styles.mobileYes}>Ranking {i.ranking}</span>

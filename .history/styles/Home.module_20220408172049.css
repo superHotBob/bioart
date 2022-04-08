@@ -191,7 +191,7 @@
   opacity: 1;
 }
 .sliderBtnNext {
-  left: 97%;
+  left: 96%;
   background-image: url("/slider_next_btn.svg");
 }
 .sliderBtnNext:hover {
@@ -240,7 +240,6 @@
   text-align: center;
   font-family: "GmarketSansLight";
   font-size: 28px;
-  letter-spacing: 2px;
 }
 .table h2 a {
   color: #00b4e6;
@@ -266,7 +265,6 @@
   border-top: 1px solid #c9c9c9;
   border-bottom: 1px solid #c9c9c9;
   padding: 10px 0;
-  margin: 0;
   font-weight: bold;
 }
 .headerTableFirst {
@@ -452,14 +450,15 @@ p.headerTable:hover {
   display: none !important;
 }
 .planetsTableData {
-  flex-grow: 1;
+  flex-grow: 4;
   font-size: 28px;
   height: 50px;
-  width: 25%; 
-  background: url("/icon_ba.svg") left center / 50px no-repeat;  
+  text-align: left;
+  background-image: url("/icon_ba.svg");
+  background-repeat: no-repeat;
+  background-size: 50px;
   padding-left: 60px;
 }
-
 .range {
   -webkit-appearance: none;
   -moz-appearance: none;

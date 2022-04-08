@@ -82,7 +82,7 @@ export default function Explore() {
   return (
     <>
     <Head>
-        <title>My NFTs</title>
+        <title>My page title</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="mainExplore">

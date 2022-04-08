@@ -884,7 +884,6 @@ export default function NFT() {
           height: 20px;
           margin: 0 10px;
           vertical-align: middle;
-          cursor: pointer;
         }
         .bold span {
           font-family: "GmarketSansMedium";

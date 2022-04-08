@@ -879,13 +879,6 @@ export default function NFT() {
           font-size: 20px;
           margin-left: 30px;
         }
-        .filterLog b {
-          display: inline-block;
-          height: 20px;
-          margin: 0 10px;
-          vertical-align: middle;
-          cursor: pointer;
-        }
         .bold span {
           font-family: "GmarketSansMedium";
           font-weight: 800;

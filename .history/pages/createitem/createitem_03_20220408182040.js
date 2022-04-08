@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 export default function GenomeDataSintetic() {
   return (
-    <div className="mainBlock">       
+    <div className="mainBlock">
+       
       <h1> 
           <span style={{float: 'left',width: 150}} />
         Genomic Data Synthesis{" "}
@@ -21,7 +22,7 @@ export default function GenomeDataSintetic() {
           <Image src="/icon_graph_13.svg" width={35} height={35} alt="icon" />
       </b>
       <div className="wraperSmallImage">
-        {/* <div className="smallImage"/> */}
+        <div className="smallImage"/>
       </div>
       <Link href='/createitem/createitem' passHref>
          <button>Select Genom</button> 

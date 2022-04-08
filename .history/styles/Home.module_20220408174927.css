@@ -266,7 +266,6 @@
   border-top: 1px solid #c9c9c9;
   border-bottom: 1px solid #c9c9c9;
   padding: 10px 0;
-  margin: 0;
   font-weight: bold;
 }
 .headerTableFirst {
@@ -455,8 +454,10 @@ p.headerTable:hover {
   flex-grow: 1;
   font-size: 28px;
   height: 50px;
-  width: 25%; 
-  background: url("/icon_ba.svg") left center / 50px no-repeat;  
+  width: 25%;
+ 
+  background: url("/icon_ba.svg") left center / 50px no-repeat;
+  
   padding-left: 60px;
 }
 

@@ -81,10 +81,6 @@ export default function Explore() {
 
   return (
     <>
-    <Head>
-        <title>My NFTs</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <div className="mainExplore">
         <div className="filters">
           <div className="filtersHeader">

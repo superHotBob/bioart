@@ -87,7 +87,7 @@ export default function PriceHistory() {
                   
               </XAxis>
               <YAxis
-                width={80}
+                width={70}
                 tickLine={false}
                 tickMargin={5}
                 style={{

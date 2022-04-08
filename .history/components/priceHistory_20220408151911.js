@@ -87,14 +87,12 @@ export default function PriceHistory() {
                   
               </XAxis>
               <YAxis
-                width={80}
-                tickLine={false}
-                tickMargin={5}
+                width={70}
                 style={{
                   fontSize: myscreen ? 16 : 12,
                   color: "#333",
-                  fontWeight: 300,
-                  
+                  fontWeight: 400,
+                  paddingRight: '15px'
                 }}
                 padding={{ top: 20, bottom: 20 }}
                 tick={{ stroke: "gray", strokeWidth: 1 }}

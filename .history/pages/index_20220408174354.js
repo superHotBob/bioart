@@ -284,7 +284,7 @@ export default function Home() {
             <span className={styles.mobile} style={{ textAlign: "left" }}>
               Ranking
             </span>
-            <span style={{ textAlign: "left",flexGrow: 3 }}>Planet</span>
+            <span style={{ textAlign: "left" }}>Planet</span>
             <span>Volume ▼</span>
             <span className={styles.mobile}>24h%</span>
             <span className={styles.mobile}>7d%</span>

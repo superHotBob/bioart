@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 export default function GenomeDataSintetic() {
   return (
-    <div className="mainBlock">       
+    <div className="mainBlock">
+       
       <h1> 
           <span style={{float: 'left',width: 150}} />
         Genomic Data Synthesis{" "}

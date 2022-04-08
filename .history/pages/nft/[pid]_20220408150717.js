@@ -62,7 +62,7 @@ export default function NFT() {
     dots: false,
     infinite: true,
     speed: 500,
-    cssEase: "linear",
+    cssEase: "linear",    
     slidesToShow: myscreen ? 4 : 2,
     slidesToScroll: myscreen ? 4 : 2,
     nextArrow: <NextArrow />,
@@ -405,24 +405,8 @@ export default function NFT() {
                   </select>
                 </div>
                 <div className="filterLog">
-                  <span>
-                    Sales <b>
-                    <Image
-                      src="/icon_clsbk.svg"
-                      width={20}
-                      height={20}
-                      alt="close"
-                    /></b>
-                  </span>
-                  <span>
-                    Transfer{" "}<b>
-                    <Image
-                      src="/icon_clsbk.svg"
-                      width={20}
-                      height={20}
-                      alt="close"
-                    /></b>
-                  </span>
+                  <span>Sales <Image src="/icon_clsbk.svg" width={20} height={20} alt="close" /></span>
+                  <span>Transfer <Image src="/icon_clsbk.svg" width={20} height={20} alt="close" /></span>
                 </div>
                 <p className="headerData bold">
                   <span className="mobileNo">Event</span>
@@ -477,9 +461,10 @@ export default function NFT() {
                   <Link href="/nft/one" passHref key={index}>
                     <figure
                       className="imageSlider"
-                      style={{
+                      style={{                       
                         background:
                           "url(/article-img.png) center / cover no-repeat",
+                       
                       }}
                     />
                   </Link>{" "}
@@ -597,24 +582,22 @@ export default function NFT() {
           letter-spacing: 1.5px;
           height: ${viewText ? "auto" : "100px"};
           color: #333;
-          -webkit-mask-image: ${
-            viewText
-              ? "none"
-              : `-webkit-gradient(linear, left top, left bottom, 
-            from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))`
-          };
+          -webkit-mask-image: ${viewText
+            ? "none"
+            : `-webkit-gradient(linear, left top, left bottom, 
+            from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))`};
         }
         .viewText {
           height: 30px;
-          background: url(${
-            viewText ? "/icon_vwar_01.svg" : "/icon_vwar_02.svg"
-          })
+          background: url(${viewText
+              ? "/icon_vwar_01.svg"
+              : "/icon_vwar_02.svg"})
             center / 5% no-repeat;
         }
         .viewText:hover {
-          background: url(${
-            viewText ? "/icon_vwar_01_hv.svg" : "/icon_vwar_02_hv.svg"
-          })
+          background: url(${viewText
+              ? "/icon_vwar_01_hv.svg"
+              : "/icon_vwar_02_hv.svg"})
             center / 5% no-repeat;
         }
         .lastString {
@@ -878,13 +861,6 @@ export default function NFT() {
         .filterLog span {
           font-size: 20px;
           margin-left: 30px;
-        }
-        .filterLog b {
-          display: inline-block;
-          height: 20px;
-          margin: 0 10px;
-          vertical-align: middle;
-          cursor: pointer;
         }
         .bold span {
           font-family: "GmarketSansMedium";
