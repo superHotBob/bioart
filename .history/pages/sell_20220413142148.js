@@ -394,7 +394,7 @@ export default function Sell() {
             display: none;
           }
           .starting select {
-            width: 24.5%;
+            width: 24.2%;
           }
         }
       `}</style>

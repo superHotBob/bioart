@@ -387,14 +387,13 @@ export default function Sell() {
           }
           .mobileView {
             display: block;
-            margin-top: 30px;
-            font: 400 18px/20px 'GmarketSansMedium';
+            font-size: 18px;
           }
           .mobileHide {
             display: none;
           }
           .starting select {
-            width: 24.5%;
+            width: 24%;
           }
         }
       `}</style>

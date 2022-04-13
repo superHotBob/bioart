@@ -107,9 +107,8 @@ export default function Sell() {
             />
             1 mounth
           </label>
-          <span className="mobileView">Starting</span>
           <div className="starting">
-          <span className="mobileHide">Starting</span>
+            <span>Starting</span>
             <select style={{ width: "25%" }}>
               <Image
                 src="/icon_drp_arr.svg"
@@ -124,9 +123,8 @@ export default function Sell() {
             <b>:</b>
             <select></select>
           </div>
-          <span className="mobileView">Ending</span>
           <div className="starting">
-            <span className="mobileHide">Ending</span>
+            <span>Ending</span>
             <select style={{ width: "25%" }}></select>
             <select></select>
             <select></select>
@@ -150,12 +148,6 @@ export default function Sell() {
         </div>
       </div>
       <style jsx>{`
-        .mobileView {
-          display: none;
-        }
-        .mobileHide {
-          display: inline-block;
-        }
         hr {
           margin: 80px 0 60px;
           color: #c9c9c9;
@@ -369,32 +361,6 @@ export default function Sell() {
           .nft,
           .content {
             width: 100%;
-          }
-          .itemSliderImageNft {
-            width: 100%;
-            height: 150vw;
-            padding-top: 97vw;
-          }
-          input[placeholder="Amount"] {
-            width: 70%;
-          }
-          input[type="radio"] {
-            margin-right: 14px;
-          }
-          .starting {
-            display: block;
-            margin-top: 10px;
-          }
-          .mobileView {
-            display: block;
-            margin-top: 30px;
-            font: 400 18px/20px 'GmarketSansMedium';
-          }
-          .mobileHide {
-            display: none;
-          }
-          .starting select {
-            width: 24.5%;
           }
         }
       `}</style>

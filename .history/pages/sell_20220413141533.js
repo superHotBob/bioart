@@ -109,7 +109,7 @@ export default function Sell() {
           </label>
           <span className="mobileView">Starting</span>
           <div className="starting">
-          <span className="mobileHide">Starting</span>
+            
             <select style={{ width: "25%" }}>
               <Image
                 src="/icon_drp_arr.svg"
@@ -124,9 +124,8 @@ export default function Sell() {
             <b>:</b>
             <select></select>
           </div>
-          <span className="mobileView">Ending</span>
           <div className="starting">
-            <span className="mobileHide">Ending</span>
+            <span>Ending</span>
             <select style={{ width: "25%" }}></select>
             <select></select>
             <select></select>
@@ -152,9 +151,6 @@ export default function Sell() {
       <style jsx>{`
         .mobileView {
           display: none;
-        }
-        .mobileHide {
-          display: inline-block;
         }
         hr {
           margin: 80px 0 60px;
@@ -387,14 +383,10 @@ export default function Sell() {
           }
           .mobileView {
             display: block;
-            margin-top: 30px;
-            font: 400 18px/20px 'GmarketSansMedium';
-          }
-          .mobileHide {
-            display: none;
+            font-size: 18px;
           }
           .starting select {
-            width: 24.5%;
+            width: 25%;
           }
         }
       `}</style>

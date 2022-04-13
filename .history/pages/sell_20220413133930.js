@@ -7,7 +7,15 @@ export default function Sell() {
   return (
     <div className="sellMain">
       <div className="nft">
-        <div className="itemSliderImageNft">
+        <div
+          className="itemSliderImageNft"
+          style={{
+            height: "500px",
+            width: "300px",
+            paddingTop: "270px",
+            backgroundImage: "url(/article-img.png)",
+          }}
+        >
           <b
             className="iconItemNft"
             style={{ backgroundImage: "url(/icon_ba.svg)" }}
@@ -107,9 +115,8 @@ export default function Sell() {
             />
             1 mounth
           </label>
-          <span className="mobileView">Starting</span>
           <div className="starting">
-          <span className="mobileHide">Starting</span>
+            <span>Starting</span>
             <select style={{ width: "25%" }}>
               <Image
                 src="/icon_drp_arr.svg"
@@ -124,9 +131,8 @@ export default function Sell() {
             <b>:</b>
             <select></select>
           </div>
-          <span className="mobileView">Ending</span>
           <div className="starting">
-            <span className="mobileHide">Ending</span>
+            <span>Ending</span>
             <select style={{ width: "25%" }}></select>
             <select></select>
             <select></select>
@@ -134,7 +140,7 @@ export default function Sell() {
             <select></select>
           </div>
         </div>
-        <hr />
+        <hr/>
         <p>Fees</p>
         <span className="service">
           Service Free<b>0.5%</b>
@@ -150,16 +156,10 @@ export default function Sell() {
         </div>
       </div>
       <style jsx>{`
-        .mobileView {
-          display: none;
-        }
-        .mobileHide {
-          display: inline-block;
-        }
-        hr {
-          margin: 80px 0 60px;
-          color: #c9c9c9;
-        }
+          hr {
+            margin: 80px 0 60px;
+            color: #c9c9c9;
+          }
         .sellMain {
           width: 68%;
           margin: 0 auto;
@@ -167,7 +167,7 @@ export default function Sell() {
         }
         @media screen and (max-width: 1300px) {
           .sellMain {
-            width: 80%;
+              width: 80%;
           }
         }
         .nft {
@@ -196,12 +196,12 @@ export default function Sell() {
         .solPrice {
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: center
         }
         label span {
           font-size: 22px;
           font-weight: 600;
-          font-family: "GmarketSansMedium";
+          font-family: "GmarketSansMedium";         
         }
         .blockRadios label {
           margin-right: 20px;
@@ -224,10 +224,6 @@ export default function Sell() {
         }
         .itemSliderImageNft {
           outline-offset: 3px;
-          height: 500px;
-          width: 300px;
-          padding-top: 270px;
-          background-image: url('/article-img.png');
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
@@ -358,43 +354,16 @@ export default function Sell() {
         }
         @media screen and (max-width: 1300px) {
           .starting span {
-            font-size: 15px;
+              font-size: 15px;
           }
         }
         @media screen and (max-width: 550px) {
           .sellMain {
-            width: 96%;
+            width:96%;
             margin: 0 auto;
           }
-          .nft,
-          .content {
+          .nft, .content {
             width: 100%;
-          }
-          .itemSliderImageNft {
-            width: 100%;
-            height: 150vw;
-            padding-top: 97vw;
-          }
-          input[placeholder="Amount"] {
-            width: 70%;
-          }
-          input[type="radio"] {
-            margin-right: 14px;
-          }
-          .starting {
-            display: block;
-            margin-top: 10px;
-          }
-          .mobileView {
-            display: block;
-            margin-top: 30px;
-            font: 400 18px/20px 'GmarketSansMedium';
-          }
-          .mobileHide {
-            display: none;
-          }
-          .starting select {
-            width: 24.5%;
           }
         }
       `}</style>

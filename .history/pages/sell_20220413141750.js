@@ -124,9 +124,8 @@ export default function Sell() {
             <b>:</b>
             <select></select>
           </div>
-          <span className="mobileView">Ending</span>
           <div className="starting">
-            <span className="mobileHide">Ending</span>
+            <span>Ending</span>
             <select style={{ width: "25%" }}></select>
             <select></select>
             <select></select>
@@ -387,14 +386,13 @@ export default function Sell() {
           }
           .mobileView {
             display: block;
-            margin-top: 30px;
-            font: 400 18px/20px 'GmarketSansMedium';
+            font-size: 18px;
           }
           .mobileHide {
             display: none;
           }
           .starting select {
-            width: 24.5%;
+            width: 24%;
           }
         }
       `}</style>
