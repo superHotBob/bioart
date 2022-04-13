@@ -1,12 +1,9 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Sell() {
   const [type, setType] = useState(true);
   const [duration, setDuration] = useState(1);
-  const [myscreen, setMyScreen] = useState(1300);  
-  useEffect(() => setMyScreen(window.screen.width),[]);
-
   return (
     <div className="sellMain">
       <div className="nft">
@@ -113,42 +110,28 @@ export default function Sell() {
           <span className="mobileView">Starting</span>
           <div className="starting">
           <span className="mobileHide">Starting</span>
-            <select style={{ width: !myscreen ? '25%' : '100%'}}>
+            <select style={{ width: "25%" }}>
               <Image
                 src="/icon_drp_arr.svg"
                 width={25}
                 height={25}
                 alt="icon"
               />
-              <option>november</option>              
+              <option>sdfsdf</option>
             </select>
-            <select>
-            <option>15</option> 
-            </select>
-            <select>
-            <option>18</option> 
-            </select>
+            <select></select>
+            <select></select>
             <b>:</b>
-            <select>
-            <option>00</option> 
-            </select>
+            <select></select>
           </div>
           <span className="mobileView">Ending</span>
           <div className="starting">
             <span className="mobileHide">Ending</span>
-            <select style={{ width: !myscreen ? '25%' : '100%' }}>
-             <option>november</option>              
-            </select>
-            <select>
-            <option>15</option> 
-            </select>
-            <select>
-            <option>18</option> 
-            </select>
+            <select style={{ width: "25%" }}></select>
+            <select></select>
+            <select></select>
             <b>:</b>
-            <select>
-            <option>00</option> 
-            </select>
+            <select></select>
           </div>
         </div>
         <hr />
@@ -364,7 +347,7 @@ export default function Sell() {
           background: transparent;
           border: 1px solid #c9c9c9;
           border-radius: 20px;
-          background: url(/icon_drp_arr.svg) no-repeat 100% / 44px  35%;
+          background: url(/icon_drp_arr.svg) no-repeat 100% / 34% 35%;
         }
 
         .starting span {
@@ -404,32 +387,17 @@ export default function Sell() {
           }
           .mobileView {
             display: block;
-            margin: 30px 0 15px;
+            margin-top: 30px;
             font: 400 18px/20px 'GmarketSansMedium';
           }
           .mobileHide {
             display: none;
           }
           .starting select {
-            width: 30.48%;
-            margin: 20px 2vw 0 0;
-            height: 35px;
-          }
-          .starting select:last-of-type {
-            margin: 10px 0 0 2vw;
+            width: 24.5%;
           }
           .blockRadios label {
             margin-right: 10px;
-          }
-          hr {
-            margin: 40px 0 0;
-          }
-          .content p {
-            margin: 40px 0 15px;
-            font-size: 20px;
-          }
-          .firstString {
-            font-size: 30px;
           }
         }
       `}</style>

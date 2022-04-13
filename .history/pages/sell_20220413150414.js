@@ -120,7 +120,7 @@ export default function Sell() {
                 height={25}
                 alt="icon"
               />
-              <option>november</option>              
+              <option>06</option>              
             </select>
             <select>
             <option>15</option> 
@@ -137,7 +137,7 @@ export default function Sell() {
           <div className="starting">
             <span className="mobileHide">Ending</span>
             <select style={{ width: !myscreen ? '25%' : '100%' }}>
-             <option>november</option>              
+             <option>07</option>              
             </select>
             <select>
             <option>15</option> 

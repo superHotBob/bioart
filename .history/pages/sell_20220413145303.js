@@ -113,14 +113,14 @@ export default function Sell() {
           <span className="mobileView">Starting</span>
           <div className="starting">
           <span className="mobileHide">Starting</span>
-            <select style={{ width: !myscreen ? '25%' : '100%'}}>
+            <select style={{ width: myscreen ? '25%' : '100%'}}>
               <Image
                 src="/icon_drp_arr.svg"
                 width={25}
                 height={25}
                 alt="icon"
               />
-              <option>november</option>              
+              <option>06</option>              
             </select>
             <select>
             <option>15</option> 
@@ -136,8 +136,8 @@ export default function Sell() {
           <span className="mobileView">Ending</span>
           <div className="starting">
             <span className="mobileHide">Ending</span>
-            <select style={{ width: !myscreen ? '25%' : '100%' }}>
-             <option>november</option>              
+            <select style={{ width: myscreen ? '25%' : '100%' }}>
+             <option>07</option>              
             </select>
             <select>
             <option>15</option> 
@@ -364,7 +364,7 @@ export default function Sell() {
           background: transparent;
           border: 1px solid #c9c9c9;
           border-radius: 20px;
-          background: url(/icon_drp_arr.svg) no-repeat 100% / 44px  35%;
+          background: url(/icon_drp_arr.svg) no-repeat 100% / 34% 35%;
         }
 
         .starting span {
@@ -411,12 +411,9 @@ export default function Sell() {
             display: none;
           }
           .starting select {
-            width: 30.48%;
-            margin: 20px 2vw 0 0;
+            width: 23.5%;
+            margin: 2px;
             height: 35px;
-          }
-          .starting select:last-of-type {
-            margin: 10px 0 0 2vw;
           }
           .blockRadios label {
             margin-right: 10px;
