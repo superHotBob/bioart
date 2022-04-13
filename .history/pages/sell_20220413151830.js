@@ -400,11 +400,11 @@ export default function Sell() {
           }
           .starting {
             display: block;
-            margin-top: 0;
+            margin-top: 10px;
           }
           .mobileView {
             display: block;
-            margin: 30px 0 0;
+            margin: 30px 0 15px;
             font: 400 18px/20px 'GmarketSansMedium';
           }
           .mobileHide {

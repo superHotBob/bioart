@@ -113,7 +113,7 @@ export default function Sell() {
           <span className="mobileView">Starting</span>
           <div className="starting">
           <span className="mobileHide">Starting</span>
-            <select style={{ width: myscreen ? '25%' : '100%'}}>
+            <select style={{ width: !myscreen ? '25%' : '100%'}}>
               <Image
                 src="/icon_drp_arr.svg"
                 width={25}
@@ -136,7 +136,7 @@ export default function Sell() {
           <span className="mobileView">Ending</span>
           <div className="starting">
             <span className="mobileHide">Ending</span>
-            <select style={{ width: myscreen ? '25%' : '100%' }}>
+            <select style={{ width: !myscreen ? '25%' : '100%' }}>
              <option>november</option>              
             </select>
             <select>
@@ -400,11 +400,11 @@ export default function Sell() {
           }
           .starting {
             display: block;
-            margin-top: 0;
+            margin-top: 10px;
           }
           .mobileView {
             display: block;
-            margin: 30px 0 0;
+            margin: 30px 0 15px;
             font: 400 18px/20px 'GmarketSansMedium';
           }
           .mobileHide {
