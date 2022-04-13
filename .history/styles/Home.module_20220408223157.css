@@ -128,11 +128,12 @@
 }
 .wrapFirstBlock {
   width: 100%;
-  height: 44.1vw;
+  height: 70.1vh;
   background: url("/main_top_bgline.jpg") bottom center / 100% 1px repeat-x;
 }
-.firstBlock { 
-  height: 44vw;
+.firstBlock {
+  /* background: url('/main_top_bg.jpg') center / 100% auto no-repeat;  */
+  height: 70vh;
   position: relative;
 }
 .firstBlockText {
@@ -244,9 +245,8 @@
   font-size: 28px;
   letter-spacing: 2px;
 }
-.table h2 b {
+.table h2 a {
   color: #00b4e6;
-  font-size: 28px;
 }
 .icons {
   width: 164px;
@@ -408,7 +408,8 @@ p.headerTable:hover {
   color: #333;
 }
 .block_likes {
-  width: 600px; 
+  width: 600px;
+  height: 60vh;
   position: absolute;
   right: 35px;
   font-size: 18px;
@@ -494,21 +495,6 @@ p.headerTable:hover {
   .symbol {
     display: none;
   }
-  .block_likes {
-    width: 100vw;
-    right: 0;
-    padding: 10px;    
-  }
-  .block_likes p {
-    font-size: 16px;
-  }
-  .iconLike::before {
-    left: 0;
-    top: -14px;
-  }
-  .block_likes figure {
-    margin: 0 5px;
-  }
   .header {
     padding: 20px 10px;
   }
@@ -570,7 +556,7 @@ p.headerTable:hover {
   .wrapFirstBlock {
     height: auto;
   }
-  .slider {
+  .sliderWraper {
     width: 94%;
     margin: 20px auto 100px;
   }

@@ -408,7 +408,8 @@ p.headerTable:hover {
   color: #333;
 }
 .block_likes {
-  width: 600px; 
+  width: 600px;
+  height: 60vh;
   position: absolute;
   right: 35px;
   font-size: 18px;
@@ -493,21 +494,6 @@ p.headerTable:hover {
   .search_input,
   .symbol {
     display: none;
-  }
-  .block_likes {
-    width: 100vw;
-    right: 0;
-    padding: 10px;    
-  }
-  .block_likes p {
-    font-size: 16px;
-  }
-  .iconLike::before {
-    left: 0;
-    top: -14px;
-  }
-  .block_likes figure {
-    margin: 0 5px;
   }
   .header {
     padding: 20px 10px;

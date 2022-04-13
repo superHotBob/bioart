@@ -152,7 +152,7 @@ export default function Geno() {
       <div className="subscribePlanets">
         <h2 className="planetsHeader"> Subscribe Planets</h2>
         <Image src="/icon_graph_04.svg" width={70} height={70} alt="icon" />
-        <div className="sliderWraper" >
+        <div className={styles.sliderWraper} style={{ width: "100%" }}>
           <Slider {...sliderGenoOne}>
             <div className="planetItems slider">
               <div

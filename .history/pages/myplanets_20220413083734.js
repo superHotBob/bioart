@@ -4,12 +4,12 @@ import Link from "next/link";
 import LastStringNft from "../components/lastStringNft";
 
 const nft = [
-  { price: "",id:0 },
-  { price: "",id:1 },
-  { price: "---",id:2 },
-  { price: 4.5,id: 3 },
-  { price: 5.5,id: 4 },
-  { price: 5.5,id: 5 },
+  { price: "" },
+  { price: "" },
+  { price: "---" },
+  { price: 4.5 },
+  { price: 5.5 },
+  { price: 5.5 },
 ];
 
 export default function Explore() {
@@ -349,7 +349,7 @@ export default function Explore() {
             <div className="blockPlus itemSliderImageNft" />
             {newNft.map((i, index) => (
               <>
-                <Link href="/nft/one" passHref key={i.id}>
+                <Link href="/nft/one" passHref key={index}>
                   <div
                     key={index}
                     className="itemSliderImageNft"

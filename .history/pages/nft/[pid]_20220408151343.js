@@ -321,6 +321,7 @@ export default function NFT() {
               <br className="mobileYes" /> 2020 at 10:15 KST
             </h3>
             <p>Minimum bid</p>
+
             <div>
               <b className="big blue">0.00</b>($ 0.00)
               <span style={{ margin: 5, verticalAlign: "middle" }}>
@@ -405,26 +406,22 @@ export default function NFT() {
                 </div>
                 <div className="filterLog">
                   <span>
-                    Sales{" "}
-                    <b>
-                      <Image
-                        src="/icon_clsbk.svg"
-                        width={20}
-                        height={20}
-                        alt="close"
-                      />
-                    </b>
+                    Sales <b>
+                    <Image
+                      src="/icon_clsbk.svg"
+                      width={20}
+                      height={20}
+                      alt="close"
+                    /></b>
                   </span>
                   <span>
-                    Transfer{" "}
-                    <b>
-                      <Image
-                        src="/icon_clsbk.svg"
-                        width={20}
-                        height={20}
-                        alt="close"
-                      />
-                    </b>
+                    Transfer{" "}<b>
+                    <Image
+                      src="/icon_clsbk.svg"
+                      width={20}
+                      height={20}
+                      alt="close"
+                    /></b>
                   </span>
                 </div>
                 <p className="headerData bold">
@@ -472,6 +469,7 @@ export default function NFT() {
           style={{ margin: "150px 0 50px" }}
         >
           <h2 style={{ textAlign: "center" }}>More from this Planet</h2>
+
           <Slider {...settings}>
             {[1, 2, 3, 4, 5, 6, 7, 8].map((i, index) => (
               <div key={index} style={{ width: 300 }}>
@@ -599,22 +597,24 @@ export default function NFT() {
           letter-spacing: 1.5px;
           height: ${viewText ? "auto" : "100px"};
           color: #333;
-          -webkit-mask-image: ${viewText
-            ? "none"
-            : `-webkit-gradient(linear, left top, left bottom, 
-            from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))`};
+          -webkit-mask-image: ${
+            viewText
+              ? "none"
+              : `-webkit-gradient(linear, left top, left bottom, 
+            from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))`
+          };
         }
         .viewText {
           height: 30px;
-          background: url(${viewText
-              ? "/icon_vwar_01.svg"
-              : "/icon_vwar_02.svg"})
+          background: url(${
+            viewText ? "/icon_vwar_01.svg" : "/icon_vwar_02.svg"
+          })
             center / 5% no-repeat;
         }
         .viewText:hover {
-          background: url(${viewText
-              ? "/icon_vwar_01_hv.svg"
-              : "/icon_vwar_02_hv.svg"})
+          background: url(${
+            viewText ? "/icon_vwar_01_hv.svg" : "/icon_vwar_02_hv.svg"
+          })
             center / 5% no-repeat;
         }
         .lastString {
@@ -760,8 +760,8 @@ export default function NFT() {
           width: 100%;
           height: 255px;
           position: relative;
-          border-top-left-radius: 15px;
-          border-top-right-radius: 15px;
+          border-top-left-radius: 15px ;
+          border-top-right-radius: 15px ;
           z-index: 1;
         }
         .imageNft img {
@@ -977,14 +977,13 @@ export default function NFT() {
             margin: 5px 10px;
           }
           .itemSlider p:first-of-type {
-            margin: 5px;
-            font: 400 20px/24px "GmarketSansMedium";
-          }
-          .iconGraph {
-            margin: 0px 10px;
-            height: 20px;
-            width: 20px;
-          }
+          margin: 5px;
+          font: 400 20px/24px "GmarketSansMedium";
+        }
+        .iconGraph {
+          margin: 0px 10px;
+          height: 20px;
+          width: 20px;
           h3 {
             font-size: 18px;
           }

@@ -497,9 +497,6 @@ p.headerTable:hover {
   .block_likes {
     width: 100vw;
     right: 0;
-    padding: 10px;    
-  }
-  .block_likes p {
     font-size: 16px;
   }
   .iconLike::before {

@@ -133,8 +133,8 @@ export default function Home() {
       </Head>
       <section className={styles.wrapFirstBlock}>
         <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" priority="true" />
-       </div>
+          <Image src={mainback} layout='responsive' alt="mainbackground" priority="true" />
+        </div>
         <div className={styles.firstBlockText}>
           <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
           <div className={styles.firstBlockTextOnly}>
@@ -273,7 +273,7 @@ export default function Home() {
       <section className={styles.table}>
         <h2>
           Rankings of Planets <br className={styles.br} />
-          <b>over last 7 days ▼</b>
+          <a>over last 7 days ▼</a>
         </h2>
         <div className={styles.icons}>
           <Image src="/icon_cate_on_01.svg" width={54} height={40} alt="icon" />

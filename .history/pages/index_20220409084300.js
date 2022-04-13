@@ -133,8 +133,8 @@ export default function Home() {
       </Head>
       <section className={styles.wrapFirstBlock}>
         <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" priority="true" />
-       </div>
+          {/* <Image src={mainback} layout='responsive' alt="mainbackground" priority="true" /> */}
+        </div>
         <div className={styles.firstBlockText}>
           <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
           <div className={styles.firstBlockTextOnly}>

@@ -280,7 +280,7 @@ export default function Explore() {
           </div>
           <p className="count">
             <span>All NFTs</span>
-            <span>{newNft.length} Items</span>
+            <span>{newnft.length} Items</span>
           </p>
           <div className="filterItem">
             {newNft.map((i, index) => (
