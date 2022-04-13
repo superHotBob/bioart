@@ -430,15 +430,16 @@ p.headerTable:hover {
   margin: 30px 0;
 }
 .icon_like {
-  padding: 2px 3px;
+  padding: 3px;
   border: 1px solid #c9c9c9;
   border-radius: 50%;
-  
-  display: inline-block;
 }
 .icon_like span {
   border-radius: 50%;
-   
+  height: 50px;
+  width: 50px;
+  
+  
   vertical-align: middle;
 }
 .icon_like_last span {
@@ -507,8 +508,7 @@ p.headerTable:hover {
     font-size: 16px;
   }
   .iconLike::before {
-    left: 3px;
-    font-size: 14px;
+    left: 0;
     top: -14px;
   }
   .block_likes figure {

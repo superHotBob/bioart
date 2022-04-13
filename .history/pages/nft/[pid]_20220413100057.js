@@ -946,7 +946,7 @@ export default function NFT() {
             padding-top: 10px;
           }
           .content p {
-            margin-top: 40px;
+            margin-top: 80px;
           }
           .image {
             height: 110vw;

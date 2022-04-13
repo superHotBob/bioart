@@ -507,8 +507,7 @@ p.headerTable:hover {
     font-size: 16px;
   }
   .iconLike::before {
-    left: 3px;
-    font-size: 14px;
+    left: 0;
     top: -14px;
   }
   .block_likes figure {
