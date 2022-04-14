@@ -18,7 +18,6 @@ export default function Layout({ children }) {
             font-size: 18px;
             color: #333;
             display: flex;
-            align-items: center;
             justify-content: space-between;
             font-family: "GmarketSansLight";
           }

@@ -159,7 +159,7 @@ export default function Sell() {
         <div className="creatorFree">
           Creator Free<b>10.0%</b>
           <button className="question">?</button>
-          <b className="answer">Hello. This is answer.</b>
+          <b className="answer">dsfsdfsdf</b>
         </div>
         <div className="buttons">
           <button className="cancel">Cancel</button>
@@ -343,8 +343,6 @@ export default function Sell() {
         .question {
           border: 3px solid #c9c9c9;
           font-size: 18px;
-          height: 30px;
-          width: 30px;
           border-radius: 50%;
           text-align: center;
           color: #c9c9c9;
@@ -421,7 +419,7 @@ export default function Sell() {
           .starting select {
             width: 30.48%;
             margin: 20px 2vw 0 0;
-            height: 44px;
+            height: 45px;
           }
           .starting select:last-of-type {
             margin: 10px 0 0 2vw;

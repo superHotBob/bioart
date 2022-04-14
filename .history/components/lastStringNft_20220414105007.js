@@ -48,7 +48,7 @@ export default function LastStringNft({mobile}) {
             }
             span {
               display: inline-block;
-              margin-top: 3px;
+              margin-top: 5px;
             }
             .lastString {
                 padding: 10px 0;

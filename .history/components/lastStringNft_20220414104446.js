@@ -21,7 +21,7 @@ export default function LastStringNft({mobile}) {
             margin: 0 auto;
             padding: 15px 0 12px;
             border-top: 1px solid #c9c9c9;
-            font: 800 25px/25px "GmarketSansLight";
+            font-size: 18px;
             color: #333;
             align-items: center;
             display: flex;
@@ -36,7 +36,6 @@ export default function LastStringNft({mobile}) {
           span {
               display: inline-block;
               margin-top: 5px;
-             
             }
           @media screen and (max-width: 550px) {
             .lastString span {
@@ -48,7 +47,7 @@ export default function LastStringNft({mobile}) {
             }
             span {
               display: inline-block;
-              margin-top: 3px;
+              margin-top: 5px;
             }
             .lastString {
                 padding: 10px 0;

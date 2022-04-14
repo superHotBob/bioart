@@ -120,7 +120,7 @@ export default function Sell() {
                 height={25}
                 alt="icon"
               />
-              <option>November</option>              
+              <option>november</option>              
             </select>
             <select>
             <option>15</option> 
@@ -137,10 +137,10 @@ export default function Sell() {
           <div className="starting">
             <span className="mobileHide">Ending</span>
             <select style={{ width: myscreen ? '25%' : '100%' }}>
-             <option>November</option>              
+             <option>november</option>              
             </select>
             <select>
-            <option>20</option> 
+            <option>15</option> 
             </select>
             <select>
             <option>18</option> 
@@ -159,7 +159,7 @@ export default function Sell() {
         <div className="creatorFree">
           Creator Free<b>10.0%</b>
           <button className="question">?</button>
-          <b className="answer">Hello. This is answer.</b>
+          <b className="answer">dsfsdfsdf</b>
         </div>
         <div className="buttons">
           <button className="cancel">Cancel</button>
@@ -193,14 +193,6 @@ export default function Sell() {
           display: inline-block;
           width: 65%;
           vertical-align: top;
-        }
-        .lastStringNft {
-          align-items: center;
-          bottom: -17px;
-          padding: 17px 0 0;
-        }
-        .lastStringNft b {
-          height: 25px;
         }
         .content p {
           font-size: 22px;
@@ -256,8 +248,7 @@ export default function Sell() {
           border-radius: 10px;
           background-position: center top;
           background-repeat: no-repeat;
-          position: relative;
-          margin-bottom: 40px;
+          position: relative;         
           cursor: pointer;
         }
         .sol:before {
@@ -343,8 +334,6 @@ export default function Sell() {
         .question {
           border: 3px solid #c9c9c9;
           font-size: 18px;
-          height: 30px;
-          width: 30px;
           border-radius: 50%;
           text-align: center;
           color: #c9c9c9;
@@ -421,7 +410,7 @@ export default function Sell() {
           .starting select {
             width: 30.48%;
             margin: 20px 2vw 0 0;
-            height: 44px;
+            height: 35px;
           }
           .starting select:last-of-type {
             margin: 10px 0 0 2vw;

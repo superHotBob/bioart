@@ -159,7 +159,7 @@ export default function Sell() {
         <div className="creatorFree">
           Creator Free<b>10.0%</b>
           <button className="question">?</button>
-          <b className="answer">Hello. This is answer.</b>
+          <b className="answer">dsfsdfsdf</b>
         </div>
         <div className="buttons">
           <button className="cancel">Cancel</button>
