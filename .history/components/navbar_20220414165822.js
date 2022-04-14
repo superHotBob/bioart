@@ -19,8 +19,8 @@ export default function Navbar() {
         <figure className={styles.symbol_icon}/>       
       </Link>
 
-      <Link href="/" passHref>
-        <b className={styles.learn}>Learn more about me &#9654;</b>
+      <Link href="/">
+        <a className={styles.learn}>Learn more about me &#9654;</a>
       </Link>
       <div className={styles.menu_tab}>
         <span className={styles.symbol}>
@@ -31,14 +31,14 @@ export default function Navbar() {
           className={styles.search_input}
           placeholder="Search"
         />
-        <Link href="/createitem/createitem" passHref>
-          <b className={styles.tab01} />
+        <Link href="/createitem/createitem">
+          <a className={styles.tab01} />
         </Link>
         <Link href="/geno" passHref>
           <b className={styles.tab02} />
         </Link>
-        <Link href="/profilesetting" passHref>          
-          <b className={styles.tab03active} />
+        <Link href="/profilesetting" >          
+          <a className={styles.tab03active} />
         </Link>
 
         <b className={styles.iconLike} onClick={()=>setLikesView(!likesView)}/>

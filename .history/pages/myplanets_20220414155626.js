@@ -91,31 +91,31 @@ export default function Explore() {
             <div className="status">
               <p onClick={() => setStatusView(!statusView)}>Status</p>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Buy Now</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>One Action</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>New</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Has offer</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Solid out</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Ready</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Hidden</span>
               </label>
             </div>
@@ -125,7 +125,7 @@ export default function Explore() {
                 <input
                   type="radio"
                   checked={priceСurrenсy === "usd"}
-                  onChange={() => setPriceCurrency("usd")}
+                  onClick={() => setPriceCurrency("usd")}
                 />
                 <b>
                   <Image
@@ -141,7 +141,7 @@ export default function Explore() {
                 <input
                   type="radio"
                   checked={priceСurrenсy === "solana"}
-                  onChange={() => setPriceCurrency("solana")}
+                  onClick={() => setPriceCurrency("solana")}
                 />
                 <b>
                   <Image
@@ -186,7 +186,7 @@ export default function Explore() {
                 <span>Subscribe</span>
               </label>
               <label>
-                <input type="checkbox" onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <b>
                   <Image
                     src="/icon_cate_off_01.svg"
@@ -283,14 +283,12 @@ export default function Explore() {
                     height={27}
                     alt="icon"
                   />
-                </figure><br className="mobileView"/>
-                <Link href="/" passHref>
-                  <b className="blue link">bioart.net</b>
+                </figure>
+                <Link href="/">
+                  <a>bioart.net</a>
                 </Link>
               </div>
-              <p style={{textAlign: 'left',margin:'10px 30px 0 0'}}>
-                {myscreen ? 'Genom Store' : 'Artistic Transformation of Life into Information.'}
-              </p>
+              <p>Artistic Transformation of Life into Information.</p>
               <div className="counters">
                 <span>
                   Item <b>8</b>
@@ -370,7 +368,7 @@ export default function Explore() {
                 />
                 <div
                   className="itemSlider__solana"
-                  style={{ textAlign: "center", margin: 0 }}
+                  style={{ textAlign: "center", margin: "10px 0 2px" }}
                 >
                   {i.price ? (
                     <>
@@ -389,8 +387,7 @@ export default function Explore() {
                   )}
                 </div>
                 <p className="itemSlider__textNft">
-                  Artistic Transformation 
-                  <b className="mobileView"> ...</b>
+                  Artistic Transformation ...
                   <span>of Life into Information.</span>
                 </p>
                 <LastStringNft />
@@ -506,12 +503,6 @@ export default function Explore() {
             outline: none;
             border: 1px solid #c9c9c9;
           }
-          .link {
-            padding-left: 0;
-            font-size: 16px;
-            line-height: 28px;
-            font-weight: 400;
-          }
           .count {
             margin: 100px 0 50px;
             display: flex;
@@ -525,17 +516,18 @@ export default function Explore() {
           }
           .itemSliderImageNft {
             width: 305px;            
-            border: 1px solid #ddd;           
-            border-radius: 15px;            
-            margin-bottom: 40px;            
+            border: 1px solid #ddd;
+            padding:0 0 10px;
+            border-radius: 15px;
+            
+            margin-bottom: 40px;
+            cursor: pointer;
           }
           .imageNft {
             width: 100%;
-            cursor: pointer;
             height: 300px;
             background-size: 100% auto;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            border-radius: 15px;
             background-position: center top;
             background-repeat: no-repeat;
           }
@@ -753,10 +745,11 @@ export default function Explore() {
           .icons figure {
             margin-right: 10px;
           }
-          p {           
-            margin: 10px 20px;
-            text-align: center;
-            font: 400 18px/25px "GmarketSansLight";            
+          p {
+            font-size: 20px;
+            margin: 5px 0;
+            font-family: "GmarketSansLight";
+            font-weight: 800;
           }
           a {
             font-size: 20px;
@@ -856,13 +849,7 @@ export default function Explore() {
           .blockPlus:hover {
             background: #f3f3f3 url("/icon_mrbk.svg") center / 120px no-repeat;
           }
-          .mobileView {
-            display: none;
-          }
           @media screen and (max-width: 550px) {
-            .mobileView {
-              display: inline-block;
-            } 
             .main {
               width: 100%;
               flex-direction: column;
@@ -894,7 +881,7 @@ export default function Explore() {
             .itemSliderImageNft {
               height: auto;
               width: 48%;
-              margin-bottom: 10px;
+              
               text-align: center;
               font-size: 14px;
             }
@@ -909,15 +896,12 @@ export default function Explore() {
               left: -100px;
               top: -30px;
             }
-            .imageNft {
-              height: 45vw;
-            }
             .genomeStoreHeader__text h2 {
               font: 300 20px/30px "GmarketSansMedium";
             }
             p,
             a {
-              font: 400 16px/20px "GmarketSansLight";
+              font-size: 16px;
               display: block;
             }
             .counters span {

@@ -27,12 +27,9 @@ export default function Layout({ children }) {
             flex-grow: 1;
           }
           .iconGraph {
-            margin: 0px 5px;
+            margin: 0px 15px;
             vertical-align: top;
             display: inline-block;
-            height: 34px;
-            width: 34px;
-            position: relative;
           }
           .priceNft {
             text-align: center;
@@ -42,7 +39,7 @@ export default function Layout({ children }) {
           }
           .textNft {
             font: 300 18px/28px GmarketSansLight;
-            margin: 0 55px 15px;
+            margin: 0 25px 15px;
             text-align: center;
             
           }
@@ -67,13 +64,6 @@ export default function Layout({ children }) {
           }
           .itemSliderNft {
             position: relative;
-          }
-          @media screen and (max-width: 550px) {
-            .iconGraph {
-              height: 22px;
-              width: 22px;
-              margin-right: 5px;
-            }
           }
         `}</style>
       </main>

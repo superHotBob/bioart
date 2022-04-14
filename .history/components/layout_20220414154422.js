@@ -41,7 +41,7 @@ export default function Layout({ children }) {
             font-family: "GmarketSansMedium";
           }
           .textNft {
-            font: 300 18px/28px GmarketSansLight;
+            font: 300 18px/26px GmarketSansLight;
             margin: 0 55px 15px;
             text-align: center;
             

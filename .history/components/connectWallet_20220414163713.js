@@ -35,7 +35,7 @@ export default function ConnectWallet(props) {
             width: 30px;
             height: 30px;
             margin-top: 7px;
-            left: 30px;
+            left: 42px;
             background: url("/icon_wlt.svg") 100% / 100% no-repeat;
           }
           p {

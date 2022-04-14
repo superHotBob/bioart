@@ -20,7 +20,7 @@ export default function Navbar() {
       </Link>
 
       <Link href="/" passHref>
-        <b className={styles.learn}>Learn more about me &#9654;</b>
+        <b className={styles.learn}>Learn more about me &#9654;</a>
       </Link>
       <div className={styles.menu_tab}>
         <span className={styles.symbol}>

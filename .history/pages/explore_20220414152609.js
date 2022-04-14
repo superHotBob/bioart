@@ -301,14 +301,15 @@ export default function Explore() {
                       <Image
                         src="/icon_graph_01.svg"
                         alt="icon"
-                        layout="fill"
+                        width={35}
+                        height={35}
                       />
                     </b>
                     <span>{i.price}</span>
                   </p>
                   <p className="textNft" onClick={() => setViewText(!viewText)}>
                     Artistic Transformation
-                    {!viewText && <b> ...</b>}
+                    {!viewText && <>...</>}
                     <span className="hide"> of Life into Information.</span>
                   </p>
                   <h5>

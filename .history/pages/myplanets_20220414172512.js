@@ -91,31 +91,31 @@ export default function Explore() {
             <div className="status">
               <p onClick={() => setStatusView(!statusView)}>Status</p>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Buy Now</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>One Action</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>New</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Has offer</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Solid out</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Ready</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Hidden</span>
               </label>
             </div>
@@ -125,7 +125,7 @@ export default function Explore() {
                 <input
                   type="radio"
                   checked={priceСurrenсy === "usd"}
-                  onChange={() => setPriceCurrency("usd")}
+                  onClick={() => setPriceCurrency("usd")}
                 />
                 <b>
                   <Image
@@ -141,7 +141,7 @@ export default function Explore() {
                 <input
                   type="radio"
                   checked={priceСurrenсy === "solana"}
-                  onChange={() => setPriceCurrency("solana")}
+                  onClick={() => setPriceCurrency("solana")}
                 />
                 <b>
                   <Image
@@ -186,7 +186,7 @@ export default function Explore() {
                 <span>Subscribe</span>
               </label>
               <label>
-                <input type="checkbox" onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <b>
                   <Image
                     src="/icon_cate_off_01.svg"

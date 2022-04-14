@@ -91,31 +91,31 @@ export default function Explore() {
             <div className="status">
               <p onClick={() => setStatusView(!statusView)}>Status</p>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Buy Now</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>One Action</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>New</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Has offer</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Solid out</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Ready</span>
               </label>
               <label>
-                <input type="checkbox"  onChange={()=>console.log('dfsdf')}/>
+                <input type="checkbox" />
                 <span>Hidden</span>
               </label>
             </div>

@@ -245,7 +245,8 @@ export default function Sell() {
           font-family: "GmarketSansLight";
           font-weight: 800;
         }
-        .itemSliderImageNft {         
+        .itemSliderImageNft {
+          outline-offset: 3px;
           height: 500px;
           width: 300px;
           padding-top: 306px;

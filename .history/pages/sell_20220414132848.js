@@ -245,7 +245,8 @@ export default function Sell() {
           font-family: "GmarketSansLight";
           font-weight: 800;
         }
-        .itemSliderImageNft {         
+        .itemSliderImageNft {
+          outline-offset: 3px;
           height: 500px;
           width: 300px;
           padding-top: 306px;
@@ -388,7 +389,7 @@ export default function Sell() {
         @media screen and (max-width: 550px) {
           .main {
            width: 100%;
-           padding: 30px 10px;
+           padding: 0 10px 20px;
           }
           .nft,
           .content {

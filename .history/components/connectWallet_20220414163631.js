@@ -34,8 +34,8 @@ export default function ConnectWallet(props) {
             position: absolute;
             width: 30px;
             height: 30px;
-            margin-top: 7px;
-            left: 30px;
+            top: 72.5%;
+            left: 42px;
             background: url("/icon_wlt.svg") 100% / 100% no-repeat;
           }
           p {
@@ -58,7 +58,9 @@ export default function ConnectWallet(props) {
               border: none;
               background-color: #f3f3f3;
             }
-            
+            figure {
+              margin-top: 7px;
+            }
           }
         `}
       </style>

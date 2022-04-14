@@ -35,15 +35,8 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-a:hover,a:focus {
+a:hover {
   color: inherit;
-  background-color: none;
-  outline: none;
-}
-a::-ms-thumb {
-  color: inherit;
-  background-color: none;
-  outline: none;
 }
 input::placeholder {
   color: #c9c9c9;

@@ -301,7 +301,8 @@ export default function Explore() {
                       <Image
                         src="/icon_graph_01.svg"
                         alt="icon"
-                        layout="fill"
+                        width={35}
+                        height={35}
                       />
                     </b>
                     <span>{i.price}</span>
