@@ -142,11 +142,14 @@ export default function GenomeDataSintetic() {
           @media screen and (max-width: 550px) {
             .mainBlock {
               width: 100%;
+              padding: 0 0 25px;
             }
             h1 {
               font-size: 24px;
               text-align: center;
               margin-bottom: 50px;
+              display: flex;
+              flex-direction: column;
             }
             h1 span {
               float: none;

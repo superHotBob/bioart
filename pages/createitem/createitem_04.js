@@ -64,7 +64,7 @@ export default function CreateItem() {
   return (
     <div className="mainBlock">
       <h1>
-        <span style={{ float: "left", width: 150 }} />
+        <span style={{ float: "left", width: 150 }} className="mobileNo"/>
         Genomic Data Synthesis{" "}
         <span>
           <b>1</b>
@@ -377,6 +377,15 @@ export default function CreateItem() {
           }
           .mobileYes {
           }
+          .mainBlock {
+            width: 96%;
+            padding: 25px 0;
+          }
+          h1 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+          }
           .mainCreateItemBlock {
             width: 94%;
             margin: 50px auto 20px;
@@ -413,6 +422,12 @@ export default function CreateItem() {
           }
           .supported {
             margin: 70px 20px 0;
+          }
+          .contentBlock {
+            margin-top: 115px;
+          }
+          .choose_file:after {
+            background: url('/icon_graph_13.svg') left 85% / 8% no-repeat;
           }
         }
       `}</style>

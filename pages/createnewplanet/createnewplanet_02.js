@@ -205,6 +205,29 @@ export default function CreateNewPlanetTwo() {
         .twoButtonsBlock {
           margin: 50px 0;
         }
+        @media screen and (max-width: 550px) {
+          .createNewBlock {
+            width: 96%;
+          }
+          h1 {
+            font-size: 28px;
+          }
+          span {
+            font-size: 16px;
+          }
+          label {
+            margin-bottom: 40px;
+          }
+          p input {
+            width: 85%;
+          }
+          .plus {
+            margin: 40px auto;
+          }
+          button {
+            font-size: 13px;
+          }
+        }
       `}</style>
     </div>
   );
