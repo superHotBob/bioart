@@ -506,7 +506,7 @@ export default function NFT() {
                   <p className="textNft" onClick={() => setViewText(!viewText)}>
                     Artistic Transformation
                     {viewText && <>...</>}
-                    {!viewText && <span className="hide"> of Life into Information.</span>}
+                    <span className="hide"> of Life into Information.</span>
                   </p>
                   <LastStringNft mobile={myscreen} />
                 </div>
@@ -607,7 +607,7 @@ export default function NFT() {
         }
         .viewText {
           height: 30px;
-          margin-top: -20px;
+          margin-top: -10px;
           background: url(${viewText
               ? "/icon_vwar_02.svg"
               : "/icon_vwar_01.svg"})
@@ -1015,12 +1015,6 @@ export default function NFT() {
           }
           .sliderWraperNft {
             margin: 50px auto;
-          }
-          .textNft {
-            line-height: 19px;
-          }
-          .imageSlider {
-            height: 200px;
           }
         }
       `}</style>

@@ -1020,7 +1020,7 @@ export default function NFT() {
             line-height: 19px;
           }
           .imageSlider {
-            height: 200px;
+            .height: 200px;
           }
         }
       `}</style>

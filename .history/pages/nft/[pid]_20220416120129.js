@@ -1016,12 +1016,6 @@ export default function NFT() {
           .sliderWraperNft {
             margin: 50px auto;
           }
-          .textNft {
-            line-height: 19px;
-          }
-          .imageSlider {
-            height: 200px;
-          }
         }
       `}</style>
     </div>

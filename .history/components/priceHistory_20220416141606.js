@@ -157,9 +157,6 @@ export default function PriceHistory() {
             .datablock div select {
             width: 100%;
           }
-          .history_text {
-            font-size: 18px;
-          }
         }
       `}</style>
     </div>

@@ -1017,10 +1017,7 @@ export default function NFT() {
             margin: 50px auto;
           }
           .textNft {
-            line-height: 19px;
-          }
-          .imageSlider {
-            height: 200px;
+            line-height: 22px;
           }
         }
       `}</style>

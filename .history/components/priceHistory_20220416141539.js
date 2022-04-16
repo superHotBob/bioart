@@ -125,7 +125,7 @@ export default function PriceHistory() {
         .data .solana {
           width: 15%;
         }
-        .history_text {
+        .histiry_text {
           padding: 0 20px 0 60px;
           height: 80px;
           border-top-left-radius: 12px;
@@ -156,9 +156,6 @@ export default function PriceHistory() {
         @media screen and (max-width: 550px) {
             .datablock div select {
             width: 100%;
-          }
-          .history_text {
-            font-size: 18px;
           }
         }
       `}</style>

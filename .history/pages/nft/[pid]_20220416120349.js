@@ -1019,9 +1019,6 @@ export default function NFT() {
           .textNft {
             line-height: 19px;
           }
-          .imageSlider {
-            height: 200px;
-          }
         }
       `}</style>
     </div>
