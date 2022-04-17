@@ -476,7 +476,7 @@ export default function Explore() {
             width: 500px;
             height: 47px;
             display: inline-block;
-            border-radius: 25px;
+            border-radius: 20px;
             border: 1px solid #c9c9c9;
           }
           .one,
