@@ -639,10 +639,4 @@ p.headerTable:hover {
   .footerText {
     font-size: 20px;
   }
-  .footer {
-    padding: 20px 10px;
-  }
-  .footerIconText {
-    font-size: 25px;
-  }
 }

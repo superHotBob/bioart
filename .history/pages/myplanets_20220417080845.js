@@ -15,7 +15,6 @@ const nft = [
 export default function Explore() {
   const [myscreen, setMyScreen] = useState(true);
   const [viewMenu, setViewMenu] = useState(false);
-  const [viewText, setViewText] = useState(false);
   useEffect(() => setMyScreen(window.screen.width > 500), []);
   const [viewFilter, setViewFilter] = useState(false);
   const [statusView, setStatusView] = useState(false);
@@ -392,7 +391,7 @@ export default function Explore() {
                 <p className="itemSlider__textNft" onClick={() => setViewText(!viewText)}>
                     Artistic Transformation
                     {!viewText && <b> ...</b>}
-                    {viewText && <> of Life into Information.</>}
+                    <span className="hide"> of Life into Information.</span>
                   </p>
                 <LastStringNft />
               </div>
@@ -429,7 +428,6 @@ export default function Explore() {
             font: 400 24px/24px "GmarketSansMedium";
             color: #fff;
             width: 100px;
-            padding-top: 3px;
             text-align: right;
             background: url("/icon_filter.svg") left center / 30% no-repeat;
           }
@@ -549,10 +547,6 @@ export default function Explore() {
             width: 18%;
             text-align: center;
           }
-          .filtersHeader p {
-            margin-right: 0;
-            text-align: left;
-          }
 
           .itemSlider__solana {
             font-size: 30px;
@@ -592,7 +586,6 @@ export default function Explore() {
           .categories p {
             font-family: "GmarketSansMedium";
             cursor: pointer;
-            text-align: left;
             margin: 0;
             height: 60px;
             padding: 20px 50px;
@@ -949,10 +942,6 @@ export default function Explore() {
             }
             .itemSlider__price {
               font: 800 20px/30px "GmarketSansLight";
-            }
-            .itemSlider__textNft {
-              font: 400 13px/18px "GmarketSansLight";
-              margin: 10px;
             }
             .itemSlider__textNft span {
               display: none;

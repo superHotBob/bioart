@@ -382,9 +382,6 @@ export default function CreateItem() {
             margin: 70px 20px 0;
             font-size: 14px;
           }
-          input {
-            font-size: 12px;
-          }
         }
       `}</style>
     </div>

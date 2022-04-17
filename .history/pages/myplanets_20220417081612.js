@@ -429,7 +429,6 @@ export default function Explore() {
             font: 400 24px/24px "GmarketSansMedium";
             color: #fff;
             width: 100px;
-            padding-top: 3px;
             text-align: right;
             background: url("/icon_filter.svg") left center / 30% no-repeat;
           }
@@ -549,10 +548,6 @@ export default function Explore() {
             width: 18%;
             text-align: center;
           }
-          .filtersHeader p {
-            margin-right: 0;
-            text-align: left;
-          }
 
           .itemSlider__solana {
             font-size: 30px;
@@ -592,7 +587,6 @@ export default function Explore() {
           .categories p {
             font-family: "GmarketSansMedium";
             cursor: pointer;
-            text-align: left;
             margin: 0;
             height: 60px;
             padding: 20px 50px;
