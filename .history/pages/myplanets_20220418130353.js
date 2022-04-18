@@ -930,9 +930,10 @@ export default function Explore() {
             }
             .genomeStoreHeader__text:after {           
             height: 75px;           
-            top: -34px;            
+            top: -55px;
+            padding: 5px;
             width: 75px;
-            left: -104px;           
+            left: -147px;           
           }
             .imageNft {
               height: 45vw;

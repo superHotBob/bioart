@@ -747,23 +747,11 @@ export default function Explore() {
             height: 110px;
             position: absolute;
             top: -50px;
-            padding: 5px;
             width: 110px;
             left: -140px;
             display: inline-block;
-            border-radius: 50%;            
+            border-radius: 50%;
             
-          }
-          .genomeStoreHeader__text:after {
-            content: "";           
-            height: 119px;
-            position: absolute;
-            top: -55px;
-            padding: 5px;
-            width: 119px;
-            left: -147px;
-            display: inline-block;
-            border-radius: 50%;            
             border: 1px solid #c9c9c9;
           }
           .genomeStoreHeader__text h2 {
@@ -928,12 +916,6 @@ export default function Explore() {
               left: -100px;
               top: -30px;
             }
-            .genomeStoreHeader__text:after {           
-            height: 75px;           
-            top: -34px;            
-            width: 75px;
-            left: -104px;           
-          }
             .imageNft {
               height: 45vw;
             }

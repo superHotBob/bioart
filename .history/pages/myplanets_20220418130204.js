@@ -928,12 +928,6 @@ export default function Explore() {
               left: -100px;
               top: -30px;
             }
-            .genomeStoreHeader__text:after {           
-            height: 75px;           
-            top: -34px;            
-            width: 75px;
-            left: -104px;           
-          }
             .imageNft {
               height: 45vw;
             }
