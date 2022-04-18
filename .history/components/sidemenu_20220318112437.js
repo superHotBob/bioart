@@ -132,7 +132,7 @@ export default function SideMenu() {
             background-image: url("/icon_tele_w.png");
         }
         .instagram {
-          background-image: url("/icon_insta.png");
+          background-image: url("/icon_insta.webp");
         }
         .instagram:hover {
             background-color: #00b4e6;

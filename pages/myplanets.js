@@ -360,8 +360,8 @@ export default function Explore() {
                     style={{
                       backgroundImage:
                         index % 2
-                          ? "url(/article-img.png)"
-                          : "url(/planet-img-01.png)",
+                          ? "url(/article-img.webp)"
+                          : "url(/planet-img-01.webp)",
                     }}
                   />
                 </Link>{" "}

@@ -96,7 +96,7 @@ export default function Geno() {
           <div
             className="image"
             style={{
-              backgroundImage: "url(/planet-img-01.png)",
+              backgroundImage: "url(/planet-img-01.webp)",
             }}
           />
           <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
@@ -113,7 +113,7 @@ export default function Geno() {
             className="image"
             style={{ backgroundImage: "url(/planet-img-02.png)" }}
           />
-          <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
+          <b style={{ backgroundImage: "url(/planet-img-01.webp)" }} />
           <h2>Geno`s Colections</h2>
           <p className="planetRslt">Genome store</p>
           <div className="lastString">
@@ -124,9 +124,9 @@ export default function Geno() {
         <div className="planetItems">
           <div
             className="image"
-            style={{ backgroundImage: "url(/article-img.png)" }}
+            style={{ backgroundImage: "url(/article-img.webp)" }}
           />
-          <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
+          <b style={{ backgroundImage: "url(/planet-img-01.webp)" }} />
           <h2>NYC Underground Stories</h2>
           <p className="planetRslt">Genome store</p>
           <div className="lastString">
@@ -139,7 +139,7 @@ export default function Geno() {
             className="image"
             style={{ backgroundImage: "url(/planet-img-02.png)" }}
           />
-          <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
+          <b style={{ backgroundImage: "url(/planet-img-01.webp)" }} />
           <h2>Genome Store</h2>
           <p className="planetRslt">Genome store</p>
           <div className="lastString">
@@ -157,7 +157,7 @@ export default function Geno() {
             <div className="planetItems slider">
               <div
                 className="image"
-                style={{ backgroundImage: "url(/article-img.png)" }}
+                style={{ backgroundImage: "url(/article-img.webp)" }}
               />
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
               <h2>Genom NFT</h2>
@@ -171,7 +171,7 @@ export default function Geno() {
             <div className="planetItems slider" style={{ width: "98%" }}>
               <div
                 className="image"
-                style={{ backgroundImage: "url(/flower.png)" }}
+                style={{ backgroundImage: "url(/flower.webp)" }}
               />
               <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
               <h2>Genome Store</h2>
@@ -184,9 +184,9 @@ export default function Geno() {
             <div className="planetItems slider">
               <div
                 className="image"
-                style={{ backgroundImage: "url(/article-img.png)" }}
+                style={{ backgroundImage: "url(/article-img.webp)" }}
               />
-              <b style={{ backgroundImage: "url(/planet-img-01.png)" }} />
+              <b style={{ backgroundImage: "url(/planet-img-01.webp)" }} />
               <h2>Genome Store</h2>
               <p className="planetRslt">Genome store</p>
               <div className="lastString">
@@ -197,7 +197,7 @@ export default function Geno() {
             <div className="planetItems slider">
               <div
                 className="image"
-                style={{ backgroundImage: "url(/flower.png)" }}
+                style={{ backgroundImage: "url(/flower.webp)" }}
               />
 
               <b style={{ backgroundImage: "url(/icon_ba.svg)" }} />
@@ -230,7 +230,7 @@ export default function Geno() {
                             marginBottom: 0,
                             backgroundImage:
                               index % 2 == 0
-                                ? "url(/article-img.png)"
+                                ? "url(/article-img.webp)"
                                 : "url(/cat.png)",
                           }}
                         />

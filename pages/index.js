@@ -1,17 +1,18 @@
 import Slider from "react-slick";
-
 import { useState, useEffect, useRef } from "react";
-import   mainback  from '../public/main_top_bg.webp';
+import mainback from "../public/main_top_bg.webp";
+import twoWoman from "../public/twowoman.webp";
+import article from "../public/article-img.webp";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 export default function Home() {
-const [slideIndex, setSlideIndex] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
   const [myscreen, setMyScreen] = useState(1300);
-  
-  useEffect(() => setMyScreen(window.screen.width),[]);
+
+  useEffect(() => setMyScreen(window.screen.width), []);
 
   const data = [
     {
@@ -89,19 +90,17 @@ const [slideIndex, setSlideIndex] = useState(0);
     dots: false,
     infinite: true,
     speed: 500,
-    lazyLoad: true,  
-    cssEase: "linear",    
+    lazyLoad: true,
+    cssEase: "linear",
     slidesToShow: myscreen > 500 ? 3 : 1,
     slidesToScroll: myscreen > 500 ? 3 : 1,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,    
+    prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setSlideIndex(next),
-    
-     
   };
   const slider = useRef();
   function NextArrow(props) {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
       <button
         type="button"
@@ -112,7 +111,7 @@ const [slideIndex, setSlideIndex] = useState(0);
   }
 
   function PrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
       <button
         type="button"
@@ -132,20 +131,24 @@ const [slideIndex, setSlideIndex] = useState(0);
         <link rel="icon" href="/favicon.webp" />
       </Head>
       <section className={styles.wrapFirstBlock}>
-        <div className={styles.firstBlock} >
-          <Image src={mainback} layout='fill' alt="mainbackground" priority="true" />
-       </div>
+        <div className={styles.firstBlock}>
+          <Image
+            src={mainback}
+            layout="fill"
+            alt="mainbackground"
+            priority="true"
+          />
+        </div>
         <div className={styles.firstBlockText}>
-          <Link href='/myplanets' passHref>
-          <Image src="/icon_ba.svg" width={55} height={55} alt="icon" /></Link>
+          <Link href="/myplanets" passHref>
+            <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+          </Link>
           <div className={styles.firstBlockTextOnly}>
-            {(myscreen < 500) && 
-            <Image src="/korona.png" width={46} height={28} alt="icon" />}
+            {myscreen < 500 && (
+              <Image src="/korona.png" width={46} height={28} alt="icon" />
+            )}
             <h3>BioArts</h3>
-            <p>
-              Artistic Transformation of
-              Life into Information.
-            </p>
+            <p>Artistic Transformation of Life into Information.</p>
             <span className={styles.gold}>GOLD HANDS</span>
             JHSASWHN-0001-20220101
           </div>
@@ -153,123 +156,128 @@ const [slideIndex, setSlideIndex] = useState(0);
       </section>
 
       <section className={styles.slider}>
-        <h2>
-          {myscreen > 500 ? "Popular NFTs" : "Notable NFTs"}
-        </h2>
- 
-       
-          <Slider ref={slider} {...settings}>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/twowoman.webp)" }}
-                />
-              </Link>
-              
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+        <h2>{myscreen > 500 ? "Popular NFTs" : "Notable NFTs"}</h2>
+
+        <Slider ref={slider} {...settings}>
+          <div className={styles.itemSlider}>
+            <Link href="/nft/one" passHref>
+              <Image
+                src={twoWoman}
+                alt="twoWoman"
+                className={styles.itemSliderImage}
+              />
+            </Link>
+
+            <span>
+              <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/article-img.webp)" }}
-                />
-              </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+          </div>
+          <div className={styles.itemSlider}>
+            <Link href="/nft/one" passHref>
+              <Image
+                src={article}
+                alt="article"
+                className={styles.itemSliderImage}
+              />
+            </Link>
+            <span>
+              <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/article-img.webp)" }}
-                />
-              </Link>
-              <span>
-                <Image
-                  src="/icon_facebook_b.png"
-                  width={55}
-                  height={55}
-                  alt="facebook"
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+          </div>
+          <div className={styles.itemSlider}>
+            <Link href="/nft/one" passHref>
+              <Image
+                src={article}
+                alt="article"
+                className={styles.itemSliderImage}
+              />
+            </Link>
+            <span>
+              <Image
+                src="/icon_facebook_b.png"
+                width={55}
+                height={55}
+                alt="facebook"
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/article-img.webp)" }}
-                />
-              </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+          </div>
+          <div className={styles.itemSlider}>
+            <Link href="/nft/one" passHref>
+              <Image
+                src={article}
+                alt="article"
+                quality={1}
+                className={styles.itemSliderImage}
+              />
+            </Link>
+            <span>
+              <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/twowoman.webp)" }}
-                />
-              </Link>
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+          </div>
+          <div className={styles.itemSlider}>
+          <Link href="/nft/one" passHref>
+              <Image
+                src={twoWoman}
+                alt="twoWoman"
+                quality={1}
+                className={styles.itemSliderImage}
+              />
+            </Link>
+            <span>
+              <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-            <div className={styles.itemSlider}>
-              <Link href="/nft/one" passHref>
-                <div
-                  className={styles.itemSliderImage}
-                  style={{ backgroundImage: "url(/article-img.webp)" }}
-                />
-              </Link>
-              <span>
-                <Image
-                  src="/icon_facebook_b.png"
-                  width={55}
-                  height={55}
-                  alt="facebook"
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+          </div>
+          <div className={styles.itemSlider}>
+            <Link href="/nft/one" passHref>
+              <Image
+                src={article}
+                alt="article"
+                className={styles.itemSliderImage}
+              />
+            </Link>
+            <span>
+              <Image
+                src="/icon_facebook_b.png"
+                width={55}
+                height={55}
+                alt="facebook"
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
-          </Slider>
-          <input style={{width: '100%'}}
-            type="range" 
-            className={styles.range}
-            min={0}
-            max={5}
-            onChange={e => slider.current.slickGoTo(e.target.value)}
-            value={slideIndex}
-          />
-       
+          </div>
+        </Slider>
+        <input
+          style={{ width: "100%" }}
+          type="range"
+          className={styles.range}
+          min={0}
+          max={5}
+          onChange={(e) => slider.current.slickGoTo(e.target.value)}
+          value={slideIndex}
+        />
       </section>
       <section className={styles.table}>
         <h2>
@@ -286,7 +294,7 @@ const [slideIndex, setSlideIndex] = useState(0);
             <span className={styles.mobile} style={{ textAlign: "left" }}>
               Ranking
             </span>
-            <span style={{ textAlign: "left",flexGrow: 3 }}>Planet</span>
+            <span style={{ textAlign: "left", flexGrow: 3 }}>Planet</span>
             <span>Volume ▼</span>
             <span className={styles.mobile}>24h%</span>
             <span className={styles.mobile}>7d%</span>
@@ -330,7 +338,7 @@ const [slideIndex, setSlideIndex] = useState(0);
                 </span>
                 <span
                   className={styles.planetsTableData}
-                  style={{ textAlign: "left" ,flexGrow: 3}}
+                  style={{ textAlign: "left", flexGrow: 3 }}
                 >
                   {i.planet} <br />
                   <span className={styles.mobileYes}>Ranking {i.ranking}</span>

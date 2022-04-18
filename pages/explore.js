@@ -288,7 +288,7 @@ export default function Explore() {
                 <div key={index} className="itemSlider">
                   <Link href="/nft/one" passHref key={index}>
                     <figure className="imageNft" 
-                    style={{ backgroundImage: 'url("/article-img.png")' }}
+                    style={{ backgroundImage: 'url("/article-img.webp")' }}
                     />    
                     
                   </Link>{" "}

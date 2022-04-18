@@ -203,10 +203,13 @@
 
 .itemSlider {
   height: 40vw;
-  width: 24.5vw !important;
+  padding: 10px;
+  
+  /* width: 24.5vw !important; */
 }
 .itemSlider span {
-  margin-left: 15px;
+  display: block;
+  margin: 15px;
 }
 .itemSliderImage {
   border: 1px solid #ccc;
@@ -581,15 +584,16 @@ p.headerTable:hover {
     margin: 20px auto 100px;
   }
   .itemSlider {
-    height: 130vw;
-    text-align: left;
-    width: 100% !important;
+    height: auto;
+    
+    /* width: 100% !important; */
   }
   .itemSliderImage {
     height: 94vw;
   }
   .sliderText {
     width: 70%;
+    margin: 0 15px;
     font-size: 20px;
     vertical-align: top;
     display: inline-block;

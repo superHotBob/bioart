@@ -249,7 +249,7 @@ export default function Sell() {
           height: 500px;
           width: 300px;
           padding-top: 306px;
-          background-image: url('/article-img.png');
+          background-image: url('/article-img.webp');
           outline: 1px solid #ddd;
           background-size: 100% auto;
           border-radius: 10px;
@@ -373,7 +373,9 @@ export default function Sell() {
           border-radius: 20px;
           background: url(/icon_drp_arr.svg) no-repeat 100% / 44px  35%;
         }
-
+        .textNft {
+          margin: 5px 32px 0;
+        }
         .starting span {
           font-size: 18px;
           width: 10%;

@@ -83,7 +83,7 @@ export default function GenomeDataSintetic() {
             border-radius: 50%;
             background-size: auto 100%;
             background-position: center;
-            background-image: url('/test.png');
+            background-image: url('/flower.webp');
           }
           .wraperSmallImage {
             background: url('/icon_graph_14.svg') center center no-repeat;

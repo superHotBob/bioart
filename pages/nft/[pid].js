@@ -481,7 +481,7 @@ export default function NFT() {
                       className="imageSlider"
                       style={{
                         background:
-                          "url(/article-img.png) center / cover no-repeat",
+                          "url(/article-img.webp) center / cover no-repeat",
                       }}
                     />
                   </Link>{" "}
@@ -582,7 +582,7 @@ export default function NFT() {
           margin: 0;
           border-radius: 10px;
           display: inline-block;
-          background-image: url("/article-img.png");
+          background-image: url("/article-img.webp");
           background-size: 100%;
           background-position: center top;
         }
