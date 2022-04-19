@@ -1,8 +1,9 @@
 import react, { useState, useEffect } from "react";
 import Image from "next/image";
-import Head from "next/head";
+import Head from 'next/head'
 
 import Link from "next/link";
+
 
 const nft = [
   { price: 1.1 },
@@ -80,7 +81,7 @@ export default function Explore() {
 
   return (
     <>
-      <Head>
+    <Head>
         <title>My NFTs</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -283,49 +284,55 @@ export default function Explore() {
           </p>
           <div className="filterItem">
             {newNft.map((i, index) => (
-              <div key={index} className="itemSlider">
-                <Link href="/nft/one" passHref>
-                  <figure
-                    className="imageNft"
+              <>
+                <div key={index} className="itemSlider">
+                  <Link href="/nft/one" passHref key={index}>
+                    <figure className="imageNft" 
                     style={{ backgroundImage: 'url("/article-img.webp")' }}
+                    />    
+                    
+                  </Link>{" "}
+                  <b
+                    className="iconItemNft"
+                    style={{ backgroundImage: "url(/icon_ba.svg)" }}
                   />
-                </Link>{" "}
-                <b
-                  className="iconItemNft"
-                  style={{ backgroundImage: "url(/icon_ba.svg)" }}
-                />
-                <p style={{ textAlign: "center", margin: "10px 0 2px" }}>
-                  <b className="iconGraph">
-                    <Image src="/icon_graph_01.svg" alt="icon" layout="fill" />
-                  </b>
-                  <span>{i.price}</span>
-                </p>
-                <p className="textNft" onClick={() => setViewText(!viewText)}>
-                  Artistic Transformation
-                  {!viewText && <b> ...</b>}
-                  <span className="hide"> of Life into Information.</span>
-                </p>
-                <h5>
-                  <b>
-                    <Image
-                      src={
-                        index % 2 ? "/icon_like_on.svg" : "/icon_like_off.svg"
-                      }
-                      layout="fill"
-                      alt="icon"
-                    />{" "}
-                  </b>
-                  <span
-                    style={{ flexGrow: 8, textAlign: "left", marginTop: 5 }}
-                  >
-                    15.285
-                  </span>
-                  <b>
-                    <Image src="/icon_bubble.svg" layout="fill" alt="icon" />
-                  </b>
-                  <span style={{ marginTop: 5 }}>25.000</span>
-                </h5>
-              </div>
+                  <p style={{ textAlign: "center", margin: "10px 0 2px" }}>
+                    <b className="iconGraph">
+                      <Image
+                        src="/icon_graph_01.svg"
+                        alt="icon"
+                        layout="fill"
+                      />
+                    </b>
+                    <span>{i.price}</span>
+                  </p>
+                  <p className="textNft" onClick={() => setViewText(!viewText)}>
+                    Artistic Transformation
+                    {!viewText && <b> ...</b>}
+                    <span className="hide"> of Life into Information.</span>
+                  </p>
+                  <h5>
+                    <b>
+                      <Image
+                        src={
+                          index % 2 ? "/icon_like_on.svg" : "/icon_like_off.svg"
+                        }
+                        layout="fill"
+                        alt="icon"
+                      />{" "}
+                    </b>
+                    <span
+                      style={{ flexGrow: 8, textAlign: "left", marginTop: 5 }}
+                    >
+                      15.285
+                    </span>
+                    <b>
+                      <Image src="/icon_bubble.svg" layout="fill" alt="icon" />
+                    </b>
+                    <span style={{ marginTop: 5 }}>25.000</span>
+                  </h5>
+                </div>
+              </>
             ))}
           </div>
         </div>
@@ -335,7 +342,7 @@ export default function Explore() {
           .mainExplore {
             width: 100%;
             display: flex;
-          }
+          }         
           .filtersHeader {
             display: ${myscreen ? "inline-block" : "none"};
             height: 85px;
@@ -443,7 +450,7 @@ export default function Explore() {
             background-size: 100% auto;
             border-radius: 15px;
             height: auto;
-            margin-bottom: 40px;
+            margin-bottom: 40px;           
           }
           .imageNft {
             width: 100%;
@@ -678,6 +685,7 @@ export default function Explore() {
               height: auto;
               width: 48%;
               margin-bottom: 10px;
+              
             }
             .imageNft {
               height: 150px;

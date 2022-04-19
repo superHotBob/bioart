@@ -148,7 +148,7 @@ export default function Home() {
               quality={10}
             />
           </Link>
-          <div className={styles.firstBlockTextOnly}>
+          <div className={styles.firstBlockTextOnly}>           
             <h3>BioArts</h3>
             <p>Artistic Transformation of Life into Information.</p>
             <span className={styles.gold}>GOLD HANDS</span>
@@ -159,138 +159,145 @@ export default function Home() {
       <section className={styles.slider}>
         <h2 />
         <Slider ref={slider} {...settings}>
-          <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+           <Link href="/nft/one" passHref>
+          <div className={styles.itemSlider}>
+           
               <Image
                 src={twoWoman}
                 alt="twoWoman"
                 className={styles.itemSliderImage}
               />
+           
 
-              <span>
-                <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+            <span>
+              <Image src="/icon_ba.svg" width={55} height={55} alt="icon" />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
           <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+          <div className={styles.itemSlider}>
+           
               <Image
                 src={article}
                 alt="article"
                 className={styles.itemSliderImage}
               />
-
-              <span>
-                <Image
-                  src="/icon_ba.svg"
-                  width={55}
-                  height={55}
-                  alt="icon"
-                  quality={10}
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+           
+            <span>
+              <Image
+                src="/icon_ba.svg"
+                width={55}
+                height={55}
+                alt="icon"
+                quality={10}
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
           <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+          <div className={styles.itemSlider}>
+            
               <Image
                 src={article}
                 alt="article"
                 className={styles.itemSliderImage}
               />
-
-              <span>
-                <Image
-                  src="/icon_facebook_b.png"
-                  width={55}
-                  height={55}
-                  alt="facebook"
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+           
+            <span>
+              <Image
+                src="/icon_facebook_b.png"
+                width={55}
+                height={55}
+                alt="facebook"
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
-          <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+           <Link href="/nft/one" passHref>
+          <div className={styles.itemSlider}>
+           
               <Image
                 src={article}
                 alt="article"
                 quality={1}
                 className={styles.itemSliderImage}
               />
-
-              <span>
-                <Image
-                  src="/icon_ba.svg"
-                  width={55}
-                  height={55}
-                  alt="icon"
-                  quality={10}
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+           
+            <span>
+              <Image
+                src="/icon_ba.svg"
+                width={55}
+                height={55}
+                alt="icon"
+                quality={10}
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
           <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+          <div className={styles.itemSlider}>
+            
               <Image
                 src={twoWoman}
                 alt="twoWoman"
                 quality={1}
                 className={styles.itemSliderImage}
               />
-
-              <span>
-                <Image
-                  src="/icon_ba.svg"
-                  width={55}
-                  height={55}
-                  alt="icon"
-                  quality={10}
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+           
+            <span>
+              <Image
+                src="/icon_ba.svg"
+                width={55}
+                height={55}
+                alt="icon"
+                quality={10}
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
           <Link href="/nft/one" passHref>
-            <div className={styles.itemSlider}>
+          <div className={styles.itemSlider}>
+            
               <Image
                 src={article}
                 alt="article"
                 className={styles.itemSliderImage}
               />
-
-              <span>
-                <Image
-                  src="/icon_facebook_b.png"
-                  width={55}
-                  height={55}
-                  alt="facebook"
-                  quality={10}
-                />
-              </span>
-              <div className={styles.sliderText}>
-                BioArts
-                <p>Artistic Transformation of Life into Information.</p>
-              </div>
+           
+            <span>
+              <Image
+                src="/icon_facebook_b.png"
+                width={55}
+                height={55}
+                alt="facebook"
+                quality={10}
+              />
+            </span>
+            <div className={styles.sliderText}>
+              BioArts
+              <p>Artistic Transformation of Life into Information.</p>
             </div>
+          </div>
           </Link>
         </Slider>
         <input

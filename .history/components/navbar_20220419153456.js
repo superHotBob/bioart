@@ -49,7 +49,7 @@ export default function Navbar() {
             <div key={index}>
               <figure className={styles.icon_like}>
                 <Image
-                  src="/article-img.webp"
+                  src="/article.webp"
                   width={50}
                   height={50}
                   alt="icon"
