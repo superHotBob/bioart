@@ -743,7 +743,7 @@ export default function Explore() {
           }
           .genomeStoreHeader__text:before {
             content: "";
-            background: url("/planet_top_bg.webp") center / cover no-repeat;
+            background: url("/planet_top_bg.jpg") center / cover no-repeat;
             height: 110px;
             position: absolute;
             top: -50px;
@@ -894,7 +894,7 @@ export default function Explore() {
               margin: 0 auto;
             }
             .header__image {
-              background: url("/planet_top_bg.webp") center / cover no-repeat;
+              background: url("/planet_top_bg.jpg") center / cover no-repeat;
               height: 300px;
               border-bottom: 1px solid #c9c9c9;
             }

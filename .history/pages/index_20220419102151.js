@@ -148,7 +148,10 @@ export default function Home() {
               quality={10}
             />
           </Link>
-          <div className={styles.firstBlockTextOnly}>           
+          <div className={styles.firstBlockTextOnly}>
+            {!myscreen && (
+              <Image src="/korona.png" width={46} height={28} alt="icon" />
+            )}
             <h3>BioArts</h3>
             <p>Artistic Transformation of Life into Information.</p>
             <span className={styles.gold}>GOLD HANDS</span>
@@ -156,6 +159,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className={styles.slider}>
         <h2 />
         <Slider ref={slider} {...settings}>

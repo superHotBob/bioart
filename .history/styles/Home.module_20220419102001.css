@@ -654,10 +654,5 @@ p.headerTable:hover {
   }
   .slider h2::before {
     content: 'Notable NFTs'
-  }
-  .firstBlockTextOnly::before {
-    content: url('/korona.png');
-    height: 30px;
-    width: 30px;
   } 
 }

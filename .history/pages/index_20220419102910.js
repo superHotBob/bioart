@@ -156,6 +156,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section className={styles.slider}>
         <h2 />
         <Slider ref={slider} {...settings}>
