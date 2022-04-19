@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig =
+// const nextConfig =
   
-  {reactStrictMode: true,
-    plugins: [["styled-jsx/babel", { "optimizeForSpeed": true }]]
-  }
+//   {reactStrictMode: true,
+//     plugins: [["styled-jsx/babel", { "optimizeForSpeed": true }]]
+//   }
 
 
-module.exports = nextConfig
+// export default nextConfig
 // const withPWA = require("next-pwa");
 
 // module.exports = withPWA({
