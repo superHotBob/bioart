@@ -1,10 +1,29 @@
 import Button from "./button";
+import { useDispatch } from 'react-redux';
+import {  addAccount, changeBalance } from "../reduser";
+import * as web3 from "@solana/web3.js";
+
+const {  
+  clusterApiUrl,
+  LAMPORTS_PER_SOL,
+  getBalance,
+} = require("@solana/web3.js");
+
 export default function ConnectWallet(props) {
+  const connect = new web3.Connection(clusterApiUrl("devnet"));
+  const dispatch = useDispatch();
+  async function Connect() {     
+    let resp = await window.solana.connect();
+    const balance = await connect.getBalance(resp.publicKey);   
+    dispatch(addAccount(resp.publicKey));
+    dispatch(changeBalance(balance));
+    localStorage.setItem('wallet', resp.publicKey);
+ }
   return (
     <div className="main">
       <p>Wallet</p>
       <p className="main__text">Connect with wallet or create a new one.</p>
-      <div className="button__image">
+      <div className="button__image" onClick={Connect}>
         <Button
           text="Phantom"
           color="#000"
@@ -20,9 +39,11 @@ export default function ConnectWallet(props) {
         {`
           .main {
             position: absolute;
-            right: -10vw;
+            right: 4vw;
             width: 280px;
-            top: 0;
+            top: 90px;
+            z-index: 100; 
+            display: ${props.view ? 'none': 'block'};
             height: auto;
             padding: 30px 20px;
             text-align: center;

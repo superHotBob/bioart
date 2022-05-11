@@ -1,5 +1,4 @@
 import Slider from "react-slick";
-
 import { useState, useEffect, useRef } from "react";
 import   mainback  from '../public/main_top_bg.webp';
 import Head from "next/head";
@@ -7,11 +6,18 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
+
+
+
+
+
 export default function Home() {
 const [slideIndex, setSlideIndex] = useState(0);
   const [myscreen, setMyScreen] = useState(1300);
   
-  useEffect(() => setMyScreen(window.screen.width),[]);
+  useEffect(() => {   
+    setMyScreen(window.screen.width);}
+  ,[]);
 
   const data = [
     {

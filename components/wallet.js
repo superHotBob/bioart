@@ -1,24 +1,85 @@
 import react, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "./button";
+import { useSelector, useDispatch } from "react-redux";
+import {  addAccount } from "../reduser";
+import { balance } from "../reduser";
+
+const {  
+  clusterApiUrl,
+  LAMPORTS_PER_SOL,
+  getBalance,
+} = require("@solana/web3.js");
+
 export default function Wallet(props) {
-  const [length, setLength] = useState(0); 
+  const my_balance = useSelector(balance);
+  const dispatch = useDispatch();
+  const [usdPrice, setUsdPrice] = useState();
+  const [length, setLength] = useState(0);
   const [myscreen, setMyScreen] = useState(true);
-  useEffect(() => setMyScreen(window.screen.width > 500), []); 
+  useEffect(() => {
+    setMyScreen(window.screen.width > 500);
+
+    const getSolanaPrice = async () => {
+      const response = await fetch(
+        'https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd',
+        {
+          method: "GET",
+        }
+      );
+    
+      const data = await response.json();
+      return setUsdPrice(data.solana.usd);
+    };
+    getSolanaPrice();
+  }, []);
+  async function LogOut() {
+    const res = await solana.disconnect();
+                  console.log(JSON.stringify(res));
+   await window.solana.request({ method: "disconnect" })
+   .catch((err) => {console.error("disconnect ERROR:", err); });  
+    localStorage.removeItem('wallet');
+    dispatch(addAccount());
+   
+  } 
+  // const disconnect = async () => {
+  //   const payload = {
+  //     session,
+  //   };
+  //   const [nonce, encryptedPayload] = encryptPayload(payload, sharedSecret);
+
+  //   const params = new URLSearchParams({
+  //     dapp_encryption_public_key: bs58.encode(dappKeyPair.publicKey),
+  //     nonce: bs58.encode(nonce),
+  //     redirect_link: onDisconnectRedirectLink,
+  //     payload: bs58.encode(encryptedPayload),
+  //   });
+
+  //   const url = buildUrl("disconnect", params);
+  //   Linking.openURL(url);
+  // }; 
   return (
     <div className="main">
-      {!myscreen && <div className="close">
-        <Image src="/icon_clsbk.svg" width={20} height={20} alt="close" onClick={props.logOut}/>
+      {!myscreen && (
+        <div className="close">
+          <Image
+            src="/icon_clsbk.svg"
+            width={20}
+            height={20}
+            alt="close"
+            onClick={props.logOut}
+          />
         </div>
-      }
+      )}
       <p className="header">Geno`s World</p>
       <p>Wallet</p>
       <p className="main__total">Total balance (USD)</p>
-      <h4>0.00</h4>
+      <h4>{(my_balance*usdPrice/LAMPORTS_PER_SOL).toFixed(2)}</h4>
       <div className="wallet">
         <div className="data__wallet">
           <figure className="sol" /> <span>SOL</span>
-          <span>0.00</span>
+          <span>{(my_balance/LAMPORTS_PER_SOL).toFixed(2)}</span>
         </div>
         <div className="data__wallet">
           <figure className="gero" /> <span>GERO</span>
@@ -26,27 +87,31 @@ export default function Wallet(props) {
         </div>
       </div>
       <p>Planets</p>
-      {[
-        "Genome NFT",
-        "Geno’s Collection",
-        "NYC Underground",
-        "Genome Story",
-      ].filter((i,index) => (index < length) ).map((i, index) => (
-        <p key={index} className="planets"><figure />
-          {i}
-        </p>
-      ))}
-      <figure className="plus" onClick={()=>setLength(length + 1)}/>
+      {["Genome NFT", "Geno’s Collection", "NYC Underground", "Genome Story"]
+        .filter((i, index) => index < length)
+        .map((i, index) => (
+          <p key={index} className="planets">
+            <figure />
+            {i}
+          </p>
+        ))}
+      <figure className="plus" onClick={() => setLength(length + 1)} />
       <div></div>
-      <p className="setting"> Setting</p>
-      <p className="logOut" onClick={props.logOut}> Log Out</p>
+      <Link href="/profilesetting" passHref>
+        <p className="setting"> Setting</p>
+      </Link>
+      <p className="logOut" onClick={LogOut}>
+        {" "}
+        Log Out
+      </p>
       <style jsx>
         {`
           .main {
             position: absolute;
-            right: -12vw;
+            right: 4vw;
             width: 260px;
-            top: 0;
+            top: 90px;
+            z-index: 100;
             font-size: 18px;
             height: auto;
             text-align: center;
@@ -82,7 +147,7 @@ export default function Wallet(props) {
             padding: 0 20px;
             cursor: pointer;
           }
-          
+
           .data__wallet .sol,
           .data__wallet .gero {
             display: inline-block;
@@ -108,9 +173,9 @@ export default function Wallet(props) {
           .data__wallet:hover span:last-of-type {
             color: #fff;
           }
-          .data__wallet:hover  {
-              color: #fff;
-              background-color: #00b4e6;
+          .data__wallet:hover {
+            color: #fff;
+            background-color: #00b4e6;
           }
 
           p {
@@ -129,7 +194,10 @@ export default function Wallet(props) {
             padding-left: 30px;
             margin: 0;
             font-size: 24px;
-            background: url("/icon_cate_12.svg") 35% / 10% no-repeat;
+            background-repeat: no-repeat;
+            background-size: 10%;
+            background-image: url("/icon_cate_12.svg");
+            background-position:  30% 20%;
           }
           .plus {
             background: url("/icon_mrgr.svg") 50% / 50% no-repeat;
@@ -139,7 +207,6 @@ export default function Wallet(props) {
           }
           .plus:hover {
             background: url("/icon_mrbk.svg") 50% / 50% no-repeat;
-            
           }
           .setting,
           .logOut {
@@ -164,33 +231,34 @@ export default function Wallet(props) {
           .planets {
             padding: 5px 0 5px 20px;
             text-align: left;
-            }
-            .planets figure {
-                width: 30px;
-                margin: 0 10px 0 0;
-                border-radius: 50%;
-                vertical-align: middle;
-                display: inline-block;
-                height: 30px;
+          }
+          .planets figure {
+            width: 30px;
+            margin: 0 10px 0 0;
+            border-radius: 50%;
+            vertical-align: middle;
+            display: inline-block;
+            height: 30px;
             background: url("/article-img.png") center / 100% no-repeat;
           }
           @media screen and (max-width: 1300px) {
             .main {
-                right: -10%;
+              right: -10%;
             }
           }
           @media screen and (max-width: 550px) {
             .main {
-                right: 0;
-                width: 104%;
-                margin: 0 -2%;
-                border: none;
-                background-color: #f3f3f3;
+              right: 0;
+              width: 104%;
+              margin: 0 -2%;
+              border: none;
+              background-color: #f3f3f3;
             }
             h4 {
               font-size: 32px;
             }
-            .setting, .logOut {
+            .setting,
+            .logOut {
               padding-left: 60px;
             }
             .header {
@@ -203,10 +271,9 @@ export default function Wallet(props) {
               padding: 20px;
               text-align: right;
             }
-          }    
+          }
         `}
       </style>
     </div>
   );
 }
-

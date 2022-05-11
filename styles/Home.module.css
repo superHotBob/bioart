@@ -48,6 +48,15 @@
 .header a:hover {
   color: blue;
 }
+.wallet {
+  display: none;
+}
+.wallet:hover {
+  display: block;
+}
+.tab03active:hover>.wallet {
+  display: block;
+}
 .symbol {
   margin-right: -40px;
   position: relative;
@@ -588,6 +597,7 @@ p.headerTable:hover {
   .itemSliderImage {
     height: 94vw;
   }
+  
   .sliderText {
     width: 70%;
     font-size: 20px;

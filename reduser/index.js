@@ -6,7 +6,7 @@ const initialState = {
   name: 'bob',
   representative_planet: 'Geno`s Collection'
  },
-  walletAddress: "",
+  walletAddress: [],
   balance: 0,
   token: "",
   tokenId: 0,
@@ -20,7 +20,7 @@ export const counterSlice = createSlice({
       state.value = true;
     },
     
-    addAccount: (state, action) => {
+    addAccount: (state, action) => {     
       state.walletAddress = action.payload;
     },
     changeBalance: (state, action) => {

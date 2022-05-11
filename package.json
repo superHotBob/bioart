@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "@solana/spl-token": "^0.2.0",
+    "@solana/web3.js": "^1.41.4",
     "formik": "^2.2.9",
     "next": "12.1.0",
     "next-pwa": "^5.4.6",
